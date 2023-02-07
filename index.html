@@ -3,11 +3,167 @@
 <head>
     <meta charset="utf-8">
     <title>Index</title>
+
+    <!-- Temporary css. All of this (and the inline stuff below) will be relocated later once we start using Bootstrap -->
+    <!-- TODO: Move to external CSS file. -->
+    <style>
+    body, html{ /* CSS Reset */
+    margin:0;
+    padding:0;
+  }
+  section {
+  padding: 5x
+  }
+  div {
+  }
+  .inline { /* For horizontally adjacent divs. */
+  display: inline-block;
+  }
+  .invisible { /* Lists that don't show bullets OR numbers. */
+    list-style: none;
+  }
+  body {
+  margin:5px;
+  padding:5px
+  }
+  input[type=button] {
+  background-color: #000000
+  color: black;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10%;
+  width: 100%;
+
+}
+    </style>
 </head>
 <body>
 <header>
-    <h1>Index</h1>
-    <p>This is the index.html page.</p>
+    <h1>Paired Preference Assessment Tool for Videos</h1>
 </header>
+
+<main>
+    <div class="inline" style="width: 67%">
+        <section> <!-- Instructions -->
+            <h2>Instructions</h2>
+            <p> <!-- TODO: Replace lorem ipsum with actual instructions -->
+                Repellat id vel id sint quis architecto non consequatur. Atque reprehenderit dolores aut doloremque qui et. Qui eligendi sunt rerum error autem. Repellat nihil neque debitis maxime. Ea beatae voluptas porro nobis magnam. Expedita dicta magni explicabo.<br><br>
+                Est voluptas occaecati itaque id consectetur. Et nihil iste id consectetur fugit. Autem ad nisi molestiae rerum.<br><br>
+                Quidem doloribus qui consequatur quos minus. Deleniti tenetur perferendis ipsum ex eius omnis rerum consequuntur. Ipsam id fuga assumenda eos. Ullam enim inventore occaecati natus consectetur voluptates. Totam aliquam a nulla dignissimos qui necessitatibus.<br><br>
+                Veritatis explicabo sit quia nulla consequatur illum qui qui. Earum quia sunt et in necessitatibus quos ratione quia. Expedita eligendi maiores sed suscipit dolor unde aut. Libero non accusamus rerum et tenetur ut. Molestiae sunt ea adipisci. Atque delectus at qui veritatis numquam.<br><br>
+                Nesciunt non animi quos officiis minima quibusdam delectus ex. Aperiam facilis dolorem temporibus. Incidunt quia non repudiandae non possimus molestias.<br><br>
+            </p>
+        </section>
+        <div> <!-- Parameters and Add Video -->
+            <section class="inline" style="width: 50%"> <!-- Parameters -->
+                <h2>Parameters</h2>
+                <label>Time to Selection: </label> <!-- 1st Parameter (number range) -->
+                <input type="number" min="3" max="90" name="time_to_selection" value="15"/>
+                <br>
+                <label>Video Location: </label><select name="video_location"> <!-- 2nd Parameter (dropdown) -->
+                    <option>Horizontal</option>
+                    <option>Vertical</option>
+                </select>
+                <br>
+                <label>Video Presentation: </label><select name="video_presentation"> <!-- 3rd Parameter (dropdown) -->
+                    <option>Video</option>
+                    <option>Still Images</option>
+                </select>
+            </section>
+            <section class="inline" style="width: 50%; float: right;"> <!-- Add New Videos -->
+                <h2>Add New Videos</h2>
+                <label>URL</label> <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
+                <input type="url" name="url" size="45" placeholder="https://www.youtube.com/watch?v=??????"/>
+                <br>
+                <input type="button" value="Add Video"> <!-- TODO: Add action to this button -->
+            </section>
+        </div>
+    </div>
+    <div class="inline" style="width: 33%; float: right;">
+        <section> <!-- Video Bank -->
+            <div class="inline">
+                <h2>Video Bank</h2>
+                <ul class="invisible"> <!-- Neither ordered nor unordered -- don't show bullets or numbers at all -->
+                    <!-- TODO: Enforce maximum and minimum video selections. -->
+                    <li> <!-- Multi-select checkboxes for which videos to use. -->
+                        <input type="checkbox" name="selected_videos" value="entry 1">[Name of Video #1]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 2">[Name of Video #2]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 3">[Name of Video #3]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 4">[Name of Video #4]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 5">[Name of Video #5]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 6">[Name of Video #6]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 7">[Name of Video #7]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 8">[Name of Video #8]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 9">[Name of Video #9]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 10">[Name of Video #10]<br/>
+                    </li>
+                </ul>
+            </div>
+            <div class="inline">
+                <ul class="invisible"> <!-- Continuation of the list from above. -->
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 11">[Name of Video #11]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 12">[Name of Video #12]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 13">[Name of Video #13]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 14">[Name of Video #14]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 15">[Name of Video #15]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 16">[Name of Video #16]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 17">[Name of Video #17]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 18">[Name of Video #18]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 19">[Name of Video #19]<br/>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="selected_videos" value="entry 20">[Name of Video #20]<br/>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section> <!-- Start Button -->
+            <input type="button" value="Start Test"> <!-- TODO: Add action to this button -->
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p><em>A website for Dr. Curiel.</em></p> <!-- TODO: Copyright? -->
+</footer>
+
 </body>
 </html>
