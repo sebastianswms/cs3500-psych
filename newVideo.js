@@ -15,23 +15,47 @@ function storeNewVideo(){
     let video_title = document.forms["newVideo"]["video_title"].value;
     let video_url = document.forms["newVideo"]["video_url"].value;
 
-    unparsed_titles = getCookie("titles");
-    if(unparsed_titles == ""){
-        unparsed_titles = "[]"
-    }
-
-    let titles = JSON.parse(unparsed_titles);
+    let titles = cookieParse("titles");
     titles.push(video_title);
     setCookie("titles",JSON.stringify(titles),5);
 
-    unparsed_videos = getCookie("videos");
-    if(unparsed_videos == ""){
-        unparsed_videos = "[]"
-    }
-
-    let videos = JSON.parse(unparsed_videos);
+    let videos = cookieParse("videos")
     videos.push(video_url);
     setCookie("videos",JSON.stringify(videos),5);
+
+    fillVideoList();
+}
+
+function fillVideoList() {
+    let form = document.getElementById("startAssessment");
+    form.innerHTML = "";
+
+    let titles = cookieParse("titles");
+
+    for (var index in titles) {
+        let title = titles[index];
+        let box = document.createElement("input");
+        box.type = "checkbox";
+        box.id = "video" + index;
+        box.name = "video" + index;
+        box.value = title;
+
+        let label = document.createElement("label");
+        label.htmlFor = "video" + index;
+        label.innerHTML = title;
+
+        form.appendChild(box);
+        form.appendChild(label);
+        form.appendChild(document.createElement("br"));
+    }
+}
+
+function cookieParse(cookie){
+    let unparsed = getCookie(cookie);
+        if(unparsed == ""){
+            unparsed = "[]";
+        }
+    return JSON.parse(unparsed);
 }
 
 function setCookie(cname, cvalue, exdays) { // Source: https://www.w3schools.com/js/js_cookies.asp

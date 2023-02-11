@@ -14,19 +14,14 @@
   section {
   padding: 5x
   }
-  div {
-  }
   .inline { /* For horizontally adjacent divs. */
   display: inline-block;
-  }
-  .invisible { /* Lists that don't show bullets OR numbers. */
-    list-style: none;
   }
   body {
   margin:5px;
   padding:5px
   }
-  input[type=button] {
+  input[type=submit] {
   background-color: #000000
   color: black;
   margin: 10px 10px;
@@ -36,14 +31,13 @@
   font-size: 16px;
   border-radius: 10%;
   width: 100%;
-
 }
     </style>
 
     <script src="newVideo.js"></script>
 
 </head>
-<body>
+<body onload="fillVideoList()">
 <header>
     <h1>Paired Preference Assessment Tool for Videos</h1>
 </header>
@@ -91,79 +85,12 @@
     </div>
     <div class="inline" style="width: 33%; float: right;">
         <section> <!-- Video Bank -->
-            <div class="inline">
-                <h2>Video Bank</h2>
-                <ul class="invisible"> <!-- Neither ordered nor unordered -- don't show bullets or numbers at all -->
-                    <!-- TODO: Enforce maximum and minimum video selections. -->
-                    <li> <!-- Multi-select checkboxes for which videos to use. -->
-                        <input type="checkbox" name="selected_videos" value="entry 1">[Name of Video #1]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 2">[Name of Video #2]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 3">[Name of Video #3]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 4">[Name of Video #4]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 5">[Name of Video #5]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 6">[Name of Video #6]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 7">[Name of Video #7]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 8">[Name of Video #8]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 9">[Name of Video #9]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 10">[Name of Video #10]<br/>
-                    </li>
-                </ul>
-            </div>
-            <div class="inline">
-                <ul class="invisible"> <!-- Continuation of the list from above. -->
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 11">[Name of Video #11]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 12">[Name of Video #12]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 13">[Name of Video #13]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 14">[Name of Video #14]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 15">[Name of Video #15]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 16">[Name of Video #16]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 17">[Name of Video #17]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 18">[Name of Video #18]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 19">[Name of Video #19]<br/>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="selected_videos" value="entry 20">[Name of Video #20]<br/>
-                    </li>
-                </ul>
-            </div>
+            <h2>Video Bank</h2>
+            <!-- TODO: Add validateStartAssessment() function.-->
+            <form name="startAssessment" id="startAssessment" onsubmit="return validateStartAssessment()" method="post"></form>
         </section>
         <section> <!-- Start Button -->
-            <input type="button" value="Start Test"> <!-- TODO: Add action to this button -->
+            <input type="submit" form="startAssessment" value="Start Test">
         </section>
     </div>
 </main>
