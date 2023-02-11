@@ -78,7 +78,9 @@
             </section>
             <section class="inline" style="width: 50%; float: right;"> <!-- Add New Videos -->
                 <h2>Add New Videos</h2>
-                <form name="newVideo" onsubmit="return validateNewVideo()" method="post">
+                <form name="newVideo" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
+                    Title: <input type="text" name="video_title" size="45">
+                    <br><br>
                     <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
                     URL: <input type="text" name="video_url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
                     <br><br>
