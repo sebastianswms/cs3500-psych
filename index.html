@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+
+<!--
+Author: Sebastian Smiley
+Class: CS3500
+Date: Spring 2023
+-->
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -58,25 +65,25 @@
             <section class="inline" style="width: 50%"> <!-- Parameters -->
                 <h2>Parameters</h2>
                 <label>Time to Selection: </label> <!-- 1st Parameter (number range) -->
-                <input type="number" min="3" max="90" name="time_to_selection" value="15"/>
+                <input type="number" min="3" max="90" name="time-to-selection" value="15"/>
                 <br>
-                <label>Video Location: </label><select name="video_location"> <!-- 2nd Parameter (dropdown) -->
+                <label>Video Location: </label><select name="video-location"> <!-- 2nd Parameter (dropdown) -->
                     <option>Horizontal</option>
                     <option>Vertical</option>
                 </select>
                 <br>
-                <label>Video Presentation: </label><select name="video_presentation"> <!-- 3rd Parameter (dropdown) -->
+                <label>Video Presentation: </label><select name="video-presentation"> <!-- 3rd Parameter (dropdown) -->
                     <option>Video</option>
                     <option>Still Images</option>
                 </select>
             </section>
             <section class="inline" style="width: 50%; float: right;"> <!-- Add New Videos -->
                 <h2>Add New Videos</h2>
-                <form name="newVideo" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
-                    Title: <input type="text" name="video_title" size="45">
+                <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
+                    Title: <input type="text" name="video-title" size="45">
                     <br><br>
                     <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
-                    URL: <input type="text" name="video_url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
+                    URL: <input type="text" name="video-url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
                     <br><br>
                     <input type="submit" value="Add Video">
                 </form>
@@ -87,10 +94,10 @@
         <section> <!-- Video Bank -->
             <h2>Video Bank</h2>
             <!-- TODO: Add validateStartAssessment() function.-->
-            <form name="startAssessment" id="startAssessment" onsubmit="return validateStartAssessment()" method="post"></form>
+            <form id="start-assessment" onsubmit="return validateStartAssessment()" method="post"></form>
         </section>
         <section> <!-- Start Button -->
-            <input type="submit" form="startAssessment" value="Start Test">
+            <input type="submit" form="start-assessment" value="Start Test">
         </section>
     </div>
 </main>
