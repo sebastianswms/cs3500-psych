@@ -39,6 +39,9 @@
 
 }
     </style>
+
+    <script src="newVideo.js"></script>
+
 </head>
 <body>
 <header>
@@ -75,10 +78,12 @@
             </section>
             <section class="inline" style="width: 50%; float: right;"> <!-- Add New Videos -->
                 <h2>Add New Videos</h2>
-                <label>URL</label> <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
-                <input type="url" name="url" size="45" placeholder="https://www.youtube.com/watch?v=??????"/>
-                <br>
-                <input type="button" value="Add Video"> <!-- TODO: Add action to this button -->
+                <form name="newVideo" onsubmit="return validateNewVideo()" method="post">
+                    <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
+                    URL: <input type="text" name="video_url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
+                    <br><br>
+                    <input type="submit" value="Add Video">
+                </form>
             </section>
         </div>
     </div>
