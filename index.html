@@ -19,29 +19,26 @@ Date: Spring 2023
     padding:0;
   }
   section {
-  padding: 5x
+  padding: 10x
   }
   .inline { /* For horizontally adjacent divs. */
   display: inline-block;
   }
   body {
-  margin:5px;
-  padding:5px
+  margin:10px;
+  padding:10px
   }
   input[type=submit] {
-  background-color: #000000
-  color: black;
-  margin: 10px 10px;
+  margin: 10px 0px;
   padding: 10px 10px;
   text-align: center;
   display: inline-block;
   font-size: 16px;
-  border-radius: 10%;
   width: 100%;
 }
     </style>
 
-    <script src="newVideo.js"></script>
+    <script src="videoManagement.js"></script>
 
 </head>
 <body onload="fillVideoList()">
@@ -65,25 +62,25 @@ Date: Spring 2023
             <section class="inline" style="width: 50%"> <!-- Parameters -->
                 <h2>Parameters</h2>
                 <label>Time to Selection: </label> <!-- 1st Parameter (number range) -->
-                <input type="number" min="3" max="90" name="time-to-selection" value="15"/>
-                <br>
-                <label>Video Location: </label><select name="video-location"> <!-- 2nd Parameter (dropdown) -->
-                    <option>Horizontal</option>
-                    <option>Vertical</option>
+                <input type="number" min="3" max="90" name="time-to-selection" value="15" form="start-assessment"/>
+                <br><br>
+                <label>Video Location: </label><select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical">Vertical</option>
                 </select>
-                <br>
-                <label>Video Presentation: </label><select name="video-presentation"> <!-- 3rd Parameter (dropdown) -->
-                    <option>Video</option>
-                    <option>Still Images</option>
+                <br><br>
+                <label>Video Presentation: </label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
+                    <option value="video">Video Playback</option>
+                    <option value="still">Still Images</option>
                 </select>
             </section>
             <section class="inline" style="width: 50%; float: right;"> <!-- Add New Videos -->
                 <h2>Add New Videos</h2>
                 <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
-                    Title: <input type="text" name="video-title" size="45">
+                    <label>Title: </label><input type="text" name="video-title" size="45">
                     <br><br>
                     <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
-                    URL: <input type="text" name="video-url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
+                    <label>URL: </label><input type="text" name="video-url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
                     <br><br>
                     <input type="submit" value="Add Video">
                 </form>
@@ -93,7 +90,6 @@ Date: Spring 2023
     <div class="inline" style="width: 33%; float: right;">
         <section> <!-- Video Bank -->
             <h2>Video Bank</h2>
-            <!-- TODO: Add validateStartAssessment() function.-->
             <form id="start-assessment" onsubmit="return validateStartAssessment()" method="post"></form>
         </section>
         <section> <!-- Start Button -->

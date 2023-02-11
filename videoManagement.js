@@ -68,7 +68,7 @@ function fillVideoList() {
         box.type = "checkbox";
         box.id = "video" + index;
         box.name = "video-entry";
-        box.value = title;
+        box.value = index;
 
         // Set the label to reference the appropriate checkbox and show the user the name they entered previously.
         label.htmlFor = "video" + index;
