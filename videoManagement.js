@@ -3,6 +3,7 @@ Author: Sebastian Smiley
 Class: CS3500
 Date: Spring 2023
 */
+// testing 
 
 // Before the user submits a new video, check to make sure that the user is allowed to do so.
 function validateNewVideo(){
