@@ -38,7 +38,9 @@ Date: Spring 2023
 }
     </style>
 
-    <script src="videoManagement.js"></script>
+    <script src="scripts/newVideo.js" type="module"></script>
+    <script src="scripts/videoList.js" type="module"></script>
+    <script src="scripts/startAssessment.js" type="module"></script>
 
 </head>
 <body onload="fillVideoList()">
@@ -90,7 +92,7 @@ Date: Spring 2023
     <div class="inline" style="width: 33%; float: right;">
         <section> <!-- Video Bank -->
             <h2>Video Bank</h2>
-            <form id="start-assessment" onsubmit="return validateStartAssessment()" method="post"></form>
+            <form id="start-assessment" action="javascript:startAssessment();" onsubmit="return validateStartAssessment()" method="post"></form>
         </section>
         <section> <!-- Start Button -->
             <input type="submit" form="start-assessment" value="Start Test">
