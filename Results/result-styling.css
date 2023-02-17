@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #34788c
+}
+
+#first-sec {
+    margin: 80px auto 0px auto;
+    font-size: 4vmin;
+    letter-spacing: 5px;
+}
+/* all section styling */
+section {
+    width: 80%;
+    margin: 20px auto;
+}
+
+
+/* style for Result text title */
+.res {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+/* graph and outcomes section as a row */
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.res-sec {
+    align-items: center;
+}
+
+.row .col {
+    margin: 10px;
+    width: 450px;
+    height: 350px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(179, 179, 179);
+    background-color: rgb(233, 233, 233);
+}
+
+
+.video-table {
+    margin: auto 40px auto;
+}
+
+.duration {
+    margin: auto 0px auto 30px;
+}
+
+/* assessment and graph text */
+.assess-title h2, .graph-text {
+    font-size: 4vmin;
+    text-align: center;
+}
+
+/* buttons  */
+.btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.b {
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 15px;
+    border-width: 1px;
+}
+.b-main {
+    background-color: rgba(190, 22, 22, 0.898);
+    color: white;
+    margin-left: 610px;
+}
+.b-save {
+    margin-right: 120px;
+}
+.b-main:hover {
+    background-color: rgb(150, 0, 0);
+}
+.b-save:hover {
+    background-color: rgb(174, 176, 174)
+}
+#myChart {
+    background-color: none;
+}
+
+/* Responsive for smaller devices */
+@media only screen and (max-width: 850px){
+
+    .section  .row {
+        flex-direction: column;
+    }
+    
+    .row .col {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .b {
+        height: 30px;
+        width: 120px;
+        margin-top: auto;
+    }
+
+    .btn-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .b-main {
+        background-color: rgba(190, 22, 22, 0.898);
+        color: white;
+        margin: auto auto 10px auto;
+    }
+    .b-save {
+        margin: auto auto 80px auto;
+    }
+
+    .row .col {
+        height: 300px;
+    }
+}
