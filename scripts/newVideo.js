@@ -29,7 +29,7 @@ window.storeNewVideo = function storeNewVideo(){
 
     // Get the name and URL of the video that the user added.
     let video_title = document.getElementById("new-video")["video-title"].value;
-    let video_url = document.getElementById("new-video")["video-title"].value;
+    let video_url = document.getElementById("new-video")["video-url"].value;
 
     // Get the current cookies corresponding to the user's videos as an array.
     let titles = cookieParse("titles");
