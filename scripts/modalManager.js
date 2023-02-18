@@ -14,14 +14,20 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn1.onclick = function() {
   modal.style.display = "block";
+
+  // TODO: Update video player for option1 and start playing it
 }
 btn2.onclick = function() {
   modal.style.display = "block";
+
+  // TODO: Update video player for option1 and start playing it
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+
+  // TODO: Stop video
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -30,5 +36,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-// TODO: Add function to change video on modal
