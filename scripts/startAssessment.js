@@ -31,11 +31,6 @@ window.startAssessment = function startAssessment(){
     setCookie("selection",JSON.stringify(values),5); // Put the array of URLs into a cookie. 5 days until expiry.
 
     let orientation = document.getElementById("start-assessment")["video-location"].value;
-    if(orientation == "horizontal"){
-        window.location.href = "./assessment horizontal.html";
-    }
-    else if (orientation =="vertical") {
-        window.location.href = "./assessment vertical.html";
-    }
+    window.location.href = "./assessment.html";
     
 }
