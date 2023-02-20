@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <head>
+        <meta harset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Graph and Results</title>
+
+        <!-- remove this link if you give a new style for the page -->
+        <link rel="stylesheet" href="result-styling.css">
+
+    </head>
+    <body>
+        <!-- this section for result and graph -->
+        <section id="first-sec">
+            <div class="res">
+                <h1>Results</h1>
+            </div>
+        </section>
+        <section class="section">
+            <div class="row">
+                <div class="col res-sec">
+                    <div class="assess-title">
+                        <h2>Assessment Outcomes</h2>
+                    </div>
+                    <table class="video-table">
+                        <tr>
+                            <td>00%</td>
+                            <td>[Name of Video]</td>
+                        </tr>
+                        <tr>
+                            <td>00%</td>
+                            <td>[Name of Video]</td>
+                        </tr>
+                        <tr>
+                            <td>00%</td>
+                            <td>[Name of Video]</td>
+                        </tr>
+                        <tr>
+                            <td>00%</td>
+                            <td>[Name of Video]</td>
+                        </tr>
+                        <tr>
+                            <td>00%</td>
+                            <td>[Name of Video]</td>
+                        </tr>
+                    </table>
+                    <div class="duration">
+                        <label>Duration of Assessment:</label>
+                        <label>00 Sec</label>
+                        <!-- Data here  -->
+                        <br><br>
+                        <label>Selection to left/top option: %</label>
+                        <!-- Data here  -->
+                        <br>
+                        <label>Selection to right/bottom option: %</label>
+                    </div>
+                </div>
+                <div class="col graph-sec">
+                    <h1 class="graph-text">Graph</h1>
+
+                    <!-- the link from canvas, shows where we need the graph to be located -->
+                    <canvas id="myChart"></canvas>
+
+                    <!-- link form the js file for graph -->
+                    <script src="graph-builder.js"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- this section for two buttons -->
+        <section>
+            <div class="btn-div">
+                <!-- this links to the main page-->
+                <a href="../index.html">
+                   <button class="b b-main" type="button">
+                       <span>MAIN PAGE</span>
+                   </button>
+               </a>
+
+               <!-- downloads the graph as png -->
+               <button class="b b-save" onclick="downloadChart()">
+                   <span>SAVE AS PNG</span>
+               </button>
+           </div>
+        </section>
+    </body>
+</html>
