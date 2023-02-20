@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assessment Vertical</title>
+    <style>
+      .column {
+        display: inline-block;
+        width: 50%;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        position: relative;
+      }
+
+      .row {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .invisible-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+      }
+
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+    </header>
+
+    <main>
+      <!-- Video Players -->
+      <div class="row">
+        <div class="column">
+          <button type="button">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UsZRqAR1SBU?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </button>
+          <a href="./Results/decision-page.html">
+            <button class="invisible-button"></button>
+          </a>
+        </div>
+        <div class="column">
+          <button type="button">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zhAYXAQxQlk?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </button>
+          <a href="./Results/decision-page.html">
+            <button class="invisible-button"></button>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
