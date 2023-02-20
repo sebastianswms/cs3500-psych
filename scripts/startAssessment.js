@@ -15,13 +15,14 @@ window.validateStartAssessment = function validateStartAssessment(){
     }
 
     let time = document.getElementById("start-assessment")["time-to-selection"].value; // Get the time-to-selection.
-    if(time < 3 || time > 90){ // If the time is too low or too high, display an alert. This should have already been validated by the form; this is just an extra precaution.
+    if(time < 3 || time > 90){ // If the time is too low or too high, display an alert. 
+                               //This should have already been validated by the form; this is just an extra precaution.
         alert("Please set a time between 3 and 90 seconds.")
         return false;
     }
 }
 
-// Store the user's selected video URLs in a cookie and navigate to the assessment.html page.
+// Store the user's selected video URLs in a cookie and navigate to the assessment page.
 window.startAssessment = function startAssessment(){
     let selection = document.querySelectorAll("input[name=video-entry]:checked"); // Get all selected videos.
     let values = [];
@@ -29,5 +30,12 @@ window.startAssessment = function startAssessment(){
 
     setCookie("selection",JSON.stringify(values),5); // Put the array of URLs into a cookie. 5 days until expiry.
 
-    window.location.href = "./assessment.html"; // Navigate to the assessment.html page.
+    let orientation = document.getElementById("start-assessment")["video-location"].value;
+    if(orientation == "horizontal"){
+        window.location.href = "./assessment horizontal.html";
+    }
+    else if (orientation =="vertical") {
+        window.location.href = "./assessment vertical.html";
+    }
+    
 }
