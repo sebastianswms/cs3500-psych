@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Assessment Horizontal</title>
+        <!-- TODO: Link to external CSS file. -->
+        <style>
+            .column {
+                float: left;
+                width: 50%;
+                position: relative;
+            }
+
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            button {
+                max-width: 80%;
+                max-height: 80%;
+                margin-top: 200px;
+            }
+
+            .invisible-button {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            div {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1><h1>
+        </header>
+        
+        <main>
+            <!-- Video Players -->
+            <div class="row">
+                <div class="column">
+                    <button type="button">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/zhAYXAQxQlk?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </button>
+                    <a href="./Results/decision-page.html">
+                        <button class="invisible-button"></button>
+                    </a>
+                </div>
+                <div class="column">
+                    <button type="button">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UsZRqAR1SBU?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </button>
+                    <a href="./Results/decision-page.html">
+                        <button class="invisible-button"></button>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- cannot import URLs from playVideos.js. Need to troubleshoot. -->
+        <script src="playVideos.js" type="module"></script>
+        <script type="module">
+            import { newUrl1 } from './playVideos.js';
+        </script>
+
+    </body>
+</html>
