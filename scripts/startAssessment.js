@@ -5,6 +5,7 @@ Date: Spring 2023
 */
 
 import {cookieParse, setCookie} from './cookieManagement.js';
+import {generateRandomCombinations} from './orderManagement.js';
 
 // Before the user begins the assessment, check to make sure the parameters are appropriately set.
 window.validateStartAssessment = function validateStartAssessment(){
@@ -26,11 +27,14 @@ window.validateStartAssessment = function validateStartAssessment(){
 window.startAssessment = function startAssessment(){
     let selection = document.querySelectorAll("input[name=video-entry]:checked"); // Get all selected videos.
     let values = [];
-    selection.forEach(element => values.push(element.value)); // Put each selected video's URL into a new array.
+    selection.forEach(element => values.push(element.value)); // Put each selected index into a new array.
 
-    setCookie("selection",JSON.stringify(values),5); // Put the array of URLs into a cookie. 5 days until expiry.
+    let combinations = generateRandomCombinations(values);
+    console.log(combinations[0]);
 
-    let orientation = document.getElementById("start-assessment")["video-location"].value;
+    setCookie("selection",JSON.stringify(combinations),5); // Put the array of URLs into a cookie. 5 days until expiry.
+    setCookie("orientation",document.getElementById("start-assessment")["video-location"].value) // Put the user's desired orientation into a cookie.
+    setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value) // Put the user's desired playback type into a cookie.
+
     window.location.href = "./assessment.html";
-    
 }

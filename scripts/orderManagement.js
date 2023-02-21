@@ -22,14 +22,11 @@ function generateCombinations(videos) {
       pairs.push(pair);
     }
   }
-
   return pairs;
 }
-  
-// example usage
-const videos = ["video1", "video2", "video3", "video4", "video5"];
-const pairs = generateCombinations(videos);
-const shuffledPairs = shuffle(pairs);
 
-// example output
-console.log(shuffledPairs);
+function generateRandomCombinations(videos) {
+    return shuffle(generateCombinations(videos));
+}
+
+export {generateRandomCombinations};
