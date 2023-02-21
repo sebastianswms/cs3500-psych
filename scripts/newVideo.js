@@ -34,6 +34,7 @@ window.storeNewVideo = function storeNewVideo(){
     // Get the current cookies corresponding to the user's videos as an array.
     let titles = cookieParse("titles");
     let videos = cookieParse("videos");
+    let option = cookieParse("option");
 
     // Add a new entry to the array of video titles and set the user's cookies accordingly.
     titles.push(video_title);

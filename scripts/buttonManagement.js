@@ -13,16 +13,14 @@ var timeoutLength = getCookie("timeout")*1000;
 
 window.selectOption1 = function selectOption1(){
     let option = cookieParse("option");
-    option.push(cookieParse("selection")[index][0]);
-    console.log(cookieParse("selection")[index][0]);
+    option[cookieParse("combination")[index][0]]++;
     setCookie("option",JSON.stringify(option),5); // 5 days until expiry.
     resetButtons();
 }
 
 window.selectOption2 = function selectOption2(){
     let option = cookieParse("option");
-    option.push(cookieParse("selection")[index][1]);
-    console.log(cookieParse("selection")[index][1]);
+    option[cookieParse("combination")[index][1]]++;
     setCookie("option",JSON.stringify(option),5); // 5 days until expiry.
     resetButtons();
 }
@@ -41,12 +39,10 @@ window.resetButtons = function resetButtons(){
 
 window.fillButtons = function fillButtons(){
 
-    let selection = cookieParse("selection");
+    let combination = cookieParse("combination");
     let videos = cookieParse("videos");
 
-    console.log(index);
-    console.log(selection.length);
-    if(index >= selection.length){
+    if(index >= combination.length){
         window.location.href = "./decision.html";
         return;
     }
@@ -60,9 +56,9 @@ window.fillButtons = function fillButtons(){
     let image1 = document.createElement("img");
     let image2 = document.createElement("img");
 
-    image1.src = "https://i.ytimg.com/vi/" + videos[selection[index][0]] + "/maxresdefault.jpg";
-    image2.src = "https://i.ytimg.com/vi/" + videos[selection[index][1]] + "/maxresdefault.jpg";
-// "https://www.youtube.com/embed/" + cookieParse("videos")[cookieParse("selection")[index][0]] + "?autoplay=1&mute=1&enablejsapi=1";
+    image1.src = "https://i.ytimg.com/vi/" + videos[combination[index][0]] + "/maxresdefault.jpg";
+    image2.src = "https://i.ytimg.com/vi/" + videos[combination[index][1]] + "/maxresdefault.jpg";
+// "https://www.youtube.com/embed/" + cookieParse("videos")[cookieParse("combination")[index][0]] + "?autoplay=1&mute=1&enablejsapi=1";
     option1.appendChild(image1);
     option2.appendChild(image2);
 }
