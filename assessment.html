@@ -83,16 +83,16 @@
         </style>
         <script src="scripts/buttonManagement.js" type="module"></script>
     </head>
-    <body onload="resetButtons()">
+    <body onload="initializeButtons()">
         
         <main>
             <!-- Video Players -->
             <div class="row">
                 <div class="column">
-                    <button type="button" id="option1"></button>
+                    <button type="button" id="option1" onclick="selectOption1()"></button>
                 </div>
                 <div class="column">
-                    <button type="button" id="option2"></button>
+                    <button type="button" id="option2" onclick="selectOption2()"></button>
                 </div>
             </div>
         </main>
