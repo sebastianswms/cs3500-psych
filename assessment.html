@@ -81,10 +81,9 @@
             }
 
         </style>
-        <script src="scripts/modalManager.js" type="module"></script>
-        <script src="scripts/buttonList.js" type="module"></script>
+        <script src="scripts/buttonManagement.js" type="module"></script>
     </head>
-    <body onload="fillButtons()">
+    <body onload="resetButtons()">
         
         <main>
             <!-- Video Players -->
@@ -94,15 +93,6 @@
                 </div>
                 <div class="column">
                     <button type="button" id="option2"></button>
-                </div>
-            </div>
-
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <button type="button">
-                        <iframe width="560" height="315" id="modal-video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </button>
                 </div>
             </div>
         </main>

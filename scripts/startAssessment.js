@@ -35,6 +35,7 @@ window.startAssessment = function startAssessment(){
     setCookie("selection",JSON.stringify(combinations),5); // Put the array of URLs into a cookie. 5 days until expiry.
     setCookie("orientation",document.getElementById("start-assessment")["video-location"].value) // Put the user's desired orientation into a cookie.
     setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value) // Put the user's desired playback type into a cookie.
+    setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value) // Put the user's desired idle timout into a cookie.
 
     window.location.href = "./assessment.html";
 }
