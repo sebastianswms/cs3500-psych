@@ -11,9 +11,6 @@ var total = option.reduce((i,j) => i+j, 0) // The total number of selections for
 selection.forEach(element => label.push(titles[element])); // Put each title into a new array.
 option.forEach(element => percent.push(element*100/total));
 
-console.log(label);
-console.log(option);
-
 const myChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -66,7 +63,7 @@ const myChart = new Chart(ctx, {
 
 
 // this function is to enable the button to download the graph as png
-function downloadChart() {
+window.downloadChart = function downloadChart() {
   const canvas = document.getElementById('myChart');
   const downloadLink = document.createElement('a');
   downloadLink.href = canvas.toDataURL('image/png');
