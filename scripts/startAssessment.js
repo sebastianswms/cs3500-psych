@@ -29,14 +29,16 @@ window.startAssessment = function startAssessment(){
     let values = [];
     selection.forEach(element => values.push(element.value)); // Put each selected index into a new array.
 
-    let combinations = generateRandomCombinations(values);
+    // Array.from(Array(10).keys()) from: https://stackoverflow.com/q/3746725
+    let combinations = generateRandomCombinations(Array.from(Array(values.length).keys()));
 
     setCookie("selection", JSON.stringify(values),5) // Ordered list of video IDs.
     setCookie("option", JSON.stringify(Array(values.length)),5) // Empty array for containing how many times an option was chosen.
+    console.log(cookieParse("option"));
     setCookie("combination",JSON.stringify(combinations),5); // Randomized combinations of video IDs.
-    setCookie("orientation",document.getElementById("start-assessment")["video-location"].value) // Put the user's desired orientation into a cookie.
-    setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value) // Put the user's desired playback type into a cookie.
-    setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value) // Put the user's desired idle timout into a cookie.
+    setCookie("orientation",document.getElementById("start-assessment")["video-location"].value, 5) // Put the user's desired orientation into a cookie.
+    setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value, 5) // Put the user's desired playback type into a cookie.
+    setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value, 5) // Put the user's desired idle timout into a cookie.
 
     window.location.href = "./assessment.html";
 }

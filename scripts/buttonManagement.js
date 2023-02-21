@@ -40,6 +40,7 @@ window.resetButtons = function resetButtons(){
 window.fillButtons = function fillButtons(){
 
     let combination = cookieParse("combination");
+    let selection = cookieParse("selection");
     let videos = cookieParse("videos");
 
     if(index >= combination.length){
@@ -56,9 +57,9 @@ window.fillButtons = function fillButtons(){
     let image1 = document.createElement("img");
     let image2 = document.createElement("img");
 
-    image1.src = "https://i.ytimg.com/vi/" + videos[combination[index][0]] + "/maxresdefault.jpg";
-    image2.src = "https://i.ytimg.com/vi/" + videos[combination[index][1]] + "/maxresdefault.jpg";
-// "https://www.youtube.com/embed/" + cookieParse("videos")[cookieParse("combination")[index][0]] + "?autoplay=1&mute=1&enablejsapi=1";
+    image1.src = "https://i.ytimg.com/vi/" + videos[selection[combination[index][0]]] + "/maxresdefault.jpg";
+    image2.src = "https://i.ytimg.com/vi/" + videos[selection[combination[index][1]]] + "/maxresdefault.jpg";
+// "https://www.youtube.com/embed/" + cookieParse("videos")[cookieParse("selection")[cookieParse("combination")[index][0]]] + "?autoplay=1&mute=1&enablejsapi=1";
     option1.appendChild(image1);
     option2.appendChild(image2);
 }
