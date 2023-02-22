@@ -1,6 +1,6 @@
 /* General */
 body {
-    background-color: #d1e4f9;
+    background-color: #d5e1ed;
   }
   
 footer {
@@ -23,30 +23,30 @@ footer {
   
 
 /* Index page*/
-body.index, html {
-    margin: 0;
-    padding: 0;
+
+body, html{ /* CSS Reset */
+    margin:0;
+    padding:0;
   }
-  
   section {
-    padding: 10px;
+  padding: 10x
   }
   
-  /* For horizontally adjacent divs. */
-  .inline {
-    display: inline-block;
+  body {
+
   }
-  
+  input[type=submit] {
+  margin: 10px 0px;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;}
 
   
-  input[type=submit] {
-    margin: 10px 0;
-    padding: 10px;
-    text-align: center;
-    display: block;
-    font-size: 16px;
-    width: 100%;
-  }
+
+
+  
   
 /* Assessment page*/
 

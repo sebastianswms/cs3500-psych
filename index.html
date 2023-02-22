@@ -20,61 +20,66 @@ Date: Spring 2023
     
 </head>
 
-<body class="index" onload="fillVideoList()">
+<body onload="fillVideoList()">
 <header>
     <h1>Paired Preference Assessment Tool for Videos</h1>
 </header>
 
 <main>
-    <div class="inline" style="width: 67%">
-        <section> <!-- Instructions -->
-            <h2>Instructions</h2>
-            <p> <!-- TODO: Replace lorem ipsum with actual instructions -->
-                Repellat id vel id sint quis architecto non consequatur. Atque reprehenderit dolores aut doloremque qui et. Qui eligendi sunt rerum error autem. Repellat nihil neque debitis maxime. Ea beatae voluptas porro nobis magnam. Expedita dicta magni explicabo.<br><br>
-                Est voluptas occaecati itaque id consectetur. Et nihil iste id consectetur fugit. Autem ad nisi molestiae rerum.<br><br>
-                Quidem doloribus qui consequatur quos minus. Deleniti tenetur perferendis ipsum ex eius omnis rerum consequuntur. Ipsam id fuga assumenda eos. Ullam enim inventore occaecati natus consectetur voluptates. Totam aliquam a nulla dignissimos qui necessitatibus.<br><br>
-                Veritatis explicabo sit quia nulla consequatur illum qui qui. Earum quia sunt et in necessitatibus quos ratione quia. Expedita eligendi maiores sed suscipit dolor unde aut. Libero non accusamus rerum et tenetur ut. Molestiae sunt ea adipisci. Atque delectus at qui veritatis numquam.<br><br>
-                Nesciunt non animi quos officiis minima quibusdam delectus ex. Aperiam facilis dolorem temporibus. Incidunt quia non repudiandae non possimus molestias.<br><br>
-            </p>
-        </section>
-        <div> <!-- Parameters and Add Video -->
-            <section class="inline" style="width: 50%"> <!-- Parameters -->
-                <h2>Parameters</h2>
-                <label>Time to Selection: </label> <!-- 1st Parameter (number range) -->
-                <input type="number" min="3" max="90" name="time-to-selection" value="15" form="start-assessment"/>
-                <br><br>
-                <label>Video Location: </label><select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
-                    <option value="horizontal">Horizontal</option>
-                    <option value="vertical">Vertical</option>
-                </select>
-                <br><br>
-                <label>Video Presentation: </label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
-                    <option value="video">Video Playback</option>
-                    <option value="still">Still Images</option>
-                </select>
+    <div class="row">
+        <div class="col-md-8"> <!-- Instructions -->
+            <section id="instructions">
+                <h2>Instructions</h2>
+                <p> <!-- TODO: Replace lorem ipsum with actual instructions -->
+                    Repellat id vel id sint quis architecto non consequatur. Atque reprehenderit dolores aut doloremque qui et. Qui eligendi sunt rerum error autem. Repellat nihil neque debitis maxime. Ea beatae voluptas porro nobis magnam. Expedita dicta magni explicabo.<br><br>
+                    Est voluptas occaecati itaque id consectetur. Et nihil iste id consectetur fugit. Autem ad nisi molestiae rerum.<br><br>
+                    Quidem doloribus qui consequatur quos minus. Deleniti tenetur perferendis ipsum ex eius omnis rerum consequuntur. Ipsam id fuga assumenda eos. Ullam enim inventore occaecati natus consectetur voluptates. Totam aliquam a nulla dignissimos qui necessitatibus.<br><br>
+                    Veritatis explicabo sit quia nulla consequatur illum qui qui. Earum quia sunt et in necessitatibus quos ratione quia. Expedita eligendi maiores sed suscipit dolor unde aut. Libero non accusamus rerum et tenetur ut. Molestiae sunt ea adipisci. Atque delectus at qui veritatis numquam.<br><br>
+                    Nesciunt non animi quos officiis minima quibusdam delectus ex. Aperiam facilis dolorem temporibus. Incidunt quia non repudiandae non possimus molestias.<br><br>
+                </p>
             </section>
-            <section class="inline" style="width: 50%; float: right;"> <!-- Add New Videos -->
-                <h2>Add New Videos</h2>
-                <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
-                    <label>Title: </label><input type="text" name="video-title" size="45">
-                    <br><br>
-                    <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
-                    <label>URL: </label><input type="text" name="video-url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
-                    <br><br>
-                    <input type="submit" value="Add Video">
-                </form>
+            
+        </div>
+        <div class="col-md-4"> <!-- Video Bank -->
+            <section id="video-bank">
+                <h2>Video Bank</h2>
+                <form id="start-assessment" action="javascript:startAssessment();" onsubmit="return validateStartAssessment()" method="post"></form>
             </section>
+            <section id="start-button"> <!-- Start Button -->
+                <input type="submit" form="start-assessment" value="Start Test">
+            </section>
+            
         </div>
     </div>
-    <div class="inline" style="width: 33%; float: right;">
-        <section> <!-- Video Bank -->
-            <h2>Video Bank</h2>
-            <form id="start-assessment" action="javascript:startAssessment();" onsubmit="return validateStartAssessment()" method="post"></form>
-        </section>
-        <section> <!-- Start Button -->
-            <input type="submit" form="start-assessment" value="Start Test">
-        </section>
-    </div>
+<div class="row">
+    <section class="col-md-4"> <!-- Parameters -->
+        <h2>Parameters</h2>
+        <label>Time to Selection: </label> <!-- 1st Parameter (number range) -->
+        <input type="number" min="3" max="90" name="time-to-selection" value="15" form="start-assessment"/>
+        <br><br>
+        <label>Video Location: </label><select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+        </select>
+        <br><br>
+        <label>Video Presentation: </label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
+            <option value="video">Video Playback</option>
+            <option value="still">Still Images</option>
+        </select>
+    </section>
+    <section class="col-md-4"> <!-- Add New Videos -->
+        <h2>Add New Videos</h2>
+        <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
+            <label>Title: </label><input type="text" name="video-title" size="45">
+            <br><br>
+            <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
+            <label>URL: </label><input type="text" name="video-url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
+            <br><br>
+            <input type="submit" value="Add Video">
+        </form>
+    </section>
+</div>
+
 </main>
 
 <footer>
