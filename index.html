@@ -10,40 +10,17 @@ Date: Spring 2023
 <head>
     <meta charset="utf-8">
     <title>Index</title>
-
-    <!-- Temporary css. All of this (and the inline stuff below) will be relocated later once we start using Bootstrap -->
-    <!-- TODO: Move to external CSS file. -->
-    <style>
-    body, html{ /* CSS Reset */
-    margin:0;
-    padding:0;
-  }
-  section {
-  padding: 10x
-  }
-  .inline { /* For horizontally adjacent divs. */
-  display: inline-block;
-  }
-  body {
-  margin:10px;
-  padding:10px
-  }
-  input[type=submit] {
-  margin: 10px 0px;
-  padding: 10px 10px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  width: 100%;
-}
-    </style>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <script src="scripts/newVideo.js" type="module"></script>
     <script src="scripts/videoList.js" type="module"></script>
     <script src="scripts/startAssessment.js" type="module"></script>
-
+    
 </head>
-<body onload="fillVideoList()">
+
+<body class="index" onload="fillVideoList()">
 <header>
     <h1>Paired Preference Assessment Tool for Videos</h1>
 </header>
