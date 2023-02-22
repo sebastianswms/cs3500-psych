@@ -4,12 +4,9 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Graph and Results</title>
-
-        <!-- remove this link if you give a new style for the page -->
-        <link rel="stylesheet" href="css/resultStyling.css">
-
+        <script src="scripts/tableBuilder.js" type="module"></script>
     </head>
-    <body>
+    <body onload="fillTable()">
         <!-- this section for result and graph -->
         <section id="first-sec">
             <div class="res">
@@ -22,27 +19,7 @@
                     <div class="assess-title">
                         <h2>Assessment Outcomes</h2>
                     </div>
-                    <table class="video-table">
-                        <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
-                        </tr>
-                        <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
-                        </tr>
-                        <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
-                        </tr>
-                        <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
-                        </tr>
-                        <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
-                        </tr>
+                    <table class="video-table" id="video-table">
                     </table>
                     <div class="duration">
                         <label>Duration of Assessment:</label>
@@ -62,7 +39,7 @@
                     <canvas id="myChart"></canvas>
 
                     <!-- link form the js file for graph -->
-                    <script src="scripts/graph-builder.js"></script>
+                    <script src="scripts/graphBuilder.js" type="module"></script>
                 </div>
             </div>
         </section>

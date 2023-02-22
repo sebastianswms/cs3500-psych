@@ -13,7 +13,7 @@ window.validateNewVideo = function validateNewVideo(){
     alert("Please enter a YouTube URL.")
     return false;
     }
-    let url_pattern = /^(https?\:\/\/)?((www\.)?youtube\.com|youtu\.be)\/.+$/i // Source: https://stackoverflow.com/q/19377262
+    let url_pattern = /(?:https?\:\/\/)(?:www\.)?(?:(?:youtube\.com\/watch\?v=)|(?:youtu\.be\/))([\w-]+)&?.*/i // Source: modified starting from https://stackoverflow.com/q/19377262
     if (!video_url.match(url_pattern)) { // If the URL isn't in an appropriate format, tell the the user as much.
         alert("Invalid URL.");
         return false;
@@ -34,13 +34,16 @@ window.storeNewVideo = function storeNewVideo(){
     // Get the current cookies corresponding to the user's videos as an array.
     let titles = cookieParse("titles");
     let videos = cookieParse("videos");
+    let option = cookieParse("option");
 
     // Add a new entry to the array of video titles and set the user's cookies accordingly.
     titles.push(video_title);
     setCookie("titles",JSON.stringify(titles),5); // 5 days until expiry.
 
-    // Add a new entry to the array of video urls and set the user's cookies accordingly.
-    videos.push(video_url);
+    let url_pattern = /(?:https?\:\/\/)(?:www\.)?(?:(?:youtube\.com\/watch\?v=)|(?:youtu\.be\/))([\w-]+)&?.*/i // Source: modified starting from https://stackoverflow.com/q/19377262
+
+    // Add a new entry to the array of video ids and set the user's cookies accordingly.
+    videos.push(video_url.match(url_pattern)[1]);
     setCookie("videos",JSON.stringify(videos),5); // 5 days until expiry.
 
     fillVideoList(); // Update the video bank with the video that was just added.

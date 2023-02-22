@@ -12,7 +12,6 @@ window.fillVideoList = function fillVideoList() {
     // Find the correct HTML element to modify and get the user's cookie list of video titles.
     let form = document.getElementById("start-assessment");
     let titles = cookieParse("titles");
-    let videos = cookieParse("videos");
 
     // Reset the form so it can be regenerated from scratch.
     form.innerHTML = "";
@@ -31,7 +30,7 @@ window.fillVideoList = function fillVideoList() {
         box.type = "checkbox";
         box.id = "video" + i;
         box.name = "video-entry";
-        box.value = videos[i];
+        box.value = i;
 
         // Set the label to reference the appropriate checkbox and show the user the name they entered previously.
         label.htmlFor = "video" + i;

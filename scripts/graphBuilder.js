@@ -1,12 +1,24 @@
+import {cookieParse} from './cookieManagement.js';
+
 const ctx = document.getElementById('myChart');
+
+const selection = cookieParse("selection"); // Get all selected videos.
+const titles = cookieParse("titles");
+const option = cookieParse("option"); // Get counts for how many times each option has been chosen.
+var label = [];
+var percent = [];
+var total = option.reduce((i,j) => i+j, 0) // The total number of selections for all options.
+selection.forEach(element => label.push(titles[element])); // Put each title into a new array.
+option.forEach(element => percent.push(element*100/total));
+
 const myChart = new Chart(ctx, {
   type: 'bar',
   data: {
     // The video names come here for video labels
-    labels: ['video 1', 'video 2', 'video 3', 'video 4'],
+    labels: label,
     datasets: [{
       // we can get the data from any variable for this one
-      data: [23, 90, 44, 55],
+      data: percent,
       backgroundColor: "#4082c4",
       },
     ],
@@ -50,8 +62,8 @@ const myChart = new Chart(ctx, {
 });
 
 
-// this funciton is to enable the button to download the graph as png 
-function downloadChart() {
+// this function is to enable the button to download the graph as png
+window.downloadChart = function downloadChart() {
   const canvas = document.getElementById('myChart');
   const downloadLink = document.createElement('a');
   downloadLink.href = canvas.toDataURL('image/png');
