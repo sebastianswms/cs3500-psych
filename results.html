@@ -23,36 +23,77 @@
                         <h2>Assessment Outcomes</h2>
                     </div>
                     <table class="video-table">
+                        <!-- added id for each data that we need to get from js file -->
+                        <!-- made each row as 4 columns to get the max number of videos -->
+                        <!-- and added id for each percentage data -->
                         <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
+                            <td id="dt-1"></td>
+                            <td>%</td>
+                            <td id="video1">[Name of Video]</td>
+                            <td></td>
+                            <td></td>
+                            <td id="dt-2"></td>
+                            <td>%</td>
+                            <td id="video2">[Name of Video]</td>
                         </tr>
                         <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
+                            <td id="dt-3"></td>
+                            <td>%</td>
+                            <td id="video3">[Name of Video]</td>
+                            <td></td>
+                            <td></td>
+                            <td id="dt-4"></td>
+                            <td>%</td>
+                            <td id="video4">[Name of Video]</td>
                         </tr>
                         <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
+                            <td id="dt-5"></td>
+                            <td>%</td>
+                            <td id="video5">[Name of Video]</td>
+                            <td></td>
+                            <td></td>
+                            <td id="dt-6"></td>
+                            <td>%</td>
+                            <td id="video6">[Name of Video]</td>
                         </tr>
                         <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
+                            <td id="dt-7"></td>
+                            <td>%</td>
+                            <td id="video7">[Name of Video]</td>
+                            <td></td>
+                            <td></td>
+                            <td id="dt-8"></td>
+                            <td>%</td>
+                            <td id="video8">[Name of Video]</td>
                         </tr>
                         <tr>
-                            <td>00%</td>
-                            <td>[Name of Video]</td>
+                            <td id="dt-9"></td>
+                            <td>%</td>
+                            <td id="video9">[Name of Video]</td>
+                            <td></td>
+                            <td></td>
+                            <td id="dt-10"></td>
+                            <td>%</td>
+                            <td id="video10">[Name of Video]</td>
                         </tr>
                     </table>
                     <div class="duration">
-                        <label>Duration of Assessment:</label>
-                        <label>00 Sec</label>
-                        <!-- Data here  -->
-                        <br><br>
-                        <label>Selection to left/top option: %</label>
-                        <!-- Data here  -->
                         <br>
-                        <label>Selection to right/bottom option: %</label>
+                        <label>Duration of Assessment:</label>
+                        <!-- added an id for this label to get the time from js file 
+                            and replace the 00-->
+                        <label id="dur-assess">00</label>
+                        <label>Sec</label>
+                        <br><br>
+                        <label>Selection to left/top option: </label>
+                        <label>%</label>
+                        <!-- added an id for this label to get selection option form js file -->
+                        <lable id="left-top"></lable>
+                        <br>
+                        <label>Selection to right/bottom option:</label>
+                        <label>%</label>
+                        <!-- added an id for this label to get selection option form js file -->
+                        <label id="right-bottom"></label>
                     </div>
                 </div>
                 <div class="col graph-sec">
@@ -62,7 +103,7 @@
                     <canvas id="myChart"></canvas>
 
                     <!-- link form the js file for graph -->
-                    <script src="scripts/graph-builder.js"></script>
+                    <script src="scripts/graphBuilder.js"></script>
                 </div>
             </div>
         </section>
