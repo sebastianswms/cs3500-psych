@@ -4,12 +4,14 @@
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Graph and Results</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script src="scripts/tableBuilder.js" type="module"></script>
     </head>
-    <body onload="fillTable()">
+    <body class="results" onload="fillTable()">
         <!-- this section for result and graph -->
         <section id="first-sec">
-            <div class="res">
+            <div class="jumbotron-title">
                 <h1>Results</h1>
             </div>
         </section>
@@ -26,10 +28,10 @@
                         <label>00 Sec</label>
                         <!-- Data here  -->
                         <br><br>
-                        <label>Selection to left/top option: %</label>
+                        <label>Left/top preference: 00%</label>
                         <!-- Data here  -->
                         <br>
-                        <label>Selection to right/bottom option: %</label>
+                        <label>Right/bottom preference: 00%</label>
                     </div>
                 </div>
                 <div class="col graph-sec">
@@ -61,4 +63,7 @@
            </div>
         </section>
     </body>
+    <footer>
+        <p><em>A website for Dr. Curiel.</em></p> <!-- TODO: Copyright? -->
+    </footer>
 </html>

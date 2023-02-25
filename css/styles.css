@@ -1,0 +1,234 @@
+/* General Styling*/
+
+
+header {
+    margin-left: 5%;
+    margin-bottom: 25px;
+  }
+
+body {
+    background-color: #d5e1ed;
+  }
+
+footer {
+    background-color: rgb(26, 49, 71);
+    color: white;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    position: absolute;
+    right: 50px;
+    bottom: 20%;
+    margin: 0;
+    font-family: "Garamond", serif;
+    font-style: italic;
+  }
+  
+
+/* Index page*/
+
+h2 {
+    margin-bottom: 30px;
+}
+
+#index {
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+  }
+
+#instructions {
+    margin-bottom: 25px;
+}
+
+#video-box {
+  border: 1px  rgb(238, 238, 238);
+  border-radius: 20px;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+}
+
+#video-bank {
+  margin-left: 5%;
+  margin-bottom: 35px;
+}
+
+
+@media (max-width: 767px) {
+    #video-bank .col-6 {
+        width: 100%;
+    }
+}
+
+#start-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+#parameters {
+    margin-bottom: 35px;
+}
+
+#new-video {
+    margin-bottom: 125px;
+}
+  
+/* Assessment page*/
+
+/* Decision page*/
+.jumbotron-title {
+    padding: 50px;
+    background-color: #a2afbd;
+    text-align: center;
+    color: #0b0c0e;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.decision-buttons {
+    text-align: center;
+  }
+  
+.btn-result, .btn-over {
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 20px 40px;
+    margin-top: 100px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    
+  }
+  
+  .btn-result {
+    background-color: #28a745;
+    border-color: #000100;
+    color: #fff;
+  }
+  
+  .btn-over {
+    background-color: black;
+    border-color: #020302;
+    color: #fff;
+  }
+
+  .btn-result:hover {
+    background-color:#3bce5d;
+    border-color: inherit;
+    color: #fff;
+  }
+
+  .btn-over:hover {
+    background-color: #271baf;
+    border-color: inherit;
+    color: #fff;
+  }
+/* Results page*/
+
+
+#first-sec {
+    margin: 10px auto;
+    font-size: 60vmin;
+    letter-spacing: 5px;
+}
+
+/* all section styling */
+.results section {
+    width: 80%;
+    margin: 20px auto;
+}
+
+
+/* style for Result text title */
+.results .res {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    color: black;
+}
+
+/* graph and outcomes section as a row */
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.results .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.results .col {
+  margin: 10px;
+  width: 450px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(68, 94, 118);
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
+}
+
+.results .col > * {
+  flex: 1;
+}
+
+
+
+.video-table {
+    margin: auto 35px auto;
+    font-size: 2.5vmin;
+    font-family: Garamond, "Times New Roman", Times, serif;
+}
+
+.duration {
+    margin: 20px;
+    font-size: 2.5vmin;
+    font-family: Garamond, "Times New Roman", Times, serif;
+}
+
+/* assessment and graph text */
+.results .assess-title h2, .graph-text {
+    font-size: 4vmin;
+    font-family: Garamond, "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+
+/* buttons  */
+.btn-div {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 150px;
+}
+
+.b-main {
+    margin-right: 75px;
+    border-radius: 10px;
+    background-color: #28a745;
+    border-color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.b-save {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border-color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}

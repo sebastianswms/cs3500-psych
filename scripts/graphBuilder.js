@@ -9,7 +9,7 @@ var label = [];
 var percent = [];
 var total = option.reduce((i,j) => i+j, 0) // The total number of selections for all options.
 selection.forEach(element => label.push(titles[element])); // Put each title into a new array.
-option.forEach(element => percent.push(element*100/total));
+option.forEach(element => percent.push(Math.round(element*100/total)));
 
 const myChart = new Chart(ctx, {
   type: 'bar',
@@ -19,7 +19,7 @@ const myChart = new Chart(ctx, {
     datasets: [{
       // we can get the data from any variable for this one
       data: percent,
-      backgroundColor: "#4082c4",
+      backgroundColor: "#000000",
       },
     ],
   },
