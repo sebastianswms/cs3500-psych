@@ -187,14 +187,24 @@ h2 {
 
 .b-main {
     margin-right: 75px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #28a745;
     border-color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
 }
 
 .b-save {
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: black;
     color: white;
     border-color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
 }
