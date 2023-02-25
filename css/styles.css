@@ -77,6 +77,36 @@ h2 {
 /* Assessment page*/
 
 /* Decision page*/
+.jumbotron-title {
+    padding: 50px;
+    background-color: #f8f9fa;
+    text-align: center;
+    color: #074588;
+}
+
+.decision-buttons {
+    text-align: center;
+  }
+  
+  .btn-result, .btn-over {
+    font-size: 2rem;
+    padding: 20px 40px;
+    margin-top: 100px;
+    
+  }
+  
+  .btn-result {
+    background-color: #28a745;
+    border-color: #000100;
+    color: #fff;
+  }
+  
+  .btn-over {
+    background-color: #181164;
+    border-color: #020302;
+    color: #fff;
+  }
+
 
 /* Results page*/
 
@@ -213,3 +243,4 @@ h2 {
         height: 300px;
     }
 }
+
