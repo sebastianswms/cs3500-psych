@@ -34,7 +34,6 @@ window.startAssessment = function startAssessment(){
 
     setCookie("selection", JSON.stringify(values),5) // Ordered list of video IDs.
     setCookie("option", JSON.stringify(Array(values.length)),5) // Empty array for containing how many times an option was chosen.
-    console.log(cookieParse("option"));
     setCookie("combination",JSON.stringify(combinations),5); // Randomized combinations of video IDs.
     setCookie("orientation",document.getElementById("start-assessment")["video-location"].value, 5) // Put the user's desired orientation into a cookie.
     setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value, 5) // Put the user's desired playback type into a cookie.
