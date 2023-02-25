@@ -1,4 +1,4 @@
-/* General */
+/* General Styling*/
 
 
 header {
@@ -108,16 +108,13 @@ h2 {
 
 /* Results page*/
 
-.results body.decision {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #34788c
-}
 
-.results #first-sec {
-    margin: 80px auto 0px auto;
-    font-size: 4vmin;
+#first-sec {
+    margin: 100px auto;
+    font-size: 60vmin;
     letter-spacing: 5px;
 }
+
 /* all section styling */
 .results section {
     width: 80%;
@@ -131,114 +128,73 @@ h2 {
     align-items: center;
     width: 100%;
     justify-content: center;
-    color: whitesmoke;
+    color: black;
 }
 
 /* graph and outcomes section as a row */
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .results .row {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.results .res-sec {
-    align-items: center;
+.results .col {
+  margin: 10px;
+  width: 450px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(68, 94, 118);
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
 }
 
-.results .row .col {
-    margin: 10px;
-    width: 450px;
-    height: 350px;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: rgb(179, 179, 179);
-    background-color: rgb(233, 233, 233);
+.results .col > * {
+  flex: 1;
 }
 
 
-.results .video-table {
+
+.video-table {
     margin: auto 40px auto;
+    font-size: 1.75vmin;
+    font-family: Garamond, "Times New Roman", Times, serif;
 }
 
-.results .duration {
-    margin: auto 0px auto 30px;
+.duration {
+    margin: 30px;
+    font-size: 1.75vmin;
+    font-family: Garamond, "Times New Roman", Times, serif;
 }
 
 /* assessment and graph text */
 .results .assess-title h2, .graph-text {
     font-size: 4vmin;
+    font-family: Garamond, "Times New Roman", Times, serif;
     text-align: center;
 }
 
 /* buttons  */
-.results .btn-div {
+.btn-div {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: auto;
+    justify-content: flex-end;
 }
 
-.results .b {
-    height: 40px;
-    width: 200px;
-    cursor: pointer;
-    border-radius: 15px;
-    border-width: 1px;
+.b-main {
+    margin-right: 75px;
+    border-radius: 5px;
+    background-color: #28a745;
+    border-color: black;
 }
-.results .b-main {
-    background-color: rgba(190, 22, 22, 0.898);
+
+.b-save {
+    border-radius: 5px;
+    background-color: black;
     color: white;
-    margin-left: 610px;
+    border-color: black;
 }
-.results .b-save {
-    margin-right: 120px;
-}
-.results .b-main:hover {
-    background-color: rgb(150, 0, 0);
-}
-.results .b-save:hover {
-    background-color: rgb(174, 176, 174)
-}
-.results #myChart {
-    background-color: none;
-}
-
-/* Responsive for smaller devices */
-@media only screen and (max-width: 850px){
-
-    .results .section  .row {
-        flex-direction: column;
-    }
-    
-    .results .row .col {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .results .b {
-        height: 30px;
-        width: 120px;
-        margin-top: auto;
-    }
-
-    .results .btn-div {
-        flex-direction: column;
-        align-items: center;
-    }
-    .results .b-main {
-        background-color: rgba(190, 22, 22, 0.898);
-        color: white;
-        margin: auto auto 10px auto;
-    }
-    .results .b-save {
-        margin: auto auto 80px auto;
-    }
-
-    .results .row .col {
-        height: 300px;
-    }
-}
-
