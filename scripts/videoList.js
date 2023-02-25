@@ -32,6 +32,9 @@ window.fillVideoList = function fillVideoList() {
         box.name = "video-entry";
         box.value = i;
 
+        // Add margin to the left of the label
+        label.style.marginLeft = "7px";
+
         // Set the label to reference the appropriate checkbox and show the user the name they entered previously.
         label.htmlFor = "video" + i;
         label.innerHTML = title;
