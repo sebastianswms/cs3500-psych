@@ -87,6 +87,7 @@ h2 {
   }
   
 .btn-result, .btn-over {
+    border-radius: 50px;
     font-size: 2rem;
     padding: 20px 40px;
     margin-top: 100px;
@@ -105,7 +106,17 @@ h2 {
     color: #fff;
   }
 
+  .btn-result:hover {
+    background-color:#3bce5d;
+    border-color: inherit;
+    color: #fff;
+  }
 
+  .btn-over:hover {
+    background-color: #271baf;
+    border-color: inherit;
+    color: #fff;
+  }
 /* Results page*/
 
 
@@ -178,9 +189,6 @@ h2 {
     font-family: Garamond, "Times New Roman", Times, serif;
     text-align: center;
 }
-
-/* graph formatting */
-
 
 
 /* buttons  */
