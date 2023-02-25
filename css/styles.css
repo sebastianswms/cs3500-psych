@@ -1,12 +1,19 @@
 /* General */
+
+
+header {
+    margin-left: 5%;
+    margin-bottom: 25px;
+  }
+
 body {
     background-color: #d5e1ed;
   }
-  
+
 footer {
     background-color: rgb(26, 49, 71);
     color: white;
-    padding: 40px;
+    height: 50px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -14,7 +21,7 @@ footer {
   
   footer p {
     position: absolute;
-    right: 100px;
+    right: 50px;
     bottom: 20%;
     margin: 0;
     font-family: "Garamond", serif;
@@ -24,28 +31,47 @@ footer {
 
 /* Index page*/
 
-body, html{ /* CSS Reset */
-    margin:0;
-    padding:0;
+h2 {
+    margin-bottom: 30px;
+}
+
+#index {
+
+    margin-left: 5%;
+    margin-right: 5%;
+
   }
-  section {
-  padding: 10x
+
+#instructions {
+    margin-bottom: 25px;
+}
+
+#video-bank {
+    margin-left: 5%;
+    margin-bottom: 35px;
+}
+
+@media (max-width: 767px) {
+    #video-bank .col-6 {
+        width: 100%;
+    }
+}
+
+#start-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
   }
+
+#parameters {
+    margin-bottom: 35px;
+}
+
+#new-video {
+    margin-bottom: 125px;
+}
+
   
-  body {
-
-  }
-  input[type=submit] {
-  margin: 10px 0px;
-  padding: 10px 10px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  width: 100%;}
-
-  
-
-
   
   
 /* Assessment page*/
@@ -54,25 +80,25 @@ body, html{ /* CSS Reset */
 
 /* Results page*/
 
-body.decision {
+.results body.decision {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #34788c
 }
 
-#first-sec {
+.results #first-sec {
     margin: 80px auto 0px auto;
     font-size: 4vmin;
     letter-spacing: 5px;
 }
 /* all section styling */
-section {
+.results section {
     width: 80%;
     margin: 20px auto;
 }
 
 
 /* style for Result text title */
-.res {
+.results .res {
     display: flex;
     align-items: center;
     width: 100%;
@@ -81,18 +107,18 @@ section {
 }
 
 /* graph and outcomes section as a row */
-.row {
+.results .row {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
 }
 
-.res-sec {
+.results .res-sec {
     align-items: center;
 }
 
-.row .col {
+.results .row .col {
     margin: 10px;
     width: 450px;
     height: 350px;
@@ -104,22 +130,22 @@ section {
 }
 
 
-.video-table {
+.results .video-table {
     margin: auto 40px auto;
 }
 
-.duration {
+.results .duration {
     margin: auto 0px auto 30px;
 }
 
 /* assessment and graph text */
-.assess-title h2, .graph-text {
+.results .assess-title h2, .graph-text {
     font-size: 4vmin;
     text-align: center;
 }
 
 /* buttons  */
-.btn-div {
+.results .btn-div {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -127,63 +153,63 @@ section {
     margin: auto;
 }
 
-.b {
+.results .b {
     height: 40px;
     width: 200px;
     cursor: pointer;
     border-radius: 15px;
     border-width: 1px;
 }
-.b-main {
+.results .b-main {
     background-color: rgba(190, 22, 22, 0.898);
     color: white;
     margin-left: 610px;
 }
-.b-save {
+.results .b-save {
     margin-right: 120px;
 }
-.b-main:hover {
+.results .b-main:hover {
     background-color: rgb(150, 0, 0);
 }
-.b-save:hover {
+.results .b-save:hover {
     background-color: rgb(174, 176, 174)
 }
-#myChart {
+.results #myChart {
     background-color: none;
 }
 
 /* Responsive for smaller devices */
 @media only screen and (max-width: 850px){
 
-    .section  .row {
+    .results .section  .row {
         flex-direction: column;
     }
     
-    .row .col {
+    .results .row .col {
         width: 90%;
         margin: 10px auto;
     }
 
-    .b {
+    .results .b {
         height: 30px;
         width: 120px;
         margin-top: auto;
     }
 
-    .btn-div {
+    .results .btn-div {
         flex-direction: column;
         align-items: center;
     }
-    .b-main {
+    .results .b-main {
         background-color: rgba(190, 22, 22, 0.898);
         color: white;
         margin: auto auto 10px auto;
     }
-    .b-save {
+    .results .b-save {
         margin: auto auto 80px auto;
     }
 
-    .row .col {
+    .results .row .col {
         height: 300px;
     }
 }

@@ -8,8 +8,8 @@ Date: Spring 2023
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Index</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSWO Assessment</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -25,9 +25,10 @@ Date: Spring 2023
     <h1>Paired Preference Assessment Tool for Videos</h1>
 </header>
 
-<main>
-    <div class="row">
-        <div class="col-md-8"> <!-- Instructions -->
+<main id="index">
+    <div class="row pt-4">
+        <!-- Instructions -->
+        <div class="col-sm-8" style="background-color: grey;"> 
             <section id="instructions">
                 <h2>Instructions</h2>
                 <p> <!-- TODO: Replace lorem ipsum with actual instructions -->
@@ -40,45 +41,48 @@ Date: Spring 2023
             </section>
             
         </div>
-        <div class="col-md-4"> <!-- Video Bank -->
+        <!-- Video Bank -->
+        <div class="col-sm-4" style="background-color: rgb(157, 240, 241);"> 
             <section id="video-bank">
                 <h2>Video Bank</h2>
                 <form id="start-assessment" action="javascript:startAssessment();" onsubmit="return validateStartAssessment()" method="post"></form>
             </section>
-            <section id="start-button"> <!-- Start Button -->
-                <input type="submit" form="start-assessment" value="Start Test">
+            <section id="start-button">
+                <input type="submit" form="start-assessment" value="Start Test" class="btn btn-dark text-light border-dark">
             </section>
             
         </div>
     </div>
-<div class="row">
-    <section class="col-md-4"> <!-- Parameters -->
-        <h2>Parameters</h2>
-        <label>Time to Selection: </label> <!-- 1st Parameter (number range) -->
-        <input type="number" min="3" max="90" name="time-to-selection" value="15" form="start-assessment"/>
-        <br><br>
-        <label>Video Location: </label><select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
-            <option value="horizontal">Horizontal</option>
-            <option value="vertical">Vertical</option>
-        </select>
-        <br><br>
-        <label>Video Presentation: </label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
-            <option value="video">Video Playback</option>
-            <option value="still">Still Images</option>
-        </select>
-    </section>
-    <section class="col-md-4"> <!-- Add New Videos -->
-        <h2>Add New Videos</h2>
-        <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
-            <label>Title: </label><input type="text" name="video-title" size="45">
+    <div class="row pt-3">
+        <!-- Parameters -->
+        <div id="parameters" class="col-sm-4" style="background-color: rgb(241, 175, 157);"> 
+             <h2>Parameters</h2>
+             <label>Time to Selection: </label> <!-- 1st Parameter (number range) -->
+              <input type="number" min="3" max="90" name="time-to-selection" value="15" form="start-assessment"/>
+             <br><br>
+             <label>Video Location: </label><select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
+                <option value="horizontal">Horizontal</option>
+                <option value="vertical">Vertical</option>
+            </select>
             <br><br>
-            <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
-            <label>URL: </label><input type="text" name="video-url" size="45" placeholder="https://www.youtube.com/watch?v=??????">
-            <br><br>
-            <input type="submit" value="Add Video">
-        </form>
-    </section>
-</div>
+            <label>Video Presentation: </label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
+                <option value="video">Video Playback</option>
+                <option value="still">Still Images</option>
+            </select>
+        </div>
+        <!-- Add New Videos -->
+        <div class="col-sm-4" style="background-color: rgb(133, 150, 96);"> 
+            <h2>Add New Videos</h2>
+            <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
+                <label>Title: </label><input type="text" name="video-title" size="30">
+                <br><br>
+                <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
+                <label>URL: </label><input type="text" name="video-url" size="30" placeholder="https://www.youtube.com/watch?v=??????">
+                <br><br>
+                <input type="submit" value="Add Video" class="btn btn-dark text-light border-dark">
+            </form>
+        </div>
+    </div>
 
 </main>
 
