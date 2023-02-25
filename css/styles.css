@@ -46,10 +46,19 @@ h2 {
     margin-bottom: 25px;
 }
 
-#video-bank {
-    margin-left: 5%;
-    margin-bottom: 35px;
+#video-box {
+  border: 1px  rgb(238, 238, 238);
+  border-radius: 20px;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 15px;
 }
+
+#video-bank {
+  margin-left: 5%;
+  margin-bottom: 35px;
+}
+
 
 @media (max-width: 767px) {
     #video-bank .col-6 {
@@ -71,15 +80,16 @@ h2 {
     margin-bottom: 125px;
 }
   
-  
 /* Assessment page*/
 
 /* Decision page*/
 .jumbotron-title {
     padding: 50px;
-    background-color: #f8f9fa;
+    background-color: #a2afbd;
     text-align: center;
-    color: #074588;
+    color: #0b0c0e;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .decision-buttons {
@@ -87,10 +97,11 @@ h2 {
   }
   
 .btn-result, .btn-over {
-    border-radius: 50px;
+    border-radius: 20px;
     font-size: 2rem;
     padding: 20px 40px;
     margin-top: 100px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
     
   }
   
@@ -101,7 +112,7 @@ h2 {
   }
   
   .btn-over {
-    background-color: #181164;
+    background-color: black;
     border-color: #020302;
     color: #fff;
   }
@@ -121,7 +132,7 @@ h2 {
 
 
 #first-sec {
-    margin: 100px auto;
+    margin: 10px auto;
     font-size: 60vmin;
     letter-spacing: 5px;
 }
@@ -172,14 +183,14 @@ h2 {
 
 
 .video-table {
-    margin: auto 40px auto;
-    font-size: 1.75vmin;
+    margin: auto 35px auto;
+    font-size: 2.5vmin;
     font-family: Garamond, "Times New Roman", Times, serif;
 }
 
 .duration {
-    margin: 30px;
-    font-size: 1.75vmin;
+    margin: 20px;
+    font-size: 2.5vmin;
     font-family: Garamond, "Times New Roman", Times, serif;
 }
 
@@ -195,6 +206,7 @@ h2 {
 .btn-div {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 150px;
 }
 
 .b-main {
