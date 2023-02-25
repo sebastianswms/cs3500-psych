@@ -8,7 +8,6 @@ import {cookieParse, getCookie, setCookie} from './cookieManagement.js';
 
 var idleTimeout;
 var index = 0;
-console.log(getCookie("timeout"));
 var timeoutLength = getCookie("timeout")*1000;
 
 window.selectOption1 = function selectOption1(){
