@@ -94,6 +94,34 @@ h2 {
   
 /* Assessment page*/
 
+.video-column {
+  float: left;
+  width: 50%;
+  position: relative;
+}
+
+.video-row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#option1, #option2 {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 200px;
+}
+
+.assessment-body div {
+  text-align: center;
+  margin-bottom: 20%;
+}
+
 /* Decision page*/
 .jumbotron-title {
     padding: 50px;
