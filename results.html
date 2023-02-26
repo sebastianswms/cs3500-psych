@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Graph and Results</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <script src="scripts/tableBuilder.js" type="module"></script>
-    </head>
-    <body class="results" onload="fillTable()">
-        <!-- this section for result and graph -->
-        <section id="first-sec">
-            <div class="jumbotron-title">
-                <h1>Results</h1>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph and Results</title>
+
+    <!-- External stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script src="scripts/tableBuilder.js" type="module"></script> <!-- Create the table of results from the assessment. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> <!-- Import the Chart.js library -->
+    <script src="scripts/graphBuilder.js" type="module"></script> <!-- Create the chart using data from cookies -->
+</head>
+
+<!-- When the page loads, fill the table from the results of the assessment. -->
+<body class="results" onload="fillTable()">
+
+<!-- Jumbotron at the top of the page announcing completion of the assessment to the user. -->
+<section id="first-sec">
+    <div class="jumbotron-title">
+        <h1>Results</h1>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col res-sec">
+            <div class="assess-title">
+                <h2>Assessment Outcomes</h2>
             </div>
-        </section>
-        <section class="section">
-            <div class="row">
-                <div class="col res-sec">
-                    <div class="assess-title">
-                        <h2>Assessment Outcomes</h2>
-                    </div>
-                    <table class="video-table" id="video-table">
-                    </table>
-                    <div class="duration">
-                        <label>Duration of Assessment:</label>
-                        <label>00 Sec</label>
-                        <!-- Data here  -->
-                        <br><br>
-                        <label>Left/top preference: 00%</label>
-                        <!-- Data here  -->
-                        <br>
-                        <label>Right/bottom preference: 00%</label>
-                    </div>
-                </div>
-                <div class="col graph-sec">
-                    <h1 class="graph-text">Graph</h1>
 
-                    <!-- the link from canvas, shows where we need the graph to be located -->
-                    <canvas id="myChart"></canvas>
+            <!-- Filled using tableBuilder.js with data from the user's cookies. -->
+            <table class="video-table" id="video-table">
+            </table>
 
-                    <!-- link form the js file for graph -->
-                    <script src="scripts/graphBuilder.js" type="module"></script>
-                </div>
+            <!-- This portion is currently not functional yet, but will eventually be filled with data from the user. -->
+            <div class="duration">
+                <label>Duration of Assessment:</label>
+                <label>WIP</label>
+                <br><br>
+                <label>Left/top preference: WIP</label>
+                <br>
+                <label>Right/bottom preference: WIP</label>
             </div>
-        </section>
 
-        <!-- this section for two buttons -->
-        <section>
-            <div class="btn-div">
-                <!-- this links to the main page-->
-                <a href="../index.html">
-                   <button class="b b-main" type="button">
-                       <span>MAIN PAGE</span>
-                   </button>
-               </a>
+        </div>
 
-               <!-- downloads the graph as png -->
-               <button class="b b-save" onclick="downloadChart()">
-                   <span>SAVE AS PNG</span>
-               </button>
-           </div>
-        </section>
-    </body>
-    <footer>
-        <p><em>A website for Dr. Curiel.</em></p>
-    </footer>
+        <!-- For styling the container of the chart -->
+        <div class="col graph-sec">
+            <h1 class="graph-text">Graph</h1>
+
+            <!-- A link from canvas which will be populated using Chart.js -->
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- Buttons for links to either restart the test or download the results. -->
+<section>
+    <div class="btn-div">
+
+        <!-- Restart the test from the beginning. -->
+        <a href="index.html">
+            <button class="b b-main" type="button">MAIN PAGE</button>
+        </a>
+
+        <!-- Download the graph as a PNG. -->
+        <button class="b b-save" onclick="downloadChart()">SAVE AS PNG</button>
+    </div>
+</section>
+
+<footer>
+    <p><em>A website for Dr. Curiel.</em></p>
+</footer>
+
+</body>
 </html>
