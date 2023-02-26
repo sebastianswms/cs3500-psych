@@ -1,9 +1,3 @@
-/*
-Author: Sebastian Smiley
-Class: CS3500
-Date: Spring 2023
-*/
-
 // Take a string that references a cookie JSON object and return an array that's the result of getting the cookie and parsing the JSON object.
 function cookieParse(cookie){
     let unparsed = getCookie(cookie);
@@ -34,4 +28,4 @@ function getCookie(cname) {
   return ""; // If all else fails, return a blank string.
 }
 
-export {cookieParse, setCookie, getCookie};
+export {cookieParse, setCookie, getCookie}; // Export functionality for reading and writing cookies.

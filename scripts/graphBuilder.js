@@ -1,6 +1,6 @@
-import {cookieParse} from './cookieManagement.js';
+import {cookieParse} from './cookieManagement.js'; // Import functionality for reading JSON cookies.
 
-const ctx = document.getElementById('myChart');
+const ctx = document.getElementById('myChart'); // Create a chart object.
 
 const selection = cookieParse("selection"); // Get all selected videos.
 const titles = cookieParse("titles");
@@ -9,7 +9,7 @@ var label = [];
 var percent = [];
 var total = option.reduce((i,j) => i+j, 0) // The total number of selections for all options.
 selection.forEach(element => label.push(titles[element])); // Put each title into a new array.
-option.forEach(element => percent.push(Math.round(element*100/total)));
+option.forEach(element => percent.push(Math.round(element*100/total))); // Calculate and store each percentage.
 
 const myChart = new Chart(ctx, {
   type: 'bar',

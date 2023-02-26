@@ -1,10 +1,4 @@
-/*
-Author: Sebastian Smiley
-Class: CS3500
-Date: Spring 2023
-*/
-
-import {cookieParse} from './cookieManagement.js';
+import {cookieParse} from './cookieManagement.js'; // Import functionality for reading JSON cookies.
 
 // Fill a list of checkboxes depending on the user's cookies.
 window.fillVideoList = function fillVideoList() {
