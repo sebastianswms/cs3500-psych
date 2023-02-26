@@ -25,8 +25,9 @@ function generateCombinations(videos) {
   return pairs;
 }
 
+// Create a shuffled 2D array of random pairs starting from a given array of videos.
 function generateRandomCombinations(videos) {
     return shuffle(generateCombinations(videos));
 }
 
-export {generateRandomCombinations};
+export {generateRandomCombinations}; // Export functionality for generating a 2D array of random pairs.

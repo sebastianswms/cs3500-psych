@@ -1,10 +1,4 @@
-/*
-Author: Sebastian Smiley
-Class: CS3500
-Date: Spring 2023
-*/
-
-import {cookieParse, setCookie} from './cookieManagement.js';
+import {cookieParse, setCookie} from './cookieManagement.js'; // Import functionality for reading and writing cookies.
 
 // Before the user submits a new video, check to make sure that the user is allowed to do so.
 window.validateNewVideo = function validateNewVideo(){

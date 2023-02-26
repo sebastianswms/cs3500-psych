@@ -1,11 +1,5 @@
-/*
-Author: Sebastian Smiley
-Class: CS3500
-Date: Spring 2023
-*/
-
-import {cookieParse, setCookie} from './cookieManagement.js';
-import {generateRandomCombinations} from './orderManagement.js';
+import {cookieParse, setCookie} from './cookieManagement.js'; // Import functionality for reading and writing cookies.
+import {generateRandomCombinations} from './orderManagement.js'; // Import functionality for generating random pairs.
 
 // Before the user begins the assessment, check to make sure the parameters are appropriately set.
 window.validateStartAssessment = function validateStartAssessment(){
@@ -16,8 +10,10 @@ window.validateStartAssessment = function validateStartAssessment(){
     }
 
     let time = document.getElementById("start-assessment")["time-to-selection"].value; // Get the time-to-selection.
-    if(time < 3 || time > 90){ // If the time is too low or too high, display an alert. 
-                               //This should have already been validated by the form; this is just an extra precaution.
+
+    // If the time is too low or too high, display an alert.
+    //This should have already been validated by the form; this is just an extra precaution.
+    if(time < 3 || time > 90){
         alert("Please set a time between 3 and 90 seconds.")
         return false;
     }
@@ -37,7 +33,7 @@ window.startAssessment = function startAssessment(){
     setCookie("combination",JSON.stringify(combinations),5); // Randomized combinations of video IDs.
     setCookie("orientation",document.getElementById("start-assessment")["video-location"].value, 5) // Put the user's desired orientation into a cookie.
     setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value, 5) // Put the user's desired playback type into a cookie.
-    setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value, 5) // Put the user's desired idle timout into a cookie.
+    setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value, 5) // Put the user's desired idle timeout into a cookie.
 
-    window.location.href = "./assessment.html";
+    window.location.href = "./assessment.html"; // Move on to the assessment.
 }
