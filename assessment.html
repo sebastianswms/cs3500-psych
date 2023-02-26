@@ -40,18 +40,18 @@
     <script src="scripts/buttonManagement.js" type="module"></script>
 </head>
 
-<!-- When the page first loads, display appropriate thumbnails for the user to pick from. -->
+<!-- When the page first loads, display appropriate options for the user to pick from. -->
 <body onload="initializeButtons()">
 <main>
     <!-- Options for the user to pick from. -->
     <div class="row">
         <div class="column">
             <!-- Detect the user's click and run appropriate javascript for the left/top option. -->
-            <button type="button" id="option1" onclick="selectOption1()"></button>
+            <button type="button" id="option1" onclick="selectOption(0)"></button>
         </div>
         <div class="column">
-            <!-- Detect the user's click and run appropriate javascript right/bottom option. -->
-            <button type="button" id="option2" onclick="selectOption2()"></button>
+            <!-- Detect the user's click and run appropriate javascript for the right/bottom option. -->
+            <button type="button" id="option2" onclick="selectOption(1)"></button>
         </div>
     </div>
 </main>
