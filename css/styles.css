@@ -46,6 +46,12 @@ h2 {
     margin-bottom: 25px;
 }
 
+#instructions p {
+  text-indent: 30px;
+  margin-right: 4%;
+}
+
+
 #video-box {
   border: 1px  rgb(238, 238, 238);
   border-radius: 20px;
@@ -79,6 +85,12 @@ h2 {
 #new-video {
     margin-bottom: 125px;
 }
+
+#new-video label, #parameters label {
+  padding-right: 7px;
+}
+
+
   
 /* Assessment page*/
 
