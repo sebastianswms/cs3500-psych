@@ -27,21 +27,19 @@
                 <h2>Instructions</h2>
                 <p>
                     Welcome to the Paired Preference Assessment Tool. This website is a tool designed for researchers and
-                    educators to assess the favorite rewards of autistic children without relying on verbal
-                    communication. Using a series of video trials, the children will be able to choose their preferred
-                    rewards without the need for speech.<br><br>
-                    To use this tool, first select the videos you would like to use by providing their YouTube URLs in
-                    the "Add New Videos" section. For each one, provide a custom title that determines how it will be
-                    referred to later. You will not be able to store more than 20 videos at once.<br><br>
-                    Next, choose the parameters of the test. You can adjust whether the videos are displayed
-                    horizontally or vertically and whether the test shows still images or video playback. You can also
-                    choose how long to wait (from 3 to 90 seconds) before skipping an option and moving on to the next
-                    one.<br><br>
-                    Once you're ready to begin, select which videos you want to include in the test using the set of
-                    checkboxes, then press the "Start Test" button.<br><br>
-                    After the test concludes, you'll see how often each video was selected and also a chart that
-                    displays these results visually. You can either copy the numbers from the results screen or download
-                    a PNG image file of the chart.
+                    educators to assess the favorite rewards of autistic children. Using a series of video trials, subjects 
+                    will be able to choose their preferred rewards without relying on verbal communication.
+                </p>
+                <p>
+                    To use this tool, first imput the videos you would like to use by providing their YouTube URLs below. 
+                    You can store a maximum of 20 videos. Next, choose the parameters of the test. You can adjust the 
+                    orientation of the videos and whether the test shows video thumbnails or the video player. You can also 
+                    choose how long to wait (from 3 to 90 seconds) before skipping a trial and moving on to the next one. 
+                    Once you're ready to begin, select which videos you want to include in the test, then press "Start Test."
+                </p>
+                <p>
+                    After the test concludes, you will see the percentage that each video was selected, and a chart that
+                    displays these results. You can either copy the data or download a PNG image file of the chart.
                 </p>
             </section>
         </div>
@@ -66,18 +64,18 @@
         <div id="parameters" class="col-sm-4">
             <h2>Parameters</h2>
             <label>Time to Selection:</label> <!-- 1st Parameter (number range) -->
-            <input type="number" min="3" max="90" name="time-to-selection" value="15" form="start-assessment"/>
+            <input type="number" min="3" max="90" name="time-to-selection" size="13" value="15" form="start-assessment"/>
             <br><br>
 
             <!-- The user's selection here currently has no effect. assessment.html is always horizontal -->
-            <label>Video Location:&nbsp</label><select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
+            <label>Video Location:</label><select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
             <option value="horizontal">Horizontal</option>
             <option value="vertical">Vertical</option>
         </select>
             <br><br>
 
             <!-- The user's selection here currently has no effect. Still images are always used. -->
-            <label>Video Presentation:&nbsp</label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
+            <label>Video Presentation:</label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
             <option value="video">Video Playback</option>
             <option value="still">Still Images</option>
         </select>
@@ -87,10 +85,10 @@
         <div class="col-sm-4" id="new-video-box">
             <h2>Add New Videos</h2>
             <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
-                <label>Title:&nbsp</label><input type="text" name="video-title" size="30">
+                <label>Title:</label><input type="text" name="video-title" size="30">
                 <br><br>
                 <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
-                <label>URL:&nbsp</label><input type="text" name="video-url" size="30" placeholder="https://www.youtube.com/watch?v=??????">
+                <label>URL:</label><input type="text" name="video-url" size="30" placeholder="https://www.youtube.com/watch?v=??????">
                 <br><br>
                 <input type="submit" value="Add Video" class="btn btn-dark text-light border-dark">
             </form>

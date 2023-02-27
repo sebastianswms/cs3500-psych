@@ -46,6 +46,12 @@ h2 {
     margin-bottom: 25px;
 }
 
+#instructions p {
+  text-indent: 30px;
+  margin-right: 4%;
+}
+
+
 #video-box {
   border: 1px  rgb(238, 238, 238);
   border-radius: 20px;
@@ -79,8 +85,42 @@ h2 {
 #new-video {
     margin-bottom: 125px;
 }
+
+#new-video label, #parameters label {
+  padding-right: 7px;
+}
+
+
   
 /* Assessment page*/
+
+.video-column {
+  float: left;
+  width: 50%;
+  position: relative;
+}
+
+.video-row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#option1, #option2 {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 200px;
+}
+
+.assessment-body div {
+  text-align: center;
+  margin-bottom: 20%;
+}
 
 /* Decision page*/
 .jumbotron-title {
@@ -97,35 +137,37 @@ h2 {
   }
   
 .btn-result, .btn-over {
+    border-width: 2.5px;
     border-radius: 20px;
-    font-size: 2rem;
-    padding: 20px 40px;
-    margin-top: 100px;
+    font-size: min(5vw, 24px);
+    padding: 2% 4%;
+    margin-top: 12%;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
     
   }
   
   .btn-result {
     background-color: #28a745;
-    border-color: #000100;
+    border-color: #000000;
     color: #fff;
   }
   
   .btn-over {
     background-color: black;
-    border-color: #020302;
+    border-color: #000000;
     color: #fff;
+    margin-bottom: 23%
   }
 
   .btn-result:hover {
     background-color:#3bce5d;
-    border-color: inherit;
+    border-color: #000000;
     color: #fff;
   }
 
   .btn-over:hover {
-    background-color: #271baf;
-    border-color: inherit;
+    background-color: #303030;
+    border-color: #000000;
     color: #fff;
   }
 /* Results page*/
