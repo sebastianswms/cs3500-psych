@@ -1,17 +1,19 @@
-/*  ===============
-    General Styling
-    =============== */
+/*  ==========================================================================================
+                                        General Styling
+    ========================================================================================== */
 
-
-header {                        /*Header syling*/ 
+/*headers*/ 
+header {                        
   margin: 1% 0 0.75% 5%;
   }
 
-body { /**/
+/*background color*/
+body { 
     background-color: #d5e1ed;
   }
 
-footer { /**/
+/*footers*/
+footer { 
     background-color: rgb(26, 49, 71);
     color: white;
     height: 50px;
@@ -20,7 +22,8 @@ footer { /**/
     width: 100%;
   }
   
-  footer p { /**/
+  /*footer text*/
+  footer p { 
     position: absolute;
     right: 5%;
     bottom: 20%;
@@ -29,32 +32,35 @@ footer { /**/
     font-style: italic;
   }
   
-/*  ==========
-    Index page
-    ========== */
+/*  ==========================================================================================
+                                          Index page
+    ========================================================================================== */
 
-h2 { /**/
+/*subheadings*/
+h2 { 
     margin-bottom: 20px;
 }
 
-#index { /**/
+/*apply margins on all main contents*/
+#index { 
 
     margin-left: 5%;
     margin-right: 5%;
 
   }
 
-#instructions { /**/
+/*instructions styling*/
+#instructions { 
     margin-bottom: 1.75%;
 }
 
-#instructions p { /**/
+#instructions p { 
   text-indent: 30px;
   margin-right: 4%;
 }
 
-
-#video-box { /**/
+/*video bank*/
+#video-box { 
   border: 1px  rgb(238, 238, 238);
   border-radius: 20px;
   background-color: rgb(238, 238, 238);
@@ -62,68 +68,79 @@ h2 { /**/
   padding: 15px;
 }
 
-#video-bank { /**/
+#video-bank { 
   margin-left: 5%;
   margin-bottom: 35px;
 }
 
-
-@media (max-width: 767px) { /**/
+/*styling edits for small screens*/
+@media (max-width: 767px) { 
     #video-bank .col-6 {
         width: 100%;
     }
 }
 
-#start-button { /**/
+/*start button*/
+#start-button { 
     display: flex;
     justify-content: center;
     margin-bottom: 35px;
   }
 
-#parameters { /**/
+/*parameters section*/
+#parameters { 
     margin-bottom: 35px;
 }
 
-#new-video { /**/
+/*add new videos section*/
+#new-video { 
     margin-bottom: 80px;
 }
 
-#new-video label, #parameters label { /**/
+#new-video label, #parameters label { 
   padding-right: 7px;
 }
 
-  
-/* Assessment page*/
+/*  ==========================================================================================
+                                       Assessment page
+    ========================================================================================== */
 
-.video-column { /**/
+    /*divs*/
+.assessment-body div {
+  text-align: center;
+}
+    
+.video-column { 
   float: left;
   width: 50%;
   position: relative;
 }
 
-.video-row:after { /**/
+.video-row:after { 
 content: "";
 display: table;
 clear: both;
 }
 
-img { /**/
+/*fit thumbnail into buttons*/
+img { 
   max-width: 100%;
   max-height: 100%;
 }
 
-#option1, #option2 { /**/
+/*buttons*/
+#option1, #option2 { 
   max-width: 80%;
   max-height: 80%;
   margin-top: 15vh;
   margin-bottom: 10vh;
 }
 
-.assessment-body div {
-  text-align: center;
-}
+/*  ==========================================================================================
+                                       Decision page
+    ========================================================================================== */
 
-/* Decision page*/
+/*main header*/
 .jumbotron-title {
     padding: 50px;
     background-color: #a2afbd;
@@ -133,6 +150,7 @@ img { /**/
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+/*buttons*/
 .decision-buttons {
     text-align: center;
   }
@@ -160,6 +178,7 @@ img { /**/
     margin-bottom: 20vh;
   }
 
+/*button effects on hover*/
   .btn-result:hover {
     background-color:#3bce5d;
     border-color: #000000;
@@ -171,14 +190,10 @@ img { /**/
     border-color: #000000;
     color: #fff;
   }
-/* Results page*/
 
-
-#first-sec {
-    margin: 10px auto;
-    font-size: 60vmin;
-    letter-spacing: 5px;
-}
+/*  ==========================================================================================
+                                        Results page
+    ========================================================================================== */
 
 /* all section styling */
 .results section {
@@ -186,8 +201,14 @@ img { /**/
     margin: 20px auto;
 }
 
+/* style for Result header section */
 
-/* style for Result text title */
+#first-sec {
+  margin: 10px auto;
+  font-size: 60vmin;
+  letter-spacing: 5px;
+}
+
 .results .res {
     display: flex;
     align-items: center;
