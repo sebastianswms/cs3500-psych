@@ -19,7 +19,7 @@ const myChart = new Chart(ctx, {
     datasets: [{
       // we can get the data from any variable for this one
       data: percent,
-      backgroundColor: "#000000",
+      backgroundColor: "#445e76",
       },
     ],
   },
