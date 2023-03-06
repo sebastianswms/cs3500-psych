@@ -246,20 +246,20 @@ img {
 .results .assess-title h2, .graph-text {
   margin-top: 25px;
   margin-bottom: 25px;
-  font-size: clamp(20px, 8vmin, 45px); /*sets a minimum and maximum font size*/
+  font-size: clamp(20px, 6vmin, 45px); /*sets a minimum and maximum font size*/
   font-family: Garamond, "Times New Roman", Times, serif;
   text-align: center;
 }
 
 /* 'assessment outcomes' table text sizing and fonts */
 .video-table {
-  margin: 7.5px 30px 7.5px;
+  margin: 7.5px 5vw 15px 7vw;
   font-size: clamp(20px, 2.5vmin, 30px); /*sets a minimum and maximum font size*/
   font-family: Garamond, "Times New Roman", Times, serif;
 }
 
 .duration {
-  margin: 20px;
+  margin: 20px 5vw 50px 5vw;
   font-size: clamp(20px, 2.5vmin, 30px);
   font-family: Garamond, "Times New Roman", Times, serif;
 }
