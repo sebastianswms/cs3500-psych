@@ -2,17 +2,37 @@
                                         General Styling
     ========================================================================================== */
 
-/*headers*/ 
+/*sets margins for all headers*/ 
 header {                        
   margin: 1% 0 0.75% 5%;
   }
 
-/*background color*/
+/*sets a bottom margin on all subheadings*/
+h2 { 
+  margin-bottom: 20px;
+}
+
+/*sky-blue background color*/
 body { 
     background-color: #d5e1ed;
   }
 
-/*footers*/
+/*sets an extra wide margin for div elements on large devices*/
+@media screen and (min-height: 825px) {
+  div {
+    margin-bottom: 2.5%;
+  }
+}
+
+/*sets an extra wide margin for div elements on small devices*/
+
+@media screen and (max-width: 575px) {
+  div {
+    margin-bottom: max(25px, 1.75%);
+  }
+}
+  
+/*footer background: set color and position*/
 footer { 
     background-color: rgb(26, 49, 71);
     color: white;
@@ -20,51 +40,41 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
+}
   
-  /*footer text*/
-  footer p { 
-    position: absolute;
-    right: 5%;
-    bottom: 20%;
-    margin: 0;
-    font-family: "Garamond", serif;
-    font-style: italic;
-  }
+/*footer text styling*/
+footer p { 
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+  margin: 0;
+  font-family: "Garamond", serif;
+  font-style: italic;
+  font-size: clamp(20px, 1vw, 24px); /*sets a minimum and maximum font size*/
+}
   
 /*  ==========================================================================================
                                           Index page
     ========================================================================================== */
 
-/*subheadings*/
-h2 { 
-    margin-bottom: 20px;
-}
-
-/*apply margins on all main contents*/
+/*apply an extra margin on all main contents*/
 #index { 
-
-    margin-left: 5%;
-    margin-right: 5%;
-
-  }
-
-/*instructions styling*/
-#instructions { 
-    margin-bottom: 1.75%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
+/*indent all paragraphs for the Instructions text*/
 #instructions p { 
   text-indent: 30px;
   margin-right: 4%;
 }
 
-/*video bank*/
+/*video bank div box*/
 #video-box { 
   border: 1px  rgb(238, 238, 238);
-  border-radius: 20px;
+  border-radius: 20px; /*add a border radius*/
   background-color: rgb(238, 238, 238);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /*add a shadow effect*/
   padding: 15px;
 }
 
@@ -73,30 +83,27 @@ h2 {
   margin-bottom: 35px;
 }
 
-/*styling edits for small screens*/
-@media (max-width: 767px) { 
-    #video-bank .col-6 {
-        width: 100%;
-    }
-}
-
-/*start button*/
-#start-button { 
-    display: flex;
-    justify-content: center;
-    margin-bottom: 35px;
+/*adds a bottom margin for small screens 
+so that the 'add video' button is not cut off*/
+@media (max-width: 800px), (max-height: 800px) {
+  #parameters { 
+    margin-bottom: 50px;
   }
 
-/*parameters section*/
-#parameters { 
-    margin-bottom: 35px;
+  #new-video { 
+    margin-bottom: 75px;
+  }
 }
 
-/*add new videos section*/
-#new-video { 
-    margin-bottom: 80px;
+
+/*center the start button and add a margin*/
+#start-button { 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
 }
 
+/*separate labels from input forms for readability*/
 #new-video label, #parameters label { 
   padding-right: 7px;
 }
@@ -105,7 +112,7 @@ h2 {
                                        Assessment page
     ========================================================================================== */
 
-    /*divs*/
+/*center divs*/
 .assessment-body div {
   text-align: center;
 }
@@ -122,7 +129,7 @@ display: table;
 clear: both;
 }
 
-/*fit thumbnail into buttons*/
+/*fit thumbnails into buttons*/
 img { 
   max-width: 100%;
   max-height: 100%;
@@ -140,56 +147,57 @@ img {
                                        Decision page
     ========================================================================================== */
 
-/*main header*/
+/*Bootstrapped title: add background and shadows*/
 .jumbotron-title {
-    padding: 50px;
-    background-color: #a2afbd;
-    text-align: center;
-    color: #0b0c0e;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  background-color: #a2afbd;
+  text-align: center;
+  color: #0b0c0e;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-/*buttons*/
+/*center the buttons*/
 .decision-buttons {
-    text-align: center;
-  }
-  
+  text-align: center;
+}
+
+/*button size and margins*/
 .btn-result, .btn-over {
-    border-width: 2.5px;
-    border-radius: 20px;
-    font-size: min(5vw, 24px);
-    padding: 2% 4%;
-    margin-top: 10vh;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-    
-  }
-  
-  .btn-result {
-    background-color: #28a745;
-    border-color: #000000;
-    color: #fff;
-  }
-  
-  .btn-over {
-    background-color: black;
-    border-color: #000000;
-    color: #fff;
-    margin-bottom: 20vh;
-  }
+  border-width: 2px;
+  border-radius: 20px;
+  font-size: min(5vw, 24px);
+  padding: 2% 4%;
+  margin-top: 7vh;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);  
+}
 
-/*button effects on hover*/
-  .btn-result:hover {
-    background-color:#3bce5d;
-    border-color: #000000;
-    color: #fff;
-  }
+/*button color and border*/
+.btn-result {
+  background-color: #28a745;
+  border-color: #000000;
+  color: #fff;
+}
+  
+.btn-over {
+  background-color: black;
+  border-color: #000000;
+  color: #fff;
+  margin-bottom: 20vh; /*extra bottom margin so that the footer does not cover up the button*/
+}
 
-  .btn-over:hover {
-    background-color: #303030;
-    border-color: #000000;
-    color: #fff;
-  }
+/*button fade on hover*/
+.btn-result:hover {
+  background-color:#3bce5d;
+  border-color: #000000;
+  color: #fff;
+}
+
+.btn-over:hover {
+  background-color: #303030;
+  border-color: #000000;
+  color: #fff;
+}
 
 /*  ==========================================================================================
                                         Results page
@@ -197,12 +205,11 @@ img {
 
 /* all section styling */
 .results section {
-    width: 80%;
-    margin: 20px auto;
+  width: 85%;
+  margin: 20px auto;
 }
 
 /* style for Result header section */
-
 #first-sec {
   margin: 10px auto;
   font-size: 60vmin;
@@ -210,18 +217,13 @@ img {
 }
 
 .results .res {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    color: black;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: black;
 }
 
 /* graph and outcomes section as a row */
-.results {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .results .row {
   display: flex;
@@ -240,59 +242,58 @@ img {
   flex-direction: column;
 }
 
-.results .col > * {
-  flex: 1;
+/* assessment page text */
+.results .assess-title h2, .graph-text {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: clamp(20px, 8vmin, 45px); /*sets a minimum and maximum font size*/
+  font-family: Garamond, "Times New Roman", Times, serif;
+  text-align: center;
 }
 
-
-
+/* 'assessment outcomes' table text sizing and fonts */
 .video-table {
-    margin: auto 35px auto;
-    font-size: 2.5vmin;
-    font-family: Garamond, "Times New Roman", Times, serif;
+  margin: 7.5px 30px 7.5px;
+  font-size: clamp(20px, 2.5vmin, 30px); /*sets a minimum and maximum font size*/
+  font-family: Garamond, "Times New Roman", Times, serif;
 }
 
 .duration {
-    margin: 20px;
-    font-size: 2.5vmin;
-    font-family: Garamond, "Times New Roman", Times, serif;
-}
-
-/* assessment and graph text */
-.results .assess-title h2, .graph-text {
-    font-size: 4vmin;
-    font-family: Garamond, "Times New Roman", Times, serif;
-    text-align: center;
+  margin: 20px;
+  font-size: clamp(20px, 2.5vmin, 30px);
+  font-family: Garamond, "Times New Roman", Times, serif;
 }
 
 
-/* buttons  */
+/* applies flexbox layout properties to buttons */
 .btn-div {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 80px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 80px;
 }
 
+/* button spacing, borders, and color scheme */
 .b-main {
-    margin-right: 75px;
-    border-radius: 10px;
-    background-color: #28a745;
-    border-color: black;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
+  margin-right: 5vw;
+  border-radius: 15px;
+  background-color: #28a745;
+  border-color: black;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  display: inline-block;
 }
 
 .b-save {
-    border-radius: 10px;
-    background-color: black;
-    color: white;
-    border-color: black;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
+  border-radius: 15px;
+  background-color: black;
+  border-color: black;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  display: inline-block;
 }
