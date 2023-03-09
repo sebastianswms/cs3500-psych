@@ -1,6 +1,12 @@
 import {cookieParse} from './cookieManagement.js'; // Import functionality for reading JSON cookies.
 
-// Fill a list of checkboxes depending on the user's cookies.
+/*
+    Input: Cookies stored int he user's browser (as determined by the newVideo.js script).
+
+    Output: A series of checkboxes showing every video the user has added to their video bank.
+
+    Remarks: The checkboxes will have the value of the index of the video they represent.
+*/
 window.fillVideoList = function fillVideoList() {
 
     // Find the correct HTML element to modify and get the user's cookie list of video titles.
