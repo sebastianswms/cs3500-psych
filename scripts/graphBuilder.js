@@ -63,6 +63,16 @@ const myChart = new Chart(ctx, {
 
 
 // this function is to enable the button to download the graph as png
+
+/* 
+
+input: A chart (bargraph) as input to algorithm foo
+   
+output: The result of the algorithm foo on input in is downloding the chart as image
+
+remarks: This function converts the chart (bargraph) into a png image data url & downloads it into the user's device
+
+*/
 window.downloadChart = function downloadChart() {
   const canvas = document.getElementById('myChart');
   const downloadLink = document.createElement('a');

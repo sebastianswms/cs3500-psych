@@ -1,6 +1,16 @@
 import {cookieParse, setCookie} from './cookieManagement.js'; // Import functionality for reading and writing cookies.
 
 // Before the user submits a new video, check to make sure that the user is allowed to do so.
+
+/* 
+
+input: a url as input to algorithm foo.
+
+output: The result of the algorithm foo on input in is the validation of the video url.
+
+remarks: this function ensure that the user enters a valid youtube url. 
+
+*/
 window.validateNewVideo = function validateNewVideo(){
     let video_url = document.getElementById("new-video")["video-url"].value; // Get the URL of the video to be added.
     if (video_url == ""){ // If the URL is empty, tell the user what they should be doing.
@@ -19,6 +29,16 @@ window.validateNewVideo = function validateNewVideo(){
 }
 
 // Store the user's new video in a cookie, allowing it to be persistent across browser sessions.
+
+/* 
+
+input: Video title name and video url as input to algorithm foo
+
+output: Adds the videos the user enters into array, and stores the videos and titels into the video bank as cookies
+
+remarks: This function stores the user's new video(s) in a cookie and keeps them for 5 days
+
+*/
 window.storeNewVideo = function storeNewVideo(){
 
     // Get the name and URL of the video that the user added.
