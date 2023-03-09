@@ -1,6 +1,13 @@
 import {cookieParse, setCookie} from './cookieManagement.js'; // Import functionality for reading and writing cookies.
 
-// Before the user submits a new video, check to make sure that the user is allowed to do so.
+/*
+    Input: The user clicking on the button to add a new video.
+
+    Output: If validation fails, returns false. If everything looks good, returns nothing.
+
+    Remarks: Although the YouTube URL format is specified as https://www.youtube.com/watch?v=??????, it will also accept
+        other similar formats (https or http; with or without www; youtube.com or youtu.be).
+*/
 window.validateNewVideo = function validateNewVideo(){
     let video_url = document.getElementById("new-video")["video-url"].value; // Get the URL of the video to be added.
     if (video_url == ""){ // If the URL is empty, tell the user what they should be doing.
@@ -18,7 +25,13 @@ window.validateNewVideo = function validateNewVideo(){
     }
 }
 
-// Store the user's new video in a cookie, allowing it to be persistent across browser sessions.
+/*
+    Input: The user clicking on the button to add a new video and the new video being successfully validated.
+
+    Output: The user's new video being stored as a cookie in their browser.
+
+    Remarks: Storing as a cookie allows the user's input to be persistent across browser sessions.
+*/
 window.storeNewVideo = function storeNewVideo(){
 
     // Get the name and URL of the video that the user added.
