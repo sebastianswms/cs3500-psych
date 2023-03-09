@@ -1,7 +1,14 @@
 import {cookieParse, setCookie} from './cookieManagement.js'; // Import functionality for reading and writing cookies.
 import {generateRandomCombinations} from './orderManagement.js'; // Import functionality for generating random pairs.
 
-// Before the user begins the assessment, check to make sure the parameters are appropriately set.
+/*
+    Input: The user pressing on the button to begin the assessment.
+
+    Output: If validation fails, returns false. If everything looks good, returns nothing.
+
+    Remarks: Portions of validation should already have been completed, but double-checking is good programming practice
+        so validation is performed again.
+*/
 window.validateStartAssessment = function validateStartAssessment(){
     let selection = document.querySelectorAll("input[name=video-entry]:checked"); // Get all selected videos.
     if(selection.length < 3 || selection.length > 10){ // If the user has selected too few or too many, display an alert.
@@ -19,7 +26,13 @@ window.validateStartAssessment = function validateStartAssessment(){
     }
 }
 
-// Store the user's selected video URLs in a cookie and navigate to the assessment page.
+/*
+    Input: The user clicking on the button to begin the assessment and validation being successfully completed.
+
+    Output: A series of cookies stored in the user's browser to determine how the assessment should be completed.
+
+    Remarks: This is the final function call before the user progresses to the assessment.html page.
+*/
 window.startAssessment = function startAssessment(){
     let selection = document.querySelectorAll("input[name=video-entry]:checked"); // Get all selected videos.
     let values = [];

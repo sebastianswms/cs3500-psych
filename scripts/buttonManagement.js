@@ -1,11 +1,16 @@
 import {cookieParse, getCookie, setCookie} from './cookieManagement.js'; // Import functionality for reading and writing cookies.
 
-var idleTimeout; // A timeout that will reset the buttons if the user fails to make a selection within the specified time. -->
+var idleTimeout; // A timeout that will reset the buttons if the user fails to make a selection within the specified time.
 var index = 0; // Stores how many choices the user has been presented with.
 var timeoutLength = getCookie("timeout")*1000; // How long to wait before skipping to the next pair of options, in ms.
 
-// Store the user's selection based on the option they selected.
-// optionIndex == 0 corresponds to left/top and optionIndex == 0 corresponds to right/bottom.
+/*
+    Input: Either 0 or 1, indicating which option the user selected.
+
+    Output: Stores the user's selection as a cookie based on the option they selected.
+
+    Remarks: optionIndex == 0 corresponds to left/top and optionIndex == 1 corresponds to right/bottom.
+*/
 window.selectOption = function selectOption(optionIndex){
     let option = cookieParse("option"); // Get the user's past selections.
     option[cookieParse("combination")[index][optionIndex]]++; // Increment the appropriate selection.
@@ -13,13 +18,25 @@ window.selectOption = function selectOption(optionIndex){
     resetButtons(); // Reset the buttons for the next pair of options.
 }
 
-// When the page first loads, display options for the user to pick from and begin a timeout.
+/*
+    Input: None.
+
+    Output: Thumbnails for the user to click on and a timeout to reset them.
+
+    Remarks: When the page first loads, display options for the user to pick from and begin a timeout.
+*/
 window.initializeButtons = function initializeButtons(){
     fillButtons();
     idleTimeout = setTimeout(resetButtons,timeoutLength); // Calls resetButtons after an amount of time determined by timeoutLength.
 }
 
-// Stops the prior timeout, increments the index, and displays a new set of options for the user to pick from.
+/*
+    Input: None
+
+    Output: Thumbnails for the user to click on and a timeout to reset them. Old timeout is cleared.
+
+    Remarks: Stops the prior timeout, increments the index, and displays a new set of options for the user to pick from.
+*/
 window.resetButtons = function resetButtons(){
     clearTimeout(idleTimeout); // Stop the timeout.
     index++; // Increment the index.
@@ -27,7 +44,13 @@ window.resetButtons = function resetButtons(){
     idleTimeout = setTimeout(resetButtons,timeoutLength); // Calls resetButtons after an amount of time determined by timeoutLength.
 }
 
-// Get the videos that are for the current assessment and populate the buttons with appropriate options.
+/*
+    Input: The user's cookies.
+
+    Output: Adding thumbnails for the user to click on.
+
+    Remarks: Get the videos that are for the current assessment and populate the buttons with appropriate options.
+*/
 window.fillButtons = function fillButtons(){
 
     // Read the user's cookies.

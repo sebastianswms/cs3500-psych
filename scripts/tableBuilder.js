@@ -1,6 +1,13 @@
 import {cookieParse} from './cookieManagement.js'; // Import functionality for reading JSON cookies.
 
-// Fill a table based on the user's selected options.
+/*
+    Input: Cookies stored in the user's browser.
+
+    Output: A table showing statistics based on the user's selections over the course of the assessment.
+
+    Remarks: The result is as formatted HTML inside a pre-existing table. If the table does not already exist, this
+        will not function correctly.
+*/
 window.fillTable = function fillTable() {
 
     let table = document.getElementById("video-table"); // Find the correct HTML element to modify.

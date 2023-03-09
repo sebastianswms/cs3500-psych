@@ -11,6 +11,7 @@ var total = option.reduce((i,j) => i+j, 0) // The total number of selections for
 selection.forEach(element => label.push(titles[element])); // Put each title into a new array.
 option.forEach(element => percent.push(Math.round(element*100/total))); // Calculate and store each percentage.
 
+// Defines a new chart object with information as specified by the user's choices.
 const myChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -61,8 +62,13 @@ const myChart = new Chart(ctx, {
   },
 });
 
+/*
+    Input: None.
 
-// this function is to enable the button to download the graph as png
+    Output: A PNG image of the generated chart.
+
+    Remarks: If the user already has a file called Result.png, a number will be automatically appended to the file name.
+*/
 window.downloadChart = function downloadChart() {
   const canvas = document.getElementById('myChart');
   const downloadLink = document.createElement('a');
