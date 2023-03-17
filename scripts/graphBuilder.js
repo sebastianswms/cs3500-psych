@@ -56,8 +56,18 @@ const myChart = new Chart(ctx, {
               return value+'%';
             },
           },
+          // removes the grid line on y-axes from background
+          gridLines: {
+            display: false
+          },
         },
       ],
+      //removes the grid lines on x-asix from background
+      xAxes: [{
+        gridLines: {
+          display: false
+        }
+      }]
     },
   },
 });
