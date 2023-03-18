@@ -50,3 +50,23 @@ window.startAssessment = function startAssessment(){
 
     window.location.href = "./assessment.html"; // Move on to the assessment.
 }
+
+
+// display or hide the instructions steps
+
+/*
+    Input: The user clicking on the Instruction text to view the instructions.
+
+    Output: All the instruction steps will be displayed for user.
+
+    Remarks: This is the function call when the user needs directions on home page (index.html).
+*/
+var inst_steps = document.getElementById("myDiv");
+inst_steps.style.display = "none";
+window.myFunction = function myFunction() {
+    if (inst_steps.style.display == "none") {
+        inst_steps.style.display = "block";
+    }else {
+        inst_steps.style.display = "none";
+    }
+}
