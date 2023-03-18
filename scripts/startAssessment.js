@@ -52,8 +52,7 @@ window.startAssessment = function startAssessment(){
 }
 
 
-// display or hide the instructions steps
-
+// this function displays/hides the instructions steps, and rotate the img as icon up/down
 /*
     Input: The user clicking on the Instruction text to view the instructions.
 
@@ -62,11 +61,14 @@ window.startAssessment = function startAssessment(){
     Remarks: This is the function call when the user needs directions on home page (index.html).
 */
 var inst_steps = document.getElementById("myDiv");
+var inst_icon = document.getElementById("inst-img");
 inst_steps.style.display = "none";
 window.myFunction = function myFunction() {
     if (inst_steps.style.display == "none") {
         inst_steps.style.display = "block";
+        inst_icon.style.transform = 'rotate(180deg)';
     }else {
+        inst_icon.style.transform = 'rotate(-0deg)';
         inst_steps.style.display = "none";
     }
 }

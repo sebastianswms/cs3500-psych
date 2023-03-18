@@ -304,24 +304,33 @@ img {
   margin-right: 1vw;
 }
 
-
-
-
-
+/* resize the instruction img (as icon) */
 #inst-img {
-  width: 20px;
+  width: 17px;
+  height: 15px;
 }
-
-
+/* changing the cursor and transform to  when hover over the instruciton text/img */
 .inst-div:hover {
   cursor: pointer;
 }
 
+/* changed the div width and restricted selection & copying */
+.inst-div {
+  width: 195px;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
+}
+
+/* the div for instruction steps  */
 .myDiv {
   display: none;
   border: 1px black solid;
   padding-top: 10px;
   resize: both;
-  /* width: 99%; */
   border-radius: 10px;
+  background-color: #ffffff29;
 } 

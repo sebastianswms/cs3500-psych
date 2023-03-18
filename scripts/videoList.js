@@ -53,6 +53,4 @@ window.removeVideos = function removeVideos() {
     alert("Are you sure you want to remove the video? ");
 
     //the rest of the CODES that enables the btn to remove the videos go here........
-
-
 }
