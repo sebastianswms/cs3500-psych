@@ -228,7 +228,7 @@ img {
 }
 
 /* font-size for texts "Assessment Outcomes" and "Graph"  */
-#title-text {
+.title-text {
   font-size: 3.5vmin;
 }
 /* the line under the "Results" text  */

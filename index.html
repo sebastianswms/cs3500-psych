@@ -13,6 +13,7 @@
     <script src="scripts/newVideo.js" type="module"></script> <!-- Storing new videos from the user -->
     <script src="scripts/videoList.js" type="module"></script> <!-- Generating a list of video checkboxes from cookies -->
     <script src="scripts/startAssessment.js" type="module"></script> <!-- Verification and starting the assessment -->
+    <script src="scripts/instructionsDropdown.js" type="module"></script> <!-- Verification and starting the assessment -->
 </head>
 
 <body onload="fillVideoList()"> <!-- When the page loads, populate the list of video checkboxes -->
@@ -29,7 +30,7 @@
                 of autistic children. Using a series of video trials, subjects will be able to choose their preferred rewards
                 without relying on verbal communication.
                 </p>
-                <!-- by clicking, the user can displayed/hide the instruction steps -->
+                <!-- by clicking, the user can display/hide the instruction steps -->
                 <h2 class="inst-div" onclick="myFunction()">Instructions <img id="inst-img" class="icon-rotate" src="/images/arrow.png"></h2>
                 <div id="myDiv" class="myDiv">
                     <p>1. Add your videos by pasting their YouTube URLs below. (max 20 videos).</p>
