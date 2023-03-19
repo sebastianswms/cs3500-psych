@@ -2,6 +2,16 @@
                                         General Styling
     ========================================================================================== */
 
+
+body {
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment:fixed;
+  background-image: url("/images/background.png");
+}
 /*sets margins for all headers*/ 
 header {                        
   margin: 1% 0 0.75% 5%;
@@ -11,11 +21,6 @@ header {
 h2 { 
   margin-bottom: 20px;
 }
-
-/*sky-blue background color*/
-body { 
-    background-color: #d5e1ed;
-  }
 
 /*sets an extra wide margin for div elements on large devices*/
 @media screen and (min-height: 825px) {
@@ -31,10 +36,10 @@ body {
     margin-bottom: max(25px, 1.75%);
   }
 }
-  
+ 
 /*footer background: set color and position*/
-footer { 
-    background-color: rgb(26, 49, 71);
+footer {
+    background-color: #1a3147;
     color: white;
     height: 50px;
     position: fixed;
@@ -65,12 +70,12 @@ footer p {
 
 /*indent all paragraphs for the Instructions text*/
 #instructions p { 
-  text-indent: 30px;
+  margin-left: 30px;
   margin-right: 4%;
 }
 
 /*video bank div box*/
-#video-box { 
+.foreground-box {
   border: 1px  rgb(238, 238, 238);
   border-radius: 20px; /*add a border radius*/
   background-color: rgb(238, 238, 238);
@@ -101,6 +106,12 @@ so that the 'add video' button is not cut off*/
   display: flex;
   justify-content: center;
   margin-bottom: 35px;
+}
+
+/* width for start and remove btns and space between them */
+.both-btn {
+  margin-left: 5px;
+  width: 95px;
 }
 
 /*separate labels from input forms for readability*/
@@ -153,8 +164,6 @@ img {
   background-color: #a2afbd;
   text-align: center;
   color: #0b0c0e;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /*center the buttons*/
@@ -188,7 +197,7 @@ img {
 
 /*button fade on hover*/
 .btn-result:hover {
-  background-color:#3bce5d;
+  background-color: #3bce5d;;
   border-color: #000000;
   color: #fff;
 }
@@ -209,6 +218,22 @@ img {
   margin: 20px auto;
 }
 
+/* changing title styling */
+#res-title {
+  background-color: transparent;
+  box-shadow: none;
+  letter-spacing: 13px;
+}
+
+/* font-size for texts "Assessment Outcomes" and "Graph"  */
+.title-text {
+  font-size: 3.5vmin;
+}
+/* the line under the "Results" text  */
+#res-title hr {
+  width: 50%;
+  margin: 0px auto;
+}
 /* style for Result header section */
 #first-sec {
   margin: 10px auto;
@@ -237,7 +262,7 @@ img {
   border-style: solid;
   border-width: 5px;
   border-color: rgb(68, 94, 118);
-  background-color: rgb(238, 238, 238);
+  background-color: #eeeeee92;
   display: flex;
   flex-direction: column;
 }
@@ -268,32 +293,32 @@ img {
 /* applies flexbox layout properties to buttons */
 .btn-div {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 80px;
+  float: right;
+  margin: -15px 15px 90px auto;
 }
 
 /* button spacing, borders, and color scheme */
 .b-main {
-  margin-right: 5vw;
-  border-radius: 15px;
-  background-color: #28a745;
-  border-color: black;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  color: black;
-  display: inline-block;
+  margin-right: 1vw;
 }
 
-.b-save {
-  border-radius: 15px;
-  background-color: black;
-  border-color: black;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-  display: inline-block;
+/* resize the instruction img (as icon) */
+#inst-img {
+  width: 17px;
+  height: 15px;
+}
+/* changing the cursor and transform to  when hover over the instruciton text/img */
+.inst-div:hover {
+  cursor: pointer;
+}
+
+/* changed the div width and restricted selection & copying */
+.inst-div {
+  width: 195px;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
 }
