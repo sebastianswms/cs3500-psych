@@ -31,14 +31,16 @@
                 without relying on verbal communication.
                 </p>
                 <!-- by clicking, the user can display/hide the instruction steps -->
-                <h2 class="inst-div" onclick="myFunction()">Instructions <img id="inst-img" class="icon-rotate" src="/images/arrow.png"></h2>
-                <div id="myDiv" class="myDiv">
-                    <p>1. Add your videos by pasting their YouTube URLs below. (max 20 videos).</p>
-                    <p>2. Set the timer (3 - 90 seconds).</p>
-                    <p>3. Select video location as Vertical/Horizontal.</p>
-                    <p>4. Select the video presentation as thumbnails or the video player.</p>
-                    <p>5. Select the videos you want to include in the test from the video bank, and press "Start Test."</p>
-                    <p><span>After the test concludes, you will see the result and can download the Chart.</span></p>    
+                <h2 class="inst-div" onclick="toggleInstructionsDropdown()">Instructions <img id="inst-img" class="icon-rotate" src="/images/arrow.png"></h2>
+                <div id="instructions-box" class="foreground-box">
+                    <ol>
+                        <li>Add your videos by pasting their YouTube URLs below. (max 20 videos).</li>
+                        <li>Set the timer (3 - 90 seconds).</li>
+                        <li>Select video location as Vertical/Horizontal.</li>
+                        <li>Select the video presentation as thumbnails or the video player.</li>
+                        <li>Select the videos you want to include in the test from the video bank. Then press "Start Test."</li>
+                    </ol>
+                    <p><b>After the test concludes, you will see the result and can download the Chart.</b></p>
                 </div>
             </section>
             <div class="row pt-3">
@@ -77,7 +79,7 @@
         </div>
         <!-- Video Bank -->
         <div class="col-sm-4">
-            <div id="video-box">
+            <div class="foreground-box">
                 <section id="video-bank">
                     <h2>Video Bank</h2>
                     <!-- An empty form that is populated using videoList.js -->

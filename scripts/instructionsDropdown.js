@@ -5,10 +5,10 @@
 
     Remarks: This is the function call when the user needs directions on home page (index.html).
 */
-var inst_steps = document.getElementById("myDiv");
+var inst_steps = document.getElementById("instructions-box");
 var inst_icon = document.getElementById("inst-img");
 inst_steps.style.display = "none";
-window.myFunction = function myFunction() {
+window.toggleInstructionsDropdown = function toggleInstructionsDropdown() {
     if (inst_steps.style.display == "none") {
         inst_steps.style.display = "block";
         inst_icon.style.transform = 'rotate(180deg)';
