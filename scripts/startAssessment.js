@@ -47,7 +47,7 @@ window.startAssessment = function startAssessment(){
     setCookie("orientation",document.getElementById("start-assessment")["video-location"].value, 5) // Put the user's desired orientation into a cookie.
     setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value, 5) // Put the user's desired playback type into a cookie.
     setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value, 5) // Put the user's desired idle timeout into a cookie.
-    setCookie("start", new Date().getTime() / 1000, 5) // Saves the epoch timestamp when the assessment gets started.
+    setCookie("start", (new Date().getTime() / 1000), 5) // Saves the epoch timestamp in seconds when the assessment gets started.
 
     window.location.href = "./assessment.html"; // Move on to the assessment.
 }
