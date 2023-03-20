@@ -48,6 +48,8 @@ window.startAssessment = function startAssessment(){
     setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value, 5) // Put the user's desired playback type into a cookie.
     setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value, 5) // Put the user's desired idle timeout into a cookie.
     setCookie("start", (new Date().getTime() / 1000), 5) // Saves the epoch timestamp in seconds when the assessment gets started.
+    setCookie("option1", 0, 5) // Sets an empty cookie to count the amount of times option1 is pressed.
+    setCookie("option2", 0, 5) // Sets an empty cookie to count the amount of times option2 is pressed.
 
     window.location.href = "./assessment.html"; // Move on to the assessment.
 }
