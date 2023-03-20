@@ -16,10 +16,11 @@
     <script src="scripts/tableBuilder.js" type="module"></script> <!-- Create the table of results from the assessment. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> <!-- Import the Chart.js library -->
     <script src="scripts/graphBuilder.js" type="module"></script> <!-- Create the chart using data from cookies -->
+    <script src="scripts/statBuilder.js" type="module"></script> <!-- Fill out the advanced stats section -->
 </head>
 
-<!-- When the page loads, fill the table from the results of the assessment. -->
-<body class="results" onload="fillTable()">
+<!-- When the page loads, fill the table and stats from the results of the assessment. -->
+<body class="results" onload="fillTable();fillStats();">
 
 <!-- Jumbotron at the top of the page announcing completion of the assessment to the user. -->
 <section id="first-sec">
@@ -43,11 +44,13 @@
             <!-- This portion is currently not functional yet, but will eventually be filled with data from the user. -->
             <div class="duration">
                 <label>Duration of Assessment:</label>
-                <label>WIP</label>
+                <label id="duration-result">WIP</label>
                 <br><br>
-                <label>Left/top preference: WIP</label>
+                <label>Left/Top preference:</label>
+                <label id="option1-result">WIP</label>
                 <br>
-                <label>Right/bottom preference: WIP</label>
+                <label>Right/Bottom preference:</label>
+                <label id="option2-result">WIP</label>
             </div>
 
         </div>
