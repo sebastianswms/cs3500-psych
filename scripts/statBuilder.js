@@ -11,4 +11,10 @@ window.fillStats = function fillStats() {
 
     duration.innerText = Math.floor(end - start) + "s"; // Updated WIP to the amount of seconds
 
+    let count1 = parseInt(getCookie("option1"));
+    let count2 = parseInt(getCookie("option2"));
+
+    option1.innerText = Math.floor(count1 / (count1 + count2) * 100) + "%";
+    option2.innerText = Math.floor(count2 / (count1 + count2) * 100) + "%";
+
 }

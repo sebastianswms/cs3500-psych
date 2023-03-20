@@ -16,7 +16,16 @@ window.selectOption = function selectOption(optionIndex){
     option[cookieParse("combination")[index][optionIndex]]++; // Increment the appropriate selection.
     setCookie("option",JSON.stringify(option),5); // Store the user's selections again. 5 days until expiry.
 
-
+    // TODO: Add to option1/2 cookies depending on which is pressed
+    
+    if (optionIndex == 0) {
+        let count = parseInt(getCookie("option1")) + 1;
+        setCookie("option1", count, 5);
+    } else if (optionIndex == 1) {
+        let count = parseInt(getCookie("option2")) + 1;
+        setCookie("option2", count, 5);
+    }
+    
 
     resetButtons(); // Reset the buttons for the next pair of options.
 }
