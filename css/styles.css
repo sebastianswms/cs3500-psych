@@ -64,8 +64,7 @@ footer p {
 
 /*apply an extra margin on all main contents*/
 #index, #about, #references {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0% 5% 10% 5%;
 }
 
 /*indent certain paragraphs of text*/
@@ -117,6 +116,22 @@ so that the 'add video' button is not cut off*/
 /*separate labels from input forms for readability*/
 #new-video label, #parameters label { 
   padding-right: 7px;
+}
+
+/* Nav bar styling */
+
+/*The nav bar itself*/
+.navbar {
+  border: 1px  rgb(238, 238, 238);
+  background-color: #1a3147;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+}
+
+/* The active page */
+.navbar .navbar-nav .active a{
+    pointer-events: none;
+    color: #eeeeee;
 }
 
 /*  ==========================================================================================
