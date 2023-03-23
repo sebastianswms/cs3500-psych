@@ -128,13 +128,24 @@ so that the 'add video' button is not cut off*/
   text-align: center;
 }
     
-.video-column { 
+.video-column-inner {
   float: left;
   width: 50%;
   position: relative;
 }
 
-.video-row:after { 
+.video-row-outer:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.video-row-inner #option1, .video-row-inner #option2 {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.video-column-outer:after {
 content: "";
 display: table;
 clear: both;

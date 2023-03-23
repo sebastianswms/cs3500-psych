@@ -15,8 +15,6 @@ window.selectOption = function selectOption(optionIndex){
     let option = cookieParse("option"); // Get the user's past selections.
     option[cookieParse("combination")[index][optionIndex]]++; // Increment the appropriate selection.
     setCookie("option",JSON.stringify(option),5); // Store the user's selections again. 5 days until expiry.
-
-    // TODO: Add to option1/2 cookies depending on which is pressed
     
     if (optionIndex == 0) {
         let count = parseInt(getCookie("option1")) + 1;
@@ -25,7 +23,6 @@ window.selectOption = function selectOption(optionIndex){
         let count = parseInt(getCookie("option2")) + 1;
         setCookie("option2", count, 5);
     }
-    
 
     resetButtons(); // Reset the buttons for the next pair of options.
 }
@@ -39,6 +36,16 @@ window.selectOption = function selectOption(optionIndex){
 */
 window.initializeButtons = function initializeButtons(){
     fillButtons();
+
+    if(getCookie("orientation") == "vertical"){
+        $(".outer").addClass("video-column-outer")
+        $(".inner").addClass("video-row-inner")
+    }
+    else if(getCookie("orientation") == "horizontal"){
+        $(".outer").addClass("video-row-outer")
+        $(".inner").addClass("video-column-inner")
+    }
+
     idleTimeout = setTimeout(resetButtons,timeoutLength); // Calls resetButtons after an amount of time determined by timeoutLength.
 }
 
@@ -78,12 +85,8 @@ window.fillButtons = function fillButtons(){
     }
 
     // Find the two buttons.
-    let option1 = document.getElementById("option1");
-    let option2 = document.getElementById("option2");
-
-    // Clear the two buttons.
-    option1.innerHTML = "";
-    option2.innerHTML = "";
+    $("#option1").empty();
+    $("#option2").empty();
 
     // Define two new images.
     let image1 = document.createElement("img");
@@ -95,6 +98,6 @@ window.fillButtons = function fillButtons(){
     image2.src = "https://i.ytimg.com/vi/" + videos[selection[combination[index][1]]] + "/hqdefault.jpg";
 
     // Put each image in its respective button.
-    option1.appendChild(image1);
-    option2.appendChild(image2);
+    $("#option1").append(image1);
+    $("#option2").append(image2);
 }
