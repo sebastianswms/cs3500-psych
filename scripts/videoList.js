@@ -1,7 +1,7 @@
 import {cookieParse} from './cookieManagement.js'; // Import functionality for reading JSON cookies.
 
 /*
-    Input: Cookies stored int he user's browser (as determined by the newVideo.js script).
+    Input: Cookies stored in the user's browser (as determined by the addDeleteVideo.js script).
 
     Output: A series of checkboxes showing every video the user has added to their video bank.
 
@@ -44,13 +44,4 @@ window.fillVideoList = function fillVideoList() {
         form.appendChild(label);
         form.appendChild(document.createElement("br"));
     }
-}
-
-
-//This function is to remove the videos from the video bank
-window.removeVideos = function removeVideos() {
-    //displays an alert to ask the user to ensure they want to remove the videos
-    alert("Are you sure you want to remove the video? ");
-
-    //the rest of the CODES that enables the btn to remove the videos go here........
 }
