@@ -7,10 +7,13 @@
     <!-- External stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- icon library link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="scripts/newVideo.js" type="module"></script> <!-- Storing new videos from the user -->
     <script src="scripts/videoList.js" type="module"></script> <!-- Generating a list of video checkboxes from cookies -->
     <script src="scripts/startAssessment.js" type="module"></script> <!-- Verification and starting the assessment -->
+    <script src="scripts/instructionsDropdown.js" type="module"></script> <!-- Verification and starting the assessment -->
 </head>
 
 <body onload="fillVideoList()"> <!-- When the page loads, populate the list of video checkboxes -->
@@ -20,82 +23,77 @@
 
 <main id="index">
     <div class="row pt-4">
-
         <!-- Instructions -->
         <div class="col-sm-8">
             <section class="indent">
-                <h2>Instructions</h2>
-                <p>
-                    Welcome to the Paired Preference Assessment Tool. This website is a tool designed for researchers and
-                    educators to assess the favorite rewards of autistic children. Using a series of video trials, subjects 
-                    will be able to choose their preferred rewards without relying on verbal communication.
+                <p><b>Welcome!</b> This website is a tool designed for researchers and educators to assess the favorite rewards
+                of autistic children. Using a series of video trials, subjects will be able to choose their preferred rewards
+                without relying on verbal communication.
                 </p>
-                <p>
-                    To use this tool, first imput the videos you would like to use by providing their YouTube URLs below. 
-                    You can store a maximum of 20 videos. Next, choose the parameters of the test. You can adjust the 
-                    orientation of the videos and whether the test shows video thumbnails or the video player. You can also 
-                    choose how long to wait (from 3 to 90 seconds) before skipping a trial and moving on to the next one. 
-                    Once you're ready to begin, select which videos you want to include in the test, then press "Start Test."
-                </p>
-                <p>
-                    After the test concludes, you will see the percentage that each video was selected, and a chart that
-                    displays these results. You can either copy the data or download a PNG image file of the chart.
-                </p>
+                <!-- by clicking, the user can display/hide the instruction steps -->
+                <h2 class="inst-div" onclick="toggleInstructionsDropdown()">Instructions <img id="inst-img" class="icon-rotate" src="/images/arrow.png"></h2>
+                <div id="instructions-box" class="foreground-box">
+                    <ol>
+                        <li>Add your videos by pasting their YouTube URLs below. (max 20 videos).</li>
+                        <li>Set the timer (3 - 90 seconds).</li>
+                        <li>Select video location as Vertical/Horizontal.</li>
+                        <li>Select the video presentation as thumbnails or the video player.</li>
+                        <li>Select the videos you want to include in the test from the video bank. Then press "Start Test."</li>
+                    </ol>
+                    <p><b>After the test concludes, you will see the result and can download the Chart.</b></p>
+                </div>
             </section>
+            <div class="row pt-3">
+                <!-- Add New Videos -->
+                <div class="col-sm-4" id="new-video-box">
+                    <h2>Add New Videos</h2>
+                    <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
+                        <label>Title:</label><input type="text" name="video-title" size="30" placeholder="Video title....">
+                        <br><br>
+                        <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
+                        <label>URL:</label><input type="text" name="video-url" size="30" placeholder="https://www.youtube.com/watch?v=??????">
+                        <br><br>
+                        <input type="submit" value="Add Video" class="btn btn-dark text-light border-dark">
+                    </form>
+                </div>
+                <!-- Parameters -->
+                <div id="parameters" class="col-sm-4">
+                    <h2>Parameters</h2>
+                    <label>Time to Selection:</label> <!-- 1st Parameter (number range) -->
+                    <input type="number" min="3" max="90" name="time-to-selection" size="13" value="15" form="start-assessment"/>
+                    <br><br>
+                    <!-- The user's selection here currently has no effect. assessment.html is always horizontal -->
+                    <label>Video Location:</label>
+                    <select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
+                        <option value="horizontal">Horizontal</option>
+                        <option value="vertical">Vertical</option>
+                    </select>
+                    <br><br>
+                    <!-- The user's selection here currently has no effect. Still images are always used. -->
+                    <label>Video Presentation:</label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
+                    <option value="video">Video Playback</option>
+                    <option value="still">Still Images</option>
+                </select>
+                </div>
+            </div>
         </div>
-
         <!-- Video Bank -->
-        <div class="col-sm-4 foreground-box">
-            <section id="video-bank">
-                <h2>Video Bank</h2>
-                <!-- An empty form that is populated using videoList.js -->
-                <form id="start-assessment" action="javascript:startAssessment();" onsubmit="return validateStartAssessment()" method="post"></form>
-            </section>
-            <section id="start-button">
-                <input type="submit" form="start-assessment" value="Start Test  >" class="btn btn-success text-light border-dark">
-            </section>
-
-        </div>
-    </div>
-
-    <div class="row pt-3">
-
-        <!-- Parameters -->
-        <div id="parameters" class="col-sm-4">
-            <h2>Parameters</h2>
-            <label>Time to Selection:</label> <!-- 1st Parameter (number range) -->
-            <input type="number" min="3" max="90" name="time-to-selection" size="13" value="15" form="start-assessment"/>
-            <br><br>
-
-            <!-- The user's selection here currently has no effect. assessment.html is always horizontal -->
-            <label>Video Location:</label><select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
-            <option value="horizontal">Horizontal</option>
-            <option value="vertical">Vertical</option>
-        </select>
-            <br><br>
-
-            <!-- The user's selection here currently has no effect. Still images are always used. -->
-            <label>Video Presentation:</label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
-            <option value="video">Video Playback</option>
-            <option value="still">Still Images</option>
-        </select>
-        </div>
-
-        <!-- Add New Videos -->
-        <div class="col-sm-4" id="new-video-box">
-            <h2>Add New Videos</h2>
-            <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
-                <label>Title:</label><input type="text" name="video-title" size="30">
-                <br><br>
-                <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
-                <label>URL:</label><input type="text" name="video-url" size="30" placeholder="https://www.youtube.com/watch?v=??????">
-                <br><br>
-                <input type="submit" value="Add Video" class="btn btn-dark text-light border-dark">
-            </form>
+        <div class="col-sm-4">
+            <div class="foreground-box">
+                <section id="video-bank">
+                    <h2>Video Bank</h2>
+                    <!-- An empty form that is populated using videoList.js -->
+                    <form id="start-assessment" action="javascript:startAssessment();" onsubmit="return validateStartAssessment()" method="post"></form>
+                </section>
+                <section id="start-button">
+                    <input type="submit" form="start-assessment" value="Start Test" class="btn btn-success text-light border-dark both-btn">
+                    <!-- added a button for user to remove the video(s)-->
+                    <button class="btn btn-danger text-light border-dark both-btn" onclick="removeVideos()"><i class="fa fa-trash"> Delete</i></button>
+                </section>
+            </div>
         </div>
     </div>
 </main>
-
 <footer>
     <p><em>A website for Dr. Curiel.</em></p>
 </footer>

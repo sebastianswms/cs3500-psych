@@ -20,7 +20,7 @@ const myChart = new Chart(ctx, {
     datasets: [{
       // we can get the data from any variable for this one
       data: percent,
-      backgroundColor: "#000000",
+      backgroundColor: "black", 
       },
     ],
   },
@@ -81,8 +81,22 @@ const myChart = new Chart(ctx, {
 */
 window.downloadChart = function downloadChart() {
   const canvas = document.getElementById('myChart');
-  const downloadLink = document.createElement('a');
-  downloadLink.href = canvas.toDataURL('image/png');
-  downloadLink.download = 'Result.png';
-  downloadLink.click();
+  // creating a new chart with white background color
+  const newChart = document.createElement('canvas');
+  newChart.width = canvas.width;
+  newChart.height = canvas.height;
+  const ctx = newChart.getContext('2d');
+  ctx.fillStyle = '#ebebeb';
+  ctx.fillRect(0, 0, newChart.width, newChart.height);
+  // convert the new chart to an images
+  const chartImage = canvas.toDataURL();
+  const newImg = new Image();
+  newImg.onload = function () {
+    ctx.drawImage(newImg, 0, 0);
+    const downloadLink = document.createElement('a');
+    downloadLink.download = 'Result.png';
+    downloadLink.href = newChart.toDataURL();
+    downloadLink.click();
+  }
+  newImg.src = chartImage;
 }

@@ -15,6 +15,18 @@ window.selectOption = function selectOption(optionIndex){
     let option = cookieParse("option"); // Get the user's past selections.
     option[cookieParse("combination")[index][optionIndex]]++; // Increment the appropriate selection.
     setCookie("option",JSON.stringify(option),5); // Store the user's selections again. 5 days until expiry.
+
+    // TODO: Add to option1/2 cookies depending on which is pressed
+    
+    if (optionIndex == 0) {
+        let count = parseInt(getCookie("option1")) + 1;
+        setCookie("option1", count, 5);
+    } else if (optionIndex == 1) {
+        let count = parseInt(getCookie("option2")) + 1;
+        setCookie("option2", count, 5);
+    }
+    
+
     resetButtons(); // Reset the buttons for the next pair of options.
 }
 
@@ -60,6 +72,7 @@ window.fillButtons = function fillButtons(){
 
     // If the assessment has completed, move on to the next page.
     if(index >= combination.length){
+        setCookie("end", (new Date().getTime() / 1000), 5) // Saves the epoch timestamp in seconds when the assessment reaches the end.
         window.location.href = "./decision.html";
         return;
     }
