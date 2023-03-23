@@ -12,7 +12,7 @@ body {
   background-attachment:fixed;
   background-image: url("/images/background.png");
 }
-/*sets margins for all headers*/ 
+/*sets margins for all headers*/
 header {                        
   margin: 1% 0 0.75% 5%;
   }
@@ -36,7 +36,7 @@ h2 {
     margin-bottom: max(25px, 1.75%);
   }
 }
- 
+
 /*footer background: set color and position*/
 footer {
     background-color: #1a3147;
@@ -59,22 +59,22 @@ footer p {
 }
   
 /*  ==========================================================================================
-                                          Index page
+                                 Index, About, & References pages
     ========================================================================================== */
 
 /*apply an extra margin on all main contents*/
-#index { 
+#index, #about, #references {
   margin-left: 5%;
   margin-right: 5%;
 }
 
-/*indent all paragraphs for the Instructions text*/
-#instructions p { 
+/*indent certain paragraphs of text*/
+.indent p {
   margin-left: 30px;
   margin-right: 4%;
 }
 
-/*video bank div box*/
+/*Boxes with a drop-shadow in the foreground of the viewing window*/
 .foreground-box {
   border: 1px  rgb(238, 238, 238);
   border-radius: 20px; /*add a border radius*/
@@ -197,7 +197,7 @@ img {
 
 /*button fade on hover*/
 .btn-result:hover {
-  background-color: #3bce5d;;
+  background-color: #3bce5d;
   border-color: #000000;
   color: #fff;
 }
