@@ -41,7 +41,7 @@ window.initializeButtons = function initializeButtons(){
         $(".outer").addClass("video-column-outer")
         $(".inner").addClass("video-row-inner")
     }
-    else if(getCookie("orientation") == "horizontal"){
+    else {
         $(".outer").addClass("video-row-outer")
         $(".inner").addClass("video-column-inner")
     }
@@ -84,20 +84,57 @@ window.fillButtons = function fillButtons(){
         return;
     }
 
-    // Find the two buttons.
+    // Remove previous selection options.
     $("#option1").empty();
     $("#option2").empty();
 
-    // Define two new images.
-    let image1 = document.createElement("img");
-    let image2 = document.createElement("img");
+    // Check whether the user wants still images or videos.
+    if(getCookie("presentation") == "video"){
 
-    // Get high-quality (hqdefault) thumbnails for the pair of videos and set the images to them.
-    // Eventually this will have a check for whether it should be thumbnails or video playback.
-    image1.src = "https://i.ytimg.com/vi/" + videos[selection[combination[index][0]]] + "/hqdefault.jpg";
-    image2.src = "https://i.ytimg.com/vi/" + videos[selection[combination[index][1]]] + "/hqdefault.jpg";
+        // Create two iframes to hold YouTube embeds.
+        let iframe1 = $("<iframe></iframe>").attr({
+            width: "560",
+            height: "315",
+            src: "https://www.youtube.com/embed/" + videos[selection[combination[index][0]]] + "?autoplay=1&mute=1&controls=0&disablekb=1"
+                                              })
+        let iframe2 = $("<iframe></iframe>").attr({
+            width: "560",
+            height: "315",
+            src: "https://www.youtube.com/embed/" + videos[selection[combination[index][1]]] + "?autoplay=1&mute=1&controls=0&disablekb=1"
+                                              })
 
-    // Put each image in its respective button.
-    $("#option1").append(image1);
-    $("#option2").append(image2);
+        // Create and add two detector divs to overlay the iframes.
+        let detector1 = $("<div></div>").attr("id","detector1");
+        let detector2 = $("<div></div>").attr("id","detector2");
+        $("#option1").append(detector1);
+        $("#option2").append(detector2);
+
+        // Add the iframes and prevent them from being paused by setting pointer-events to none.
+        $("#option1").append(iframe1);
+        $("#option2").append(iframe2);
+        $("iframe").css("pointer-events","none");
+
+        // Add listeners to the detectors to check for when the user selects a video.
+        $("#detector1").click(function(){selectOption(0)});
+        $("#detector2").click(function(){selectOption(1)});
+    }
+    else {
+
+        // Create two images with thumbnails from YouTube.
+        let image1 = $("<img>").attr("src","https://i.ytimg.com/vi/" + videos[selection[combination[index][0]]] + "/hqdefault.jpg");
+        let image2 = $("<img>").attr("src","https://i.ytimg.com/vi/" + videos[selection[combination[index][1]]] + "/hqdefault.jpg");
+
+        // Add the images.
+        $("#option1").append(image1);
+        $("#option2").append(image2);
+
+        // Add listeners to the images to check for when the user selects an image.
+        $("#option1").click(function(){selectOption(0)});
+        $("#option2").click(function(){selectOption(1)});
+    }
 }
+
+// When the page loads, initialize the "buttons" for the user to select from.
+$(document).ready(function(){
+        initializeButtons()
+})

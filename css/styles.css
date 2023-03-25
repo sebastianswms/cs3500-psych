@@ -127,7 +127,7 @@ so that the 'add video' button is not cut off*/
 .assessment-body div {
   text-align: center;
 }
-    
+
 .video-column-inner {
   float: left;
   width: 50%;
@@ -140,11 +140,6 @@ display: table;
 clear: both;
 }
 
-.video-row-inner #option1, .video-row-inner #option2 {
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-}
-
 .video-column-outer:after {
 content: "";
 display: table;
@@ -152,18 +147,51 @@ clear: both;
 }
 
 /*fit thumbnails into buttons*/
-img { 
+img iframe {
   max-width: 100%;
   max-height: 100%;
 }
 
-/*buttons*/
-#option1, #option2 { 
+/* img and iframe positioning for horizontal presentation mode */
+.video-column-inner img, .video-column-inner iframe {
   max-width: 80%;
   max-height: 80%;
   margin-top: 15vh;
   margin-bottom: 10vh;
 }
+
+/* img and iframe positioning for vertical presentation mode */
+.video-row-inner image, .video-row-inner iframe {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+/* detector positioning for horizontal presentation mode */
+.video-column-inner #detector1, .video-column-inner #detector2 {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    margin-left: 10%;
+}
+
+/* detector positioning for vertical presentation mode */
+.video-row-inner #detector1, .video-row-inner #detector2 {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 15%;
+}
+
+/* detector positioning, including z-positioning to place them in front of their iframes */
+#detector1, #detector2 {
+    z-index:1;
+    position:absolute;
+    max-width: 80%;
+    max-height: 80%;
+    height:315px;
+    width:560px;
+}
+
 
 /*  ==========================================================================================
                                        Decision page

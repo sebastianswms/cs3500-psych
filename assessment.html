@@ -15,19 +15,13 @@
     <script src="scripts/buttonManagement.js" type="module"></script>
 </head>
 
-<!-- When the page first loads, display appropriate options for the user to pick from. -->
-<body onload="initializeButtons()" class="assessment-body">
+<body class="assessment-body">
 <main>
-    <!-- Options for the user to pick from. -->
+    <!-- Options for the user to pick from. Outer div for formatting where the two options are positioned. -->
     <div class="outer">
-        <div class="inner">
-            <!-- Detect the user's click and run appropriate javascript for the left/top option. -->
-            <button type="button" id="option1" onclick="selectOption(0)"></button>
-        </div>
-        <div class="inner">
-            <!-- Detect the user's click and run appropriate javascript for the right/bottom option. -->
-            <button type="button" id="option2" onclick="selectOption(1)"></button>
-        </div>
+        <!-- Inner divs for formatting where each individual option is positioned. -->
+        <div id="option1" class="inner"></div>
+        <div id="option2" class="inner"></div>
     </div>
 </main>
 
