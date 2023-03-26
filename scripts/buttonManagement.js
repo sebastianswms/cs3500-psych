@@ -14,9 +14,6 @@ var timeoutLength = getCookie("timeout")*1000; // How long to wait before skippi
 window.selectOption = function selectOption(optionIndex){
 
     // Read the user's cookies.
-    let combination = cookieParse("combination");
-    let selection = cookieParse("selection");
-    let videos = cookieParse("videos");
     let option = cookieParse("option");
 
     option[cookieParse("combination")[index][optionIndex]]++; // Increment the appropriate selection.
@@ -30,21 +27,7 @@ window.selectOption = function selectOption(optionIndex){
         setCookie("option2", count, 5);
     }
 
-    // Create a new iframe with a YouTube embed showing the user's selection.
-    let iframeSelection = $("<iframe></iframe>").attr({
-                width: "560",
-                height: "315",
-                src: "https://www.youtube.com/embed/" + videos[selection[combination[index][optionIndex]]] + "?autoplay=1&controls=0&disablekb=1",
-                allow: "autoplay"
-                                                  })
-
-    // Stop the options from displaying in the background.
-    $(".outer").css("display","none")
-
-    // Add and show the iframe, but disable pausing.
-    $("#selection-player .modal-content").append(iframeSelection)
-    $("iframe").css("pointer-events","none");
-    $("#selection-player").css("display","block")
+    modalEnable(optionIndex); // Display pop-up with the user's selected video.
 
     clearTimeout(idleTimeout); // Stop the timeout.
     idleTimeout = setTimeout(resetButtons,timeoutLength); // Calls resetButtons after an amount of time determined by timeoutLength.
@@ -82,8 +65,7 @@ window.initializeButtons = function initializeButtons(){
 */
 window.resetButtons = function resetButtons(){
     clearTimeout(idleTimeout); // Stop the timeout.
-    $(".modal-content").empty()
-    $("#selection-player").css("display","none")
+    modalDisable();
     index++; // Increment the index.
     fillButtons(); // Display a new set of options for the user to pick from.
     idleTimeout = setTimeout(resetButtons,timeoutLength); // Calls resetButtons after an amount of time determined by timeoutLength.
@@ -163,6 +145,50 @@ window.fillButtons = function fillButtons(){
         $("#option1").click(function(){selectOption(0)});
         $("#option2").click(function(){selectOption(1)});
     }
+}
+
+/*
+    Input: Either 0 or 1, indicating which option the user selected.
+
+    Output: Displays a modal with a video embed that plays the user's selection.
+
+    Remarks: optionIndex == 0 corresponds to left/top and optionIndex == 1 corresponds to right/bottom.
+*/
+window.modalShow = function modalEnable(optionIndex){
+
+    // Read the user's cookies.
+    let combination = cookieParse("combination");
+    let selection = cookieParse("selection");
+    let videos = cookieParse("videos");
+
+    // Create a new iframe with a YouTube embed showing the user's selection.
+    let iframeSelection = $("<iframe></iframe>").attr({
+                width: "560",
+                height: "315",
+                src: "https://www.youtube.com/embed/" + videos[selection[combination[index][optionIndex]]] + "?autoplay=1&controls=0&disablekb=1",
+                allow: "autoplay"
+                                                  })
+
+    // Stop the options from displaying in the background.
+    $(".outer").css("display","none")
+
+    // Add and show the iframe, but disable pausing.
+    $("#selection-player .modal-content").append(iframeSelection)
+    $("iframe").css("pointer-events","none");
+    $("#selection-player").css("display","block")
+
+}
+
+/*
+    Input: None
+
+    Output: Hides and empties the modal playing the user's selection.
+
+    Remarks: This should be called after a delay in concert with modalEnable() to show and hide the modal.
+*/
+window.modalHide = function modalDisable(){
+    $(".modal-content").empty() // Empties the modal's content.
+    $("#selection-player").css("display","none") // Hides the modal.
 }
 
 // When the page loads, initialize the "buttons" for the user to select from.
