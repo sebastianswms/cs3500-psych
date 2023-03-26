@@ -12,7 +12,13 @@ var timeoutLength = getCookie("timeout")*1000; // How long to wait before skippi
     Remarks: optionIndex == 0 corresponds to left/top and optionIndex == 1 corresponds to right/bottom.
 */
 window.selectOption = function selectOption(optionIndex){
-    let option = cookieParse("option"); // Get the user's past selections.
+
+    // Read the user's cookies.
+    let combination = cookieParse("combination");
+    let selection = cookieParse("selection");
+    let videos = cookieParse("videos");
+    let option = cookieParse("option");
+
     option[cookieParse("combination")[index][optionIndex]]++; // Increment the appropriate selection.
     setCookie("option",JSON.stringify(option),5); // Store the user's selections again. 5 days until expiry.
     
@@ -24,7 +30,24 @@ window.selectOption = function selectOption(optionIndex){
         setCookie("option2", count, 5);
     }
 
-    resetButtons(); // Reset the buttons for the next pair of options.
+    // Create a new iframe with a YouTube embed showing the user's selection.
+    let iframeSelection = $("<iframe></iframe>").attr({
+                width: "560",
+                height: "315",
+                src: "https://www.youtube.com/embed/" + videos[selection[combination[index][optionIndex]]] + "?autoplay=1&controls=0&disablekb=1",
+                allow: "autoplay"
+                                                  })
+
+    // Stop the options from displaying in the background.
+    $(".outer").css("display","none")
+
+    // Add and show the iframe, but disable pausing.
+    $("#selection-player .modal-content").append(iframeSelection)
+    $("iframe").css("pointer-events","none");
+    $("#selection-player").css("display","block")
+
+    clearTimeout(idleTimeout); // Stop the timeout.
+    idleTimeout = setTimeout(resetButtons,timeoutLength); // Calls resetButtons after an amount of time determined by timeoutLength.
 }
 
 /*
@@ -37,6 +60,7 @@ window.selectOption = function selectOption(optionIndex){
 window.initializeButtons = function initializeButtons(){
     fillButtons();
 
+    // Add appropriate classes depending on the user's choice or orientation.
     if(getCookie("orientation") == "vertical"){
         $(".outer").addClass("video-column-outer")
         $(".inner").addClass("video-row-inner")
@@ -58,6 +82,8 @@ window.initializeButtons = function initializeButtons(){
 */
 window.resetButtons = function resetButtons(){
     clearTimeout(idleTimeout); // Stop the timeout.
+    $(".modal-content").empty()
+    $("#selection-player").css("display","none")
     index++; // Increment the index.
     fillButtons(); // Display a new set of options for the user to pick from.
     idleTimeout = setTimeout(resetButtons,timeoutLength); // Calls resetButtons after an amount of time determined by timeoutLength.
@@ -88,6 +114,9 @@ window.fillButtons = function fillButtons(){
     $("#option1").empty();
     $("#option2").empty();
 
+    // Reset visibility to show options correctly.
+    $(".outer").css("display","table")
+
     // Check whether the user wants still images or videos.
     if(getCookie("presentation") == "video"){
 
@@ -95,12 +124,14 @@ window.fillButtons = function fillButtons(){
         let iframe1 = $("<iframe></iframe>").attr({
             width: "560",
             height: "315",
-            src: "https://www.youtube.com/embed/" + videos[selection[combination[index][0]]] + "?autoplay=1&mute=1&controls=0&disablekb=1"
+            src: "https://www.youtube.com/embed/" + videos[selection[combination[index][0]]] + "?autoplay=1&mute=1&controls=0&disablekb=1",
+            allow: "autoplay"
                                               })
         let iframe2 = $("<iframe></iframe>").attr({
             width: "560",
             height: "315",
-            src: "https://www.youtube.com/embed/" + videos[selection[combination[index][1]]] + "?autoplay=1&mute=1&controls=0&disablekb=1"
+            src: "https://www.youtube.com/embed/" + videos[selection[combination[index][1]]] + "?autoplay=1&mute=1&controls=0&disablekb=1",
+            allow: "autoplay"
                                               })
 
         // Create and add two detector divs to overlay the iframes.
