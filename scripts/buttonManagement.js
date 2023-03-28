@@ -3,6 +3,7 @@ import {cookieParse, getCookie, setCookie} from './cookieManagement.js'; // Impo
 var idleTimeout; // A timeout that will reset the buttons if the user fails to make a selection within the specified time.
 var index = 0; // Stores how many choices the user has been presented with.
 var timeoutLength = getCookie("timeout")*1000; // How long to wait before skipping to the next pair of options, in ms.
+var playtimeLength = getCookie("playtime")*1000; // How long to play a user's selection, in ms.
 
 /*
     Input: Either 0 or 1, indicating which option the user selected.
@@ -12,6 +13,8 @@ var timeoutLength = getCookie("timeout")*1000; // How long to wait before skippi
     Remarks: optionIndex == 0 corresponds to left/top and optionIndex == 1 corresponds to right/bottom.
 */
 window.selectOption = function selectOption(optionIndex){
+
+    clearTimeout(idleTimeout); // Stop the timeout.
 
     // Read the user's cookies.
     let option = cookieParse("option");
@@ -29,8 +32,7 @@ window.selectOption = function selectOption(optionIndex){
 
     modalEnable(optionIndex); // Display pop-up with the user's selected video.
 
-    clearTimeout(idleTimeout); // Stop the timeout.
-    idleTimeout = setTimeout(resetButtons,timeoutLength); // Calls resetButtons after an amount of time determined by timeoutLength.
+    idleTimeout = setTimeout(resetButtons,playtimeLength); // Calls resetButtons after an amount of time determined by playtimeLength.
 }
 
 /*
@@ -97,7 +99,7 @@ window.fillButtons = function fillButtons(){
     $("#option2").empty();
 
     // Reset visibility to show options correctly.
-    $(".outer").css("display","table")
+    $(".outer").css("display","block")
 
     // Check whether the user wants still images or videos.
     if(getCookie("presentation") == "video"){
@@ -154,7 +156,7 @@ window.fillButtons = function fillButtons(){
 
     Remarks: optionIndex == 0 corresponds to left/top and optionIndex == 1 corresponds to right/bottom.
 */
-window.modalShow = function modalEnable(optionIndex){
+window.modalEnable = function modalEnable(optionIndex){
 
     // Read the user's cookies.
     let combination = cookieParse("combination");
@@ -186,7 +188,7 @@ window.modalShow = function modalEnable(optionIndex){
 
     Remarks: This should be called after a delay in concert with modalEnable() to show and hide the modal.
 */
-window.modalHide = function modalDisable(){
+window.modalDisable = function modalDisable(){
     $(".modal-content").empty() // Empties the modal's content.
     $("#selection-player").css("display","none") // Hides the modal.
 }

@@ -62,15 +62,16 @@
                     <label>Time to Selection:</label> <!-- 1st Parameter (number range) -->
                     <input type="number" min="3" max="90" name="time-to-selection" size="13" value="15" form="start-assessment"/>
                     <br><br>
-                    <!-- The user's selection here currently has no effect. assessment.html is always horizontal -->
+                    <label>Play Time:</label> <!-- 2nd Parameter (number range) -->
+                    <input type="number" min="3" max="90" name="playtime" size="13" value="15" form="start-assessment"/>
+                    <br><br>
                     <label>Video Location:</label>
-                    <select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
+                    <select name="video-location" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
                         <option value="horizontal">Horizontal</option>
                         <option value="vertical">Vertical</option>
                     </select>
                     <br><br>
-                    <!-- The user's selection here currently has no effect. Still images are always used. -->
-                    <label>Video Presentation:</label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
+                    <label>Video Presentation:</label><select name="video-presentation" form="start-assessment"> <!-- 4th Parameter (dropdown) -->
                     <option value="video">Video Playback</option>
                     <option value="still">Still Images</option>
                 </select>
