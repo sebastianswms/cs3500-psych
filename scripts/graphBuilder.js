@@ -47,11 +47,18 @@ const myChart = new Chart(ctx, {
       // set the y-axis to 100
       yAxes: [
         {
+          // added a y-axis title
+          scaleLabel: {
+            display: true,
+            labelString: 'Percentage of Selection'
+          },
           stacked: true,
           ticks: {
             beginAtZero: true,
             min: 0,
             max: 100,
+            // The values on the y-axis appear in increments of 20
+            stepSize: 20,
             callback: function (value) {
               return value+'%';
             },
@@ -66,6 +73,11 @@ const myChart = new Chart(ctx, {
       xAxes: [{
         gridLines: {
           display: false
+        },
+        // added an x-axis title
+        scaleLabel: {
+          display: true,
+          labelString: "Picture"
         }
       }]
     },
