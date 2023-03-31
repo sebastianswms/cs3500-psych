@@ -282,6 +282,16 @@ img iframe {
   margin: 20px auto;
 }
 
+.results div {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.duration label {
+  margin-left: 30px;
+  margin-right: 4%;
+}
+
 /* changing title styling */
 #res-title {
   background-color: transparent;
@@ -353,6 +363,13 @@ img iframe {
   font-family: Garamond, "Times New Roman", Times, serif;
 }
 
+.duration h2 {
+  font-size: clamp(24px, 2vmin, 24px);
+}
+
+.results .centered {
+  text-align: center;
+}
 
 /* applies flexbox layout properties to buttons */
 .btn-div {

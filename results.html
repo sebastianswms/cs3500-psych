@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graph and Results</title>
+    <title>Assessment Results</title>
 
     <!-- icon library link w3c -->
     <!-- Add icon library -->
@@ -25,39 +25,38 @@
 <!-- Jumbotron at the top of the page announcing completion of the assessment to the user. -->
 <section id="first-sec">
     <div class="jumbotron-title" id="res-title">
-        <h1>RESULTS</h1>
+        <h1>Assessment Results</h1>
         <hr>
     </div>
 </section>
 
 <section>
     <div class="row">
-        <div class="col res-sec">
-            <div class="assess-title">
-                <h2 class="title-text">Assessment Outcomes</h2>
-            </div>
+        <div class="col res-sec duration">
 
             <!-- Filled using tableBuilder.js with data from the user's cookies. -->
-            <table class="video-table" id="video-table">
-            </table>
-
-            <!-- This portion is currently not functional yet, but will eventually be filled with data from the user. -->
-            <div class="duration">
-                <label>Duration of Assessment:</label>
-                <label id="duration-result">WIP</label>
-                <br><br>
-                <label>Left/Top preference:</label>
-                <label id="option1-result">WIP</label>
-                <br>
-                <label>Right/Bottom preference:</label>
-                <label id="option2-result">WIP</label>
+            <div class="centered">
+                <h2>Percentage of Selection</h2>
             </div>
+
+            <table class="video-table" id="video-table"></table>
+
+            <div class="centered">
+                <h2>Percentage of Selection (location)</h2>
+            </div>
+            <label id="option1-result"></label>
+            <label id="option2-result"></label>
+            <br>
+            <div class="centered">
+                <h2>Duration of Assessment</h2>
+            </div>
+            <label id="duration-result"></label>
 
         </div>
 
         <!-- For styling the container of the chart -->
         <div class="col graph-sec">
-            <h3 class="graph-text title-text">Graph</h3>
+            <h3 class="graph-text title-text"></h3>
 
             <!-- A link from canvas which will be populated using Chart.js -->
             <canvas id="myChart"></canvas>
@@ -72,12 +71,12 @@
         <!-- Restart the test from the beginning. -->
         <a href="index.html">
             <!-- added bootstrap btn styling -->
-            <button class="b-main btn btn-primary" type="button">&nbspSTART OVER &nbsp&nbsp&nbsp&#x21B7</button>
+            <button class="b-main btn btn-primary" type="button">&nbspMain Page&nbsp&nbsp&nbsp&#x21B7</button>
         </a>
 
         <!-- Download the graph as a PNG. -->
         <!-- added bootstrap btn styling -->
-        <button class="btn btn-success" onclick="downloadChart()"><i class="fa fa-download"></i> Download Chart</button>
+        <button class="btn btn-success" onclick="downloadChart()"><i class="fa fa-download"></i> Download PNG</button>
     </div>
 </section>
 
