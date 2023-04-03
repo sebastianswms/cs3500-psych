@@ -22,7 +22,7 @@
 <body onload="fillVideoList()"> <!-- When the page loads, populate the list of video checkboxes -->
 <div class="loader"></div>
 <header>
-    <h1>Paired Preference Assessment Tool for Videos</h1>
+    <h1>Paired Stimulus Preference Assessment Tool</h1>
 </header>
 
 <main id="index">
@@ -50,31 +50,32 @@
             <div class="row pt-3">
                 <!-- Add New Videos -->
                 <div class="col-sm-4" id="new-video-box">
-                    <h2>Add New Videos</h2>
+                    <h2>Add New Stimulus</h2>
                     <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
                         <label>Title:</label><input type="text" name="video-title" size="30" placeholder="Video title....">
                         <br><br>
                         <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
                         <label>URL:</label><input type="text" name="video-url" size="30" placeholder="https://www.youtube.com/watch?v=??????">
                         <br><br>
-                        <input type="submit" value="Add Video" class="btn btn-dark text-light border-dark">
+                        <input type="submit" value="Add Stimulus" class="btn btn-dark text-light border-dark">
                     </form>
                 </div>
                 <!-- Parameters -->
                 <div id="parameters" class="col-sm-4">
-                    <h2>Parameters</h2>
-                    <label>Time to Selection:</label> <!-- 1st Parameter (number range) -->
+                    <h2>Assessment Parameters</h2>
+                    <label>Time to Selection (seconds):</label> <!-- 1st Parameter (number range) -->
                     <input type="number" min="3" max="90" name="time-to-selection" size="13" value="15" form="start-assessment"/>
                     <br><br>
-                    <!-- The user's selection here currently has no effect. assessment.html is always horizontal -->
-                    <label>Video Location:</label>
-                    <select name="video-location" form="start-assessment"> <!-- 2nd Parameter (dropdown) -->
+                    <label>Playtime for Selections (seconds):</label> <!-- 2nd Parameter (number range) -->
+                    <input type="number" min="3" max="90" name="playtime" size="13" value="15" form="start-assessment"/>
+                    <br><br>
+                    <label>Location of Stimuli:</label>
+                    <select name="video-location" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
                         <option value="horizontal">Horizontal</option>
                         <option value="vertical">Vertical</option>
                     </select>
                     <br><br>
-                    <!-- The user's selection here currently has no effect. Still images are always used. -->
-                    <label>Video Presentation:</label><select name="video-presentation" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
+                    <label>Stimulus Option Displays:</label><select name="video-presentation" form="start-assessment"> <!-- 4th Parameter (dropdown) -->
                     <option value="video">Video Playback</option>
                     <option value="still">Still Images</option>
                 </select>
@@ -85,7 +86,7 @@
         <div class="col-sm-4">
             <div class="foreground-box">
                 <section id="video-bank">
-                    <h2>Video Bank</h2>
+                    <h2>Stimulus Library</h2>
                     <!-- An empty form that is populated using videoList.js -->
                     <form id="start-assessment" action="javascript:startAssessment();" onsubmit="return validateStartAssessment()" method="post"></form>
                 </section>

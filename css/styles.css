@@ -127,31 +127,95 @@ so that the 'add video' button is not cut off*/
 .assessment-body div {
   text-align: center;
 }
-    
-.video-column { 
+
+.video-column-inner {
   float: left;
   width: 50%;
   position: relative;
 }
 
-.video-row:after { 
+.video-row-outer:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.video-column-outer:after {
 content: "";
 display: table;
 clear: both;
 }
 
 /*fit thumbnails into buttons*/
-img { 
+img iframe {
   max-width: 100%;
   max-height: 100%;
 }
 
-/*buttons*/
-#option1, #option2 { 
+/* img and iframe positioning for horizontal presentation mode */
+.video-column-inner img, .video-column-inner iframe {
   max-width: 80%;
   max-height: 80%;
   margin-top: 15vh;
   margin-bottom: 10vh;
+}
+
+/* img and iframe positioning for vertical presentation mode */
+.video-row-inner image, .video-row-inner iframe {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+/* detector positioning for horizontal presentation mode */
+.video-column-inner #detector1, .video-column-inner #detector2 {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    margin-left: 10%;
+}
+
+/* detector positioning for vertical presentation mode */
+.video-row-inner #detector1, .video-row-inner #detector2 {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 15%;
+}
+
+/* detector positioning, including z-positioning to place them in front of their iframes */
+#detector1, #detector2 {
+    z-index:1;
+    position:absolute;
+    max-width: 80%;
+    max-height: 80%;
+    height:315px;
+    width:560px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /*  ==========================================================================================
@@ -216,6 +280,16 @@ img {
 .results section {
   width: 85%;
   margin: 20px auto;
+}
+
+.results div {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.duration label {
+  margin-left: 30px;
+  margin-right: 4%;
 }
 
 /* changing title styling */
@@ -289,6 +363,13 @@ img {
   font-family: Garamond, "Times New Roman", Times, serif;
 }
 
+.duration h2 {
+  font-size: clamp(24px, 2vmin, 24px);
+}
+
+.results .centered {
+  text-align: center;
+}
 
 /* applies flexbox layout properties to buttons */
 .btn-div {
