@@ -10,6 +10,9 @@
     <!-- icon library link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- loader file js link -->
+    <script src="/scripts/loader.js"></script>
+
     <script src="scripts/addDeleteVideo.js" type="module"></script> <!-- Storing new videos from the user -->
     <script src="scripts/videoList.js" type="module"></script> <!-- Generating a list of video checkboxes from cookies -->
     <script src="scripts/startAssessment.js" type="module"></script> <!-- Verification and starting the assessment -->
@@ -17,6 +20,7 @@
 </head>
 
 <body onload="fillVideoList()"> <!-- When the page loads, populate the list of video checkboxes -->
+<div class="loader"></div>
 <header>
     <h1>Paired Stimulus Preference Assessment Tool</h1>
 </header>
