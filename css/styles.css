@@ -88,6 +88,27 @@ footer p {
   margin-bottom: 35px;
 }
 
+/* resize the instruction icon */
+#inst-icon {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0b0c0e;
+}
+/* changed the div width and restricted selection & copying */
+.inst-text {
+  width: 210px;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
+}
+/* changing the cursor and transform to  when hover over the instruciton text/img */
+.inst-text:hover {
+  cursor: pointer;
+}
+
 /*adds a bottom margin for small screens 
 so that the 'add video' button is not cut off*/
 @media (max-width: 800px), (max-height: 800px) {
@@ -382,26 +403,8 @@ img iframe {
 .b-main {
   margin-right: 1vw;
 }
-
-/* resize the instruction img (as icon) */
-#inst-img {
-  width: 17px;
-  height: 15px;
-}
-/* changing the cursor and transform to  when hover over the instruciton text/img */
-.inst-div:hover {
-  cursor: pointer;
-}
-
-/* changed the div width and restricted selection & copying */
-.inst-div {
-  width: 195px;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  user-select: none;
+.b-main .refresh {
+  padding: auto;
 }
 
 /*  ==========================================================================================

@@ -6,7 +6,7 @@
     Remarks: This is the function call when the user needs directions on home page (index.html).
 */
 var inst_steps = document.getElementById("instructions-box");
-var inst_icon = document.getElementById("inst-img");
+var inst_icon = document.getElementById("inst-icon");
 inst_steps.style.display = "none";
 window.toggleInstructionsDropdown = function toggleInstructionsDropdown() {
     if (inst_steps.style.display == "none") {
