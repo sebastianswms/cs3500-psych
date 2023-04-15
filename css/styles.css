@@ -87,6 +87,27 @@ footer p {
   margin-bottom: 35px;
 }
 
+/* resize the instruction icon */
+#inst-icon {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0b0c0e;
+}
+/* changed the div width and restricted selection & copying */
+.inst-text {
+  width: 210px;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
+}
+/* changing the cursor and transform to  when hover over the instruciton text/img */
+.inst-text:hover {
+  cursor: pointer;
+}
+
 /*adds a bottom margin for small screens 
 so that the 'add video' button is not cut off*/
 @media (max-width: 800px), (max-height: 800px) {
@@ -142,31 +163,95 @@ so that the 'add video' button is not cut off*/
 .assessment-body div {
   text-align: center;
 }
-    
-.video-column { 
+
+.video-column-inner {
   float: left;
   width: 50%;
   position: relative;
 }
 
-.video-row:after { 
+.video-row-outer:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.video-column-outer:after {
 content: "";
 display: table;
 clear: both;
 }
 
 /*fit thumbnails into buttons*/
-img { 
+img iframe {
   max-width: 100%;
   max-height: 100%;
 }
 
-/*buttons*/
-#option1, #option2 { 
+/* img and iframe positioning for horizontal presentation mode */
+.video-column-inner img, .video-column-inner iframe {
   max-width: 80%;
   max-height: 80%;
   margin-top: 15vh;
   margin-bottom: 10vh;
+}
+
+/* img and iframe positioning for vertical presentation mode */
+.video-row-inner image, .video-row-inner iframe {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+/* detector positioning for horizontal presentation mode */
+.video-column-inner #detector1, .video-column-inner #detector2 {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    margin-left: 10%;
+}
+
+/* detector positioning for vertical presentation mode */
+.video-row-inner #detector1, .video-row-inner #detector2 {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 15%;
+}
+
+/* detector positioning, including z-positioning to place them in front of their iframes */
+#detector1, #detector2 {
+    z-index:1;
+    position:absolute;
+    max-width: 80%;
+    max-height: 80%;
+    height:315px;
+    width:560px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /*  ==========================================================================================
@@ -231,6 +316,16 @@ img {
 .results section {
   width: 85%;
   margin: 20px auto;
+}
+
+.results div {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.duration label {
+  margin-left: 30px;
+  margin-right: 4%;
 }
 
 /* changing title styling */
@@ -304,6 +399,13 @@ img {
   font-family: Garamond, "Times New Roman", Times, serif;
 }
 
+.duration h2 {
+  font-size: clamp(24px, 2vmin, 24px);
+}
+
+.results .centered {
+  text-align: center;
+}
 
 /* applies flexbox layout properties to buttons */
 .btn-div {
@@ -316,24 +418,52 @@ img {
 .b-main {
   margin-right: 1vw;
 }
-
-/* resize the instruction img (as icon) */
-#inst-img {
-  width: 17px;
-  height: 15px;
-}
-/* changing the cursor and transform to  when hover over the instruciton text/img */
-.inst-div:hover {
-  cursor: pointer;
+.b-main .refresh {
+  padding: auto;
 }
 
-/* changed the div width and restricted selection & copying */
-.inst-div {
-  width: 195px;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  user-select: none;
-}
+/*  ==========================================================================================
+                                        loader styling
+    ========================================================================================== */
+
+
+    .loader {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      position: fixed;
+      background-color: rgb(249, 252, 255);
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.75s, visibility 0.75s;
+    }
+    
+    .loader-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+    .loader::after {
+      content: "";
+      height: 25px;
+      width: 25px;
+      border: 3px solid #131212;
+      border-top: 3px solid transparent;
+      border-radius: 50%;
+      -webkit-animation: spin 0.75 linear infinite;
+      animation: spin 0.75s linear infinite;
+    
+    }
+    @keyframes spin {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+    }
+    
+    /* for safari */
+    @-webkit-keyframes spin {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+    }
+    

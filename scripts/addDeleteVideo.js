@@ -41,7 +41,6 @@ window.storeNewVideo = function storeNewVideo(){
     // Get the current cookies corresponding to the user's videos as an array.
     let titles = cookieParse("titles");
     let videos = cookieParse("videos");
-    let option = cookieParse("option");
 
     // Add a new entry to the array of video titles and set the user's cookies accordingly.
     titles.push(video_title);
@@ -51,6 +50,32 @@ window.storeNewVideo = function storeNewVideo(){
 
     // Add a new entry to the array of video ids and set the user's cookies accordingly.
     videos.push(video_url.match(url_pattern)[1]);
+    setCookie("videos",JSON.stringify(videos),5); // 5 days until expiry.
+
+    fillVideoList(); // Update the video bank with the video that was just added.
+}
+
+/*
+    Input: The user clicking on the button to delete one or more videos.
+
+    Output: The selected videos being deleted.
+
+    Remarks: Modifies the user's cookies to delete entries from there.
+*/
+window.removeVideos = function removeVideos() {
+    let selection = document.querySelectorAll("input[name=video-entry]:checked"); // Get all selected videos.
+    let values = [];
+    selection.forEach(element => values.push(element.value)); // Put each selected index into a new array.
+
+    // Get the current cookies corresponding to the user's videos as an array.
+    let titles = cookieParse("titles");
+    let videos = cookieParse("videos");
+
+    // Delete each selected element from titles and videos, using shift++ to adjust the index as elements are deleted.
+    let shift = 0;
+    values.forEach(i => {titles.splice(i-shift,1); videos.splice(i-shift++,1)});
+
+    setCookie("titles",JSON.stringify(titles),5); // 5 days until expiry.
     setCookie("videos",JSON.stringify(videos),5); // 5 days until expiry.
 
     fillVideoList(); // Update the video bank with the video that was just added.
