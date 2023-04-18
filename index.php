@@ -33,5 +33,8 @@
         </li>
     </ul>
 </nav>
+<footer>
+    <p><em>A website for Dr. Curiel.</em></p>
+</footer>
 </body>
 </html>
