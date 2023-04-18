@@ -6,7 +6,7 @@ window.confirmOption = function confirmOption(){
     let type = $("#target-ytsearch").html();
     let url = data['items'][index]['id']['videoId'];
 
-    $.post( "insert.php" , { type: $type, url: url });
+    $.post( "insert.php" , { type: type, url: url });
 
     index++
     resetPlayer();

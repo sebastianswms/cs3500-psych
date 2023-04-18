@@ -85,7 +85,7 @@ window.fillButtons = function fillButtons(){
     // Read the user's cookies.
     let combination = cookieParse("combination");
     let selection = cookieParse("selection");
-    let videos = cookieParse("videos");
+    let videos = cookieParse("videos2");
 
     // If the assessment has completed, move on to the next page.
     if(index >= combination.length){
@@ -161,7 +161,7 @@ window.modalEnable = function modalEnable(optionIndex){
     // Read the user's cookies.
     let combination = cookieParse("combination");
     let selection = cookieParse("selection");
-    let videos = cookieParse("videos");
+    let videos = cookieParse("videos2");
 
     // Create a new iframe with a YouTube embed showing the user's selection.
     let iframeSelection = $("<iframe></iframe>").attr({
