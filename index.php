@@ -13,9 +13,9 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark">
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li> 
         <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
         </li>
@@ -29,7 +29,7 @@
             <a class="nav-link" href="catalog.php">Catalog</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="api.html">API</a>
+            <a class="nav-link" href="api.php">API</a>
         </li>
     </ul>
 </nav>
