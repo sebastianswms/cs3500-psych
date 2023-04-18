@@ -60,7 +60,7 @@ const myChart = new Chart(ctx, {
             // The values on the y-axis appear in increments of 20
             stepSize: 20,
             callback: function (value) {
-              return value+'%';
+              return value;
             },
           },
           // removes the grid line on y-axes from background
@@ -87,7 +87,7 @@ const myChart = new Chart(ctx, {
 /*
     Input: None.
 
-    Output: A PNG image of the generated chart.
+    Output: A PNG image with a custom name is generated of the chart.
 
     Remarks: If the user already has a file called Result.png, a number will be automatically appended to the file name.
 */
@@ -98,7 +98,7 @@ window.downloadChart = function downloadChart() {
   newChart.width = canvas.width;
   newChart.height = canvas.height;
   const ctx = newChart.getContext('2d');
-  ctx.fillStyle = '#ebebeb';
+  ctx.fillStyle = '#fff';
   ctx.fillRect(0, 0, newChart.width, newChart.height);
   // convert the new chart to an images
   const chartImage = canvas.toDataURL();
@@ -106,8 +106,13 @@ window.downloadChart = function downloadChart() {
   newImg.onload = function () {
     ctx.drawImage(newImg, 0, 0);
     const downloadLink = document.createElement('a');
-    downloadLink.download = 'Result.png';
     downloadLink.href = newChart.toDataURL();
+    // let user enter a custom file name
+    const custome_name = prompt("Enter a custom name:", "Result");
+    // download with the user's custom name
+    if (custome_name !== null) {
+      downloadLink.setAttribute('download', custome_name);
+    }
     downloadLink.click();
   }
   newImg.src = chartImage;
