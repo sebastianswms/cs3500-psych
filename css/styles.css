@@ -12,6 +12,12 @@ body {
   background-attachment:fixed;
   background-image: url("/images/background.png");
 }
+
+/*sets text fonts*/
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}
+
 /*sets margins for all headers*/
 header {                        
   margin: 1% 0 0.75% 5%;
@@ -53,7 +59,7 @@ footer p {
   right: 5%;
   bottom: 20%;
   margin: 0;
-  font-family: "Garamond", serif;
+  font-family: "Fanwood Text", "Times New Roman", serif;
   font-style: italic;
   font-size: clamp(20px, 1vw, 24px); /*sets a minimum and maximum font size*/
 }
