@@ -1,11 +1,14 @@
 /*  ==========================================================================================
                                         General Styling
-    ========================================================================================== */
-
-
+    ========================================================================================== */  
+/* all the font style be as sans-serif */
+*{
+  font-family:sans-serif;
+}
 body {
   padding: 0;
   margin: 0;
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -67,7 +70,6 @@ footer p {
 /*  ==========================================================================================
                                  Index, About, & References pages
     ========================================================================================== */
-
 /*apply an extra margin on all main contents*/
 #index, #about, #references {
   margin: 0% 5% 10% 5%;
@@ -75,7 +77,6 @@ footer p {
 
 /*indent certain paragraphs of text*/
 .indent p {
-  margin-left: 30px;
   margin-right: 4%;
 }
 
@@ -87,7 +88,10 @@ footer p {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /*add a shadow effect*/
   padding: 15px;
 }
-
+/* video bank parent div bottom magrin */
+#vid-bnk {
+  margin-bottom: 5rem;
+}
 #video-bank { 
   margin-left: 5%;
   margin-bottom: 35px;
@@ -114,6 +118,15 @@ footer p {
   cursor: pointer;
 }
 
+/* parameters div styling */
+#parameters {
+  margin-left: 3rem;
+  width: 22rem;
+}
+#parameters h2 {
+  width: 22rem;
+  margin-bottom: 2.5rem;
+}
 /*adds a bottom margin for small screens 
 so that the 'add video' button is not cut off*/
 @media (max-width: 800px), (max-height: 800px) {
@@ -125,7 +138,6 @@ so that the 'add video' button is not cut off*/
     margin-bottom: 75px;
   }
 }
-
 
 /*center the start button and add a margin*/
 #start-button { 
@@ -260,23 +272,22 @@ img iframe {
     width: 50%; /* Could be more or less, depending on screen size */
 }
 
-/*  ==========================================================================================
-                                       Decision page
-    ========================================================================================== */
-
+/*  ===================================================================
+                                Decision page
+    ================================================================= */
 /*Bootstrapped title: add background and shadows*/
-.jumbotron-title {
+#res-title {
   padding: 50px;
-  background-color: #a2afbd;
   text-align: center;
   color: #0b0c0e;
+  background-color: transparent;
+  box-shadow: none;
+  letter-spacing: 13px;
 }
-
 /*center the buttons*/
 .decision-buttons {
   text-align: center;
 }
-
 /*button size and margins*/
 .btn-result, .btn-over {
   border-width: 2px;
@@ -286,206 +297,654 @@ img iframe {
   margin-top: 7vh;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);  
 }
-
 /*button color and border*/
 .btn-result {
   background-color: #28a745;
   border-color: #000000;
   color: #fff;
 }
-  
 .btn-over {
   background-color: black;
   border-color: #000000;
   color: #fff;
   margin-bottom: 20vh; /*extra bottom margin so that the footer does not cover up the button*/
 }
-
 /*button fade on hover*/
 .btn-result:hover {
   background-color: #3bce5d;
   border-color: #000000;
   color: #fff;
 }
-
 .btn-over:hover {
   background-color: #303030;
   border-color: #000000;
   color: #fff;
 }
-
-/*  ==========================================================================================
-                                        Results page
-    ========================================================================================== */
-
+/*  =============================================================
+                             Results page
+    =========================================================== */
 /* all section styling */
 .results section {
   width: 85%;
   margin: 20px auto;
 }
-
 .results div {
     padding-top: 1%;
     padding-bottom: 1%;
 }
-
 .duration label {
   margin-left: 30px;
   margin-right: 4%;
 }
-
-/* changing title styling */
-#res-title {
-  background-color: transparent;
-  box-shadow: none;
-  letter-spacing: 13px;
-}
-
 /* font-size for texts "Assessment Outcomes" and "Graph"  */
 .title-text {
   font-size: 3.5vmin;
 }
+#graph-res-title{
+  padding: 50px;
+  text-align: center;
+  color: #0b0c0e;
+  background-color: transparent;
+  box-shadow: none;
+  letter-spacing: 12px;
+}
 /* the line under the "Results" text  */
-#res-title hr {
-  width: 50%;
+#graph-res-title hr {
+  width: 40%;
   margin: 0px auto;
 }
-/* style for Result header section */
-#first-sec {
-  margin: 10px auto;
-  font-size: 60vmin;
-  letter-spacing: 5px;
-}
-
 .results .res {
   display: flex;
   align-items: center;
   width: 100%;
   color: black;
 }
-
 /* graph and outcomes section as a row */
-
 .results .row {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
+  margin-top: -2rem;
 }
-
-.results .col {
-  margin: 10px;
-  width: 450px;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: rgb(68, 94, 118);
-  background-color: #eeeeee92;
+.results #col1 {
+  width: 29rem;
+  margin: 10px 1rem 3rem 12.5%;
   display: flex;
   flex-direction: column;
 }
-
+/* both columns styling */
+.results #col1, #chart-div {
+  width: 29rem;
+  border-radius: 10px;
+  border: solid 5px rgb(68, 94, 118);
+  background-color: #eeeeee92;
+}
+/* second col, chart's parent div  */
+.results #col2 {
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  display: block;
+  height: 25rem;
+  width: 30rem;
+  margin-top: 10px;
+}
+/* div for chart */
+#chart-div {
+  height: 20rem;
+  margin: 0 auto;
+  padding: 2rem 0 0 0.9rem;
+}
 /* assessment page text */
 .results .assess-title h2, .graph-text {
   margin-top: 25px;
   margin-bottom: 25px;
   font-size: clamp(20px, 6vmin, 45px); /*sets a minimum and maximum font size*/
-  font-family: Garamond, "Times New Roman", Times, serif;
   text-align: center;
 }
-
 /* 'assessment outcomes' table text sizing and fonts */
 .video-table {
   margin: 7.5px 5vw 15px 7vw;
   font-size: clamp(20px, 2.5vmin, 30px); /*sets a minimum and maximum font size*/
-  font-family: Garamond, "Times New Roman", Times, serif;
 }
-
 .duration {
   margin: 20px 5vw 50px 5vw;
   font-size: clamp(20px, 2.5vmin, 30px);
-  font-family: Garamond, "Times New Roman", Times, serif;
 }
-
 .duration h2 {
   font-size: clamp(24px, 2vmin, 24px);
 }
-
 .results .centered {
   text-align: center;
 }
-
 /* applies flexbox layout properties to buttons */
 .btn-div {
   display: flex;
-  float: right;
-  margin: -15px 15px 90px auto;
+  width: 19.7rem;
+  margin: 0.8rem auto;
+}
+#btn-size {
+  width: 9rem;
+  font-size: 0.91rem;
+  margin-left: 0.4rem;
+}
+#dnld {
+  font-size: 0.9rem;
 }
 
-/* button spacing, borders, and color scheme */
-.b-main {
-  margin-right: 1vw;
-}
-.b-main .refresh {
-  padding: auto;
-}
-
-/*  ==========================================================================================
-                                        API Search Page
-    ========================================================================================== */
-
-.api {
-    height:100%;
-}
-
-.api div {
-    text-align: center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height: 100%;
-}
-
-/*  ==========================================================================================
                                         loader styling
-    ========================================================================================== */
+========================================================================================== */
+.loader {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  background-color: rgb(249, 252, 255);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  border: 3px solid #131212;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: spin 0.75 linear infinite;
+  animation: spin 0.75s linear infinite;
+}
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+/* for safari */
+@-webkit-keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
 
-
-    .loader {
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      position: fixed;
-      background-color: rgb(249, 252, 255);
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.75s, visibility 0.75s;
-    }
-    
-    .loader-hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-    
-    .loader::after {
-      content: "";
-      height: 25px;
-      width: 25px;
-      border: 3px solid #131212;
-      border-top: 3px solid transparent;
-      border-radius: 50%;
-      -webkit-animation: spin 0.75 linear infinite;
-      animation: spin 0.75s linear infinite;
-    
-    }
-    @keyframes spin {
-      from {transform: rotate(0deg);}
-      to {transform: rotate(360deg);}
-    }
-    
-    /* for safari */
-    @-webkit-keyframes spin {
-      from {transform: rotate(0deg);}
-      to {transform: rotate(360deg);}
-    }
-    
+/*===============================================================
+                          responsive styling
+  ==============================================================*/
+@media only screen and  (max-width: 1400px) {
+  /* index page */
+  header {
+   text-align: center;
+  }
+  /* header title */
+  header h1 {
+    margin-top: 2rem;
+  }
+  /* text indents */
+  .indent {
+    margin-left: 0%;
+    margin-right: 0;
+  }
+  .indent p {
+    margin: 0 auto;
+    text-align: justify;
+    align-items: center;
+    padding: 1rem auto;
+  }
+  /* instruction text */
+  .inst-text {
+    margin-top: 1rem;
+    margin-bottom: -0.09rem;
+    margin-left: 0rem;
+  }
+  /* add new stim & assess parameter div as flex */
+  #par_stim {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50rem;
+  }
+  /* add new stimulu */
+  #new-video-box {
+    width: 18rem;
+  }
+  #new-video-box h2 {
+    font-size: 1.7rem;
+    width: 14rem;
+    margin-bottom: 0.5rem;
+  }
+  #parameters {
+    width: 21rem;
+    margin-left: 3rem;
+  }
+  #parameters h2 {
+    font-size: 1.7rem;
+    width: 21rem;
+    margin-bottom: 1.2rem;
+  }
+  .vid_bnk_title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  #start-button {
+    display: block;
+    text-align: center;
+  }
+  .both-btn {
+    margin-bottom: 0.5rem;
+  }
+ }
+@media only screen and  (max-width: 1200px) {
+  /* index page */
+  header {
+    text-align: center;
+  }
+  /* header title */
+  header h1 {
+    margin-top: 2rem;
+  }
+  /* text indents */
+  .indent {
+    margin-left: 0%;
+    margin-right: 0;
+  }
+  .indent p {
+    margin: 0 auto;
+    text-align: justify;
+    align-items: center;
+    padding: 1rem auto;
+  }
+  /* instruction text */
+  .inst-text {
+    margin-top: 1rem;
+    margin-bottom: -0.09rem;
+    margin-left: 0rem;
+  }
+  /* add new stim & assess parameter div as flex */
+  #par_stim {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45rem;
+  }
+  /* add new stimulu */
+  #new-video-box {
+    width: 18rem;
+  }
+  #new-video-box h2 {
+    font-size: 1.7rem;
+    width: 14rem;
+    margin-bottom: 0.5rem;
+  }
+  #parameters {
+    width: 21rem;
+    margin-left: 3rem;
+  }
+  #parameters h2 {
+    font-size: 1.7rem;
+    width: 21rem;
+    margin-bottom: 1.2rem;
+  }
+  .vid_bnk_title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  #start-button {
+    display: block;
+    text-align: center;
+  }
+  .both-btn {
+    margin-bottom: 0.5rem;
+  }
+  /* result page  */
+  /* div for chart */
+  .results section {
+    width: 85%;
+    margin: 0px auto;
+  }
+  .results .row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: 5rem;
+  }
+  .results #col1, .results #col2{
+    width: 29rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .results #chart-div {
+    margin: 0px auto;
+    height: auto;
+    width: 29rem;
+    padding: 2rem 0 0.9rem 1rem;
+  }
+  #graph-res-title h1 {
+    letter-spacing: 7px;
+    font-size: 2rem;
+  }
+  .btn-div {
+  width: 20rem;
+  margin: 1rem auto;
+  }
+  #btn-size {
+    width: 9.5rem;
+    font-size: 0.91rem;
+  }
+  #dnld {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and  (max-width: 1024px){
+  /* index page */
+  header {
+    text-align: center;
+  }
+  /* header title */
+  header h1 {
+    margin-top: 2rem;
+  }
+  /* text indents */
+  .indent {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .indent p {
+    margin: 0 auto;
+    text-align: justify;
+    align-items: center;
+    padding: 1rem auto;
+  }
+  /* instruction text */
+  .inst-text {
+    margin-top: 1rem;
+    margin-bottom: -0.09rem;
+    margin-left: 0rem;
+  }
+  /* add new stim & assess parameter div as flex */
+  #par_stim {
+    display: block;
+    flex-wrap: wrap;
+    width: 40rem;
+  }
+  /* add new stimulu */
+  #new-video-box {
+    width: 18rem;
+  }
+  #new-video-box h2 {
+    font-size: 1.7rem;
+    width: 14rem;
+    margin-bottom: 0.5rem;
+  }
+  #parameters {
+    width: 21rem;
+    margin-left: 0px;
+  }
+  #parameters h2 {
+    font-size: 1.7rem;
+    width: 21rem;
+    margin-bottom: 1.2rem;
+  }
+  .vid_bnk_title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  #start-button {
+    display: block;
+    text-align: center;
+  }
+  .both-btn {
+    margin-bottom: 0.5rem;
+  }
+  /* result page  */
+  /* div for chart */
+  .results section {
+    width: 85%;
+    margin: 0px auto;
+  }
+  .results .row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: -2rem;
+  }
+  .results #col1, .results #col2{
+    width: 29rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .results #chart-div {
+    margin: 0px auto;
+    height: auto;
+    width: 29rem;
+    padding: 2rem 0 0.9rem 1rem;
+  }
+  #graph-res-title h1 {
+    letter-spacing: 7px;
+    font-size: 2rem;
+  }
+  #btn-size {
+  width: 9.5rem;
+  }
+}
+@media only screen and  (max-width: 820px) {
+   header h1 {
+     margin-top: 2rem;
+   }
+   #par_stim {
+     display: block;
+ 
+   }
+   #new-video-box h2 {
+     width: 15rem;
+     margin-bottom: 0.5rem;
+   }
+   .vid_bnk_title {
+     font-size: 1.3rem;
+   }
+   #parameters h2 {
+     width: 19rem;
+     margin-top: -3rem;
+   }
+   #start-button {
+     display: block;
+     text-align: center;
+   }
+   .both-btn {
+     margin-bottom: 0.5rem;
+   }
+   #parameters {
+     margin-left: 0;
+     margin-top: 4rem;
+     width: 22rem;
+     padding-bottom: 3rem;
+   }
+   #parameters h2 {
+     width: 22rem;
+     margin-bottom: 1.2rem;
+   }
+  /* result page  */
+   /* div for chart */
+   .results section {
+     width: 100%;
+     margin: 10px auto;
+   }
+   .results #col1, #col2{
+     width: 29rem;
+     margin: 1rem auto;
+     display: flex;
+     flex-direction: column;
+   }
+   .results #chart-div {
+     margin: 0px auto;
+     height: auto;
+     width: 29rem;
+     padding: 2rem 0 0.9rem 1rem;
+   }
+   #graph-res-title h1 {
+     letter-spacing: 7px;
+     font-size: 2rem;
+   }
+ }
+ 
+@media only screen and (max-width: 768px) {
+  /* index page */
+  header h1 {
+    margin-top: 2rem;
+  }
+  #par_stim {
+    display: block;
+  }
+  /* video bank parent div bottom magrin */
+  #vid-bnk {
+    margin-bottom: 2rem;
+  }
+  #new-video-box h2 {
+    width: 15rem;
+    margin-bottom: 0.5rem;
+  }
+  .vid_bnk_title {
+    font-size: 1.3rem;
+  }
+  #parameters h2 {
+    width: 19rem;
+    margin-top: -3rem;
+  }
+  #start-button {
+    display: block;
+    text-align: center;
+  }
+  .both-btn {
+    margin-bottom: 0.5rem;
+  }
+  #parameters {
+    margin-top: 3rem;
+    margin-left: 0;
+    width: 22rem;
+    padding-bottom: 3rem;
+  }
+  #parameters h2 {
+    width: 22rem;
+    margin-bottom: 1.2rem;
+  }
+  /* decision page */
+  .decision {
+    align-items: center;
+    text-align: center;
+  }
+  #res-title {
+    text-align: center;
+    align-items: center;
+  }
+  #res-title h1 {
+    letter-spacing: 3px;
+    margin: 1rem auto -3rem auto;
+    width: 27rem;
+  }
+  .decision-buttons {
+    margin-bottom: 0.2rem;
+  }
+  /* result page  */
+  /* div for chart */
+   .results section {
+     width: 100%;
+     margin: 10px auto;
+   }
+   .results #col1, #col2{
+     width: 29rem;
+     margin: 1rem auto;
+     display: flex;
+     flex-direction: column;
+   }
+   .results #chart-div {
+     margin: 0px auto;
+     height: auto;
+     width: 29rem;
+     padding: 2rem 0 0.9rem 1rem;
+   }
+   #graph-res-title h1 {
+     letter-spacing: 7px;
+     font-size: 2rem;
+   }
+ }
+ /* -----------for cell phones----------- */
+ @media only screen and  (max-width: 480px) {
+   /* index page */
+   header {
+     text-align: center;
+     width: 90%;
+   }
+   header h1 {
+     margin-top: 2rem;
+   }
+   .indent {
+     margin-left: 0%;
+     margin-right: 0;
+   }
+   .indent p {
+     margin: 0 auto;
+     text-align: justify;
+     align-items: center;
+     padding: 1rem auto;
+   }
+   .inst-text {
+     margin-top: 1rem;
+     margin-bottom: -0.09rem;
+     margin-left: -1.8rem;
+   }
+   #par_stim {
+     display: block;
+     width: 100%;
+   }
+   /* instruction text */
+  .inst-text {
+    margin-top: 1rem;
+    margin-bottom: -0.09rem;
+    margin-left: 0rem;
+  }
+  /* decision page */
+  #vid-bnk {
+   margin-top: -5rem;
+  }
+  .decision {
+    align-items: center;
+    text-align: center;
+  }
+  #res-title {
+    text-align: center;
+  }
+  #res-title h1 {
+    letter-spacing: 2px;
+    margin: 5rem auto -3rem -6%;
+    width: 22rem;
+   }
+   .decision-buttons {
+     margin-bottom: -2rem;
+   }
+  /* result page */
+  /* div for chart */
+  .results section {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .results #col1 {
+    width: 23rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .results #chart-div {
+    margin: 0px auto;
+    height: auto;
+    width: 23rem;
+    padding: 2rem 0 0.9rem 1rem;
+  }
+  #graph-res-title h1 {
+    letter-spacing: 7px;
+    font-size: 2rem;
+  }
+ }
+ /*=================== new styling END ==================== */
