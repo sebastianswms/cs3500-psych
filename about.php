@@ -20,7 +20,7 @@
             <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="references.html">References</a>
+            <a class="nav-link" href="references.php">References</a>
         </li>
     </ul>
 </nav>
