@@ -68,7 +68,7 @@ window.removeVideos = function removeVideos() {
     selection.forEach(element => {
             if(element.value.includes(",")){
                 let triplet = element.value.split(",");
-                $.post( "delete.php" , { type: triplet[0] });
+                $.post( "php/delete.php" , { type: triplet[0] });
             }
             else{
                 values.push(element.value)

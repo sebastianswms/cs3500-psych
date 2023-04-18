@@ -48,7 +48,7 @@ window.fillVideoList = function fillVideoList() {
     $.ajax({
         type: "GET",
         data: {index : titles.length},
-        url: "apivideolist.php",
+        url: "php/apivideolist.php",
         success: function(response){
             form.insertAdjacentHTML('beforeend',response);
         }

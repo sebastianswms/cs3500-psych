@@ -34,7 +34,7 @@
     </nav>
 <main class="container h-100 w-100">
     <div class="row h-100 justify-content-center align-items-center">
-        <form action="/review.php" class="col-12">
+        <form action="/php/review.php" class="col-12">
             <label for="ytsearch">Search YouTube:</label>
             <input type="search" id="ytsearch" name="ytsearch" pattern=".{1,100}" required title="Up to 100 characters.">
             <input type="submit" value="Search" class="btn btn-success text-light border-dark both-btn">
