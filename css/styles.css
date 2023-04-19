@@ -252,9 +252,7 @@ so that the 'add video' button is not cut off*/
 
     ========================================================================================== */ 
 
-  
-    .api { 
-
+  .api { 
       height:100%; 
   } 
   .api div { 
@@ -270,7 +268,7 @@ so that the 'add video' button is not cut off*/
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /*add a shadow effect*/
     padding: 15px;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
