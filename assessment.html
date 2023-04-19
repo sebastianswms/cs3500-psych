@@ -18,6 +18,10 @@
 
     <!-- Initializing and resetting buttons, and detecting input from the user. -->
     <script src="scripts/buttonManagement.js" type="module"></script>
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
 </head>
 
 <body class="assessment-body">
