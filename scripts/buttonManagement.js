@@ -30,9 +30,13 @@ window.selectOption = function selectOption(optionIndex){
         setCookie("option2", count, 5);
     }
 
-    modalEnable(optionIndex); // Display pop-up with the user's selected video.
-
-    idleTimeout = setTimeout(resetButtons,playtimeLength); // Calls resetButtons after an amount of time determined by playtimeLength.
+    if(playtimeLength > 0){
+        modalEnable(optionIndex); // Display pop-up with the user's selected video.
+        idleTimeout = setTimeout(resetButtons,playtimeLength); // Calls resetButtons after an amount of time determined by playtimeLength.
+    }
+    else{
+        resetButtons();
+    }
 }
 
 /*
@@ -142,10 +146,6 @@ window.fillButtons = function fillButtons(){
         // Add the images.
         $("#option1").append(image1);
         $("#option2").append(image2);
-
-        // Add listeners to the images to check for when the user selects an image.
-        $("#option1").click(function(){selectOption(0)});
-        $("#option2").click(function(){selectOption(1)});
     }
 }
 
@@ -183,7 +183,6 @@ window.modalEnable = function modalEnable(optionIndex){
         $("iframe").css("pointer-events","none");
         $("#selection-player").css("display","block");
     }
-
 }
 
 /*
@@ -201,4 +200,8 @@ window.modalDisable = function modalDisable(){
 // When the page loads, initialize the "buttons" for the user to select from.
 $(document).ready(function(){
         initializeButtons()
+
+        // Add listeners to the images to check for when the user selects an image.
+        $("#option1").click(function(){selectOption(0)});
+        $("#option2").click(function(){selectOption(1)});
 })

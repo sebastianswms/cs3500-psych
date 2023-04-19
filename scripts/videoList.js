@@ -44,13 +44,4 @@ window.fillVideoList = function fillVideoList() {
         form.appendChild(label);
         form.appendChild(document.createElement("br"));
     }
-
-    $.ajax({
-        type: "GET",
-        data: {index : titles.length},
-        url: "apivideolist.php",
-        success: function(response){
-            form.insertAdjacentHTML('beforeend',response);
-        }
-    });
 }

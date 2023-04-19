@@ -10,7 +10,6 @@ window.fillStats = function fillStats() {
     let end = getCookie("end"); // Get the start epoch timestamp.
 
     let total = Math.floor(end - start);
-    console.log(total)
 
     let minutes = Math.floor(total/60)
     let seconds = Math.floor(total%60)

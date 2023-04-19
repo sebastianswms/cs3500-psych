@@ -31,23 +31,6 @@
 <body onload="fillVideoList()"> <!-- When the page loads, populate the list of video checkboxes -->
 <div class="loader"></div>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="references.html">References</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="api.html">API</a>
-        </li>
-    </ul>
-</nav>
-
 <header>
     <h1>Paired Stimulus Preference Assessment Tool</h1>
 </header>
@@ -57,21 +40,37 @@
         <!-- Instructions -->
         <div class="col-sm-8">
             <section class="indent">
-                <p><b>Welcome!</b> This website is a tool designed for researchers and educators to assess the favorite rewards
-                of autistic children. Using a series of video trials, subjects will be able to choose their preferred rewards
-                without relying on verbal communication.
-                </p>
+                <p>Welcome to the Paired Stimulus Preference Assessment Tool. This program follows the paired stimulus
+                    preference assessment methodology and was designed to allow users to systematically identify
+                    stimulus preferences. The tool allows users to assess 3–10 videos per assessment. The users can
+                    customize each assessment by adjusting the following parameters: time to stimulus selection,
+                    stimulus location, stimulus presentation of samples (still images or videos), and duration of
+                    playtime for selected stimuli. The tool will calculate and display data regarding the percentage
+                    of selection per video, percentage of selections per location (left/right or top/bottom), and
+                    assessment duration at the conclusion of each assessment.</p>
                 <!-- by clicking, the user can display/hide the instruction steps -->
                 <h2 class="inst-text" onclick="toggleInstructionsDropdown()">Instructions <i id="inst-icon" class='bx bx-chevron-down-circle up-icon'></i></h2>
                 <div id="instructions-box" class="foreground-box">
                     <ol>
-                        <li>Add your videos by pasting their YouTube URLs below. (max 20 videos).</li>
-                        <li>Set the timer (3 - 90 seconds).</li>
-                        <li>Select video location as Vertical/Horizontal.</li>
-                        <li>Select the video presentation as thumbnails or the video player.</li>
-                        <li>Select the videos you want to include in the test from the video bank. Then press "Start Test."</li>
+                        <li>Upload stimuli. This parameter allows users to upload YouTube videos. To add a video,
+                            copy the YouTube URL and paste it in the URL textbox. Click inside the title textbook and
+                            add a name. Click the Add Stimulus button. The video title will appear in the Stimulus
+                            Library.</li>
+                        <li>Select videos for assessment. This parameter allows user to select the stimuli for an
+                            assessment. To select a stimulus, click the box next to each video title in the Stimulus
+                            Library. The program allows users to select 3–10 stimuli per assessment. The Stimulus
+                            Library will store up to 20 stimuli.</li>
+                        <li>Time to selection. This parameter allows users to select the duration of time allotted
+                            for a response. The duration starts each time a stimulus is presented on the screen. The
+                            value can range from 3–90 seconds.</li>
+                        <li>Location of stimuli. This parameter allows users to arrange stimuli horizontally or
+                            vertically.</li>
+                        <li>Stimulus option displays. This parameter allows users to display the stimulus options
+                            as still images or as videos without sound.</li>
+                        <li>Playtime for selections. This parameter allows users to select the duration of time
+                            selected stimuli will play after each selection. The value ranges from 0 to 90 seconds.</li>
+                        <li>Start assessment. Click the Start Test button.</li>
                     </ol>
-                    <p><b>After the test concludes, you will see the result and can download the Chart.</b></p>
                 </div>
             </section>
             <div id="par_stim" class="row pt-3">
@@ -94,7 +93,7 @@
                     <input type="number" min="3" max="90" name="time-to-selection" size="13" value="15" form="start-assessment"/>
                     <br><br>
                     <label>Playtime for Selections (seconds):</label> <!-- 2nd Parameter (number range) -->
-                    <input type="number" min="3" max="90" name="playtime" size="13" value="15" form="start-assessment"/>
+                    <input type="number" min="0" max="90" name="playtime" size="13" value="15" form="start-assessment"/>
                     <br><br>
                     <label>Location of Stimuli:</label>
                     <select name="video-location" form="start-assessment"> <!-- 3rd Parameter (dropdown) -->
