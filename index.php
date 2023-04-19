@@ -13,6 +13,9 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark">
     <ul class="navbar-nav mr-auto">
+        <li class="nav-logo">
+        <img src="/images/favicon.png" width="100" height="100" alt="Logo"  href="index.html">
+        </li> 
         <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
         </li> 

@@ -10,28 +10,31 @@
 </head>
 
 <body class="api">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.php">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Index</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="references.php">References</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="catalog.php">Catalog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="api.php">API</a>
-            </li>
-        </ul>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-logo">
+        <img src="/images/favicon.png" width="100" height="100" alt="Logo"  href="index.html">
+        </li> 
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li> 
+        <li class="nav-item">
+            <a class="nav-link" href="about.php">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="index.php">Index</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="references.php">References</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="catalog.php">Catalog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="api.php">API</a>
+        </li>
+    </ul>
+</nav>
 <main class="container h-100 w-100">
     <div class="row h-100 justify-content-center align-items-center">
         <form action="/php/review.php" class="col-12">

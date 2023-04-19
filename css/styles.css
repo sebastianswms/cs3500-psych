@@ -161,7 +161,17 @@ so that the 'add video' button is not cut off*/
   border: 1px  rgb(238, 238, 238);
   background-color: #1a3147;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  padding: 15px;
+  padding: 10px;
+}
+
+.nav-link {
+  margin-top: 6vh;
+  font-size: 16px;
+  height: 100%;
+}
+
+.nav-logo {
+  margin-right: 1.5vw;
 }
 
 /* The active page */
