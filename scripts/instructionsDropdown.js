@@ -3,7 +3,7 @@
 
     Output: All the instruction steps will be displayed for user.
 
-    Remarks: This is the function call when the user needs directions on home page (index.html).
+    Remarks: This is the function call when the user needs directions on home page (index.php).
 */
 var inst_steps = document.getElementById("instructions-box");
 var inst_icon = document.getElementById("inst-icon");

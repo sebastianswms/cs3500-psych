@@ -17,7 +17,7 @@
 <body class="api">
 <nav class="navbar navbar-expand-sm navbar-dark">
         <a
-            href="index.html"
+            href="index.php"
             class="nav-logo mb-0">
               <img src="/images/logo.png"
               width="100" height="100" />
@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item" id="item1">
-               <a class="nav-link" href="index.html"
+               <a class="nav-link" href="index.php"
                >Home</a>
             </li>
             <li class="nav-item">
