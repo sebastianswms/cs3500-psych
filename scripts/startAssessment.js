@@ -1,4 +1,4 @@
-import {cookieParse, setCookie} from './cookieManagement.js'; // Import functionality for reading and writing cookies.
+import {getCookie, cookieParse, setCookie} from './cookieManagement.js'; // Import functionality for reading and writing cookies.
 import {generateRandomCombinations} from './orderManagement.js'; // Import functionality for generating random pairs.
 
 /*
@@ -34,9 +34,44 @@ window.validateStartAssessment = function validateStartAssessment(){
     Remarks: This is the final function call before the user progresses to the assessment.html page.
 */
 window.startAssessment = function startAssessment(){
+
+    let all = document.querySelectorAll("input[name=video-entry]"); // Get all videos.
+
+    let titles = cookieParse("titles");
+    setCookie("titles2",JSON.stringify(titles),5); // 5 days until expiry.
+
+    console.log(titles);
+
+    let videos = cookieParse("videos");
+    setCookie("videos2",JSON.stringify(videos),5); // 5 days until expiry.
+
+    all.forEach(element => {
+            if(element.value.includes(",")){
+                let triplet = element.value.split(",");
+
+                let titles2 = cookieParse("titles2");
+                let videos2 = cookieParse("videos2");
+
+                titles2[triplet[2]] = triplet[0];
+                setCookie("titles2",JSON.stringify(titles2),5); // 5 days until expiry.
+
+                videos2[triplet[2]] = triplet[1];
+                setCookie("videos2",JSON.stringify(videos2),5); // 5 days until expiry.
+            }
+        })
+
     let selection = document.querySelectorAll("input[name=video-entry]:checked"); // Get all selected videos.
     let values = [];
-    selection.forEach(element => values.push(element.value)); // Put each selected index into a new array.
+
+    selection.forEach(element => {
+        if(element.value.includes(",")){
+            let triplet = element.value.split(",");
+            values.push(triplet[2]);
+        }
+        else{
+            values.push(element.value)
+        }
+    }) // Put each selected index into a new array.
 
     // Array.from(Array(10).keys()) from: https://stackoverflow.com/q/3746725
     let combinations = generateRandomCombinations(Array.from(Array(values.length).keys()));

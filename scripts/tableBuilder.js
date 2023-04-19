@@ -12,7 +12,7 @@ window.fillTable = function fillTable() {
 
     let table = document.getElementById("video-table"); // Find the correct HTML element to modify.
     let selection = cookieParse("selection"); // Get all selected videos.
-    let titles = cookieParse("titles"); // Get titles for all videos.
+    let titles = cookieParse("titles2"); // Get titles for all videos.
     let options = cookieParse("option"); // Get counts for how many times each option has been chosen.
     let label = [];
     let percents = [];

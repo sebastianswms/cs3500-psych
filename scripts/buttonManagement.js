@@ -85,7 +85,7 @@ window.fillButtons = function fillButtons(){
     // Read the user's cookies.
     let combination = cookieParse("combination");
     let selection = cookieParse("selection");
-    let videos = cookieParse("videos");
+    let videos = cookieParse("videos2");
 
     // If the assessment has completed, move on to the next page.
     if(index >= combination.length){
@@ -161,7 +161,9 @@ window.modalEnable = function modalEnable(optionIndex){
     // Read the user's cookies.
     let combination = cookieParse("combination");
     let selection = cookieParse("selection");
-    let videos = cookieParse("videos");
+    let videos = cookieParse("videos2");
+
+    $(".modal-content").empty() // Empties the modal's content.
 
     // Create a new iframe with a YouTube embed showing the user's selection.
     let iframeSelection = $("<iframe></iframe>").attr({
@@ -174,10 +176,13 @@ window.modalEnable = function modalEnable(optionIndex){
     // Stop the options from displaying in the background.
     $(".outer").css("display","none")
 
-    // Add and show the iframe, but disable pausing.
-    $("#selection-player .modal-content").append(iframeSelection)
-    $("iframe").css("pointer-events","none");
-    $("#selection-player").css("display","block")
+    // Checks to make sure that the modal has been emptied before appending
+    if ($("#selection-player .modal-content").is(':empty')) {
+        // Add and show the iframe, but disable pausing.
+        $("#selection-player .modal-content").append(iframeSelection);
+        $("iframe").css("pointer-events","none");
+        $("#selection-player").css("display","block");
+    }
 
 }
 

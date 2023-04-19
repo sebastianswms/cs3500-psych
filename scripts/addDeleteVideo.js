@@ -65,7 +65,15 @@ window.storeNewVideo = function storeNewVideo(){
 window.removeVideos = function removeVideos() {
     let selection = document.querySelectorAll("input[name=video-entry]:checked"); // Get all selected videos.
     let values = [];
-    selection.forEach(element => values.push(element.value)); // Put each selected index into a new array.
+    selection.forEach(element => {
+            if(element.value.includes(",")){
+                let triplet = element.value.split(",");
+                $.post( "delete.php" , { type: triplet[0] });
+            }
+            else{
+                values.push(element.value)
+            }
+        }) // Put each selected index into a new array.
 
     // Get the current cookies corresponding to the user's videos as an array.
     let titles = cookieParse("titles");

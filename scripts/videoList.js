@@ -1,7 +1,7 @@
 import {cookieParse} from './cookieManagement.js'; // Import functionality for reading JSON cookies.
 
 /*
-    Input: Cookies stored in the user's browser (as determined by the addDeleteVideo.js script).
+    Input: Cookies stored in the user's browser (as determined by the addDelete.js script).
 
     Output: A series of checkboxes showing every video the user has added to their video bank.
 
@@ -16,7 +16,7 @@ window.fillVideoList = function fillVideoList() {
     // Reset the form so it can be regenerated from scratch.
     form.innerHTML = "";
 
-    // Iterate through every video title form the user's cookies.
+    // Iterate through every video title from the user's cookies.
     for (var i = 0; i < titles.length; i++) {
 
         // Define a text string for the each title to add to the list of videos.
@@ -44,4 +44,13 @@ window.fillVideoList = function fillVideoList() {
         form.appendChild(label);
         form.appendChild(document.createElement("br"));
     }
+
+    $.ajax({
+        type: "GET",
+        data: {index : titles.length},
+        url: "apivideolist.php",
+        success: function(response){
+            form.insertAdjacentHTML('beforeend',response);
+        }
+    });
 }

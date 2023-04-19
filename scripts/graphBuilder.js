@@ -3,7 +3,7 @@ import {cookieParse} from './cookieManagement.js'; // Import functionality for r
 const ctx = document.getElementById('myChart'); // Create a chart object.
 
 const selection = cookieParse("selection"); // Get all selected videos.
-const titles = cookieParse("titles");
+const titles = cookieParse("titles2");
 const option = cookieParse("option"); // Get counts for how many times each option has been chosen.
 var label = [];
 var percent = [];
