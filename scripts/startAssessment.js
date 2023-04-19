@@ -40,8 +40,6 @@ window.startAssessment = function startAssessment(){
     let titles = cookieParse("titles");
     setCookie("titles2",JSON.stringify(titles),5); // 5 days until expiry.
 
-    console.log(titles);
-
     let videos = cookieParse("videos");
     setCookie("videos2",JSON.stringify(videos),5); // 5 days until expiry.
 
