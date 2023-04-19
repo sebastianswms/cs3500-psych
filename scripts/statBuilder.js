@@ -1,5 +1,12 @@
 import {getCookie} from './cookieManagement.js'; // Import functionality for reading cookies.
 
+/*
+    Input: Cookies stored in the user's browser.
+
+    Output: A set of stats representing the user's choices during the assessment.
+
+    Remarks: All output is formatted as per Dr. Curiel's requests.
+*/
 window.fillStats = function fillStats() {
 
     let duration = document.getElementById("duration-result"); // Find the duration result element.
@@ -10,7 +17,6 @@ window.fillStats = function fillStats() {
     let end = getCookie("end"); // Get the start epoch timestamp.
 
     let total = Math.floor(end - start);
-    console.log(total)
 
     let minutes = Math.floor(total/60)
     let seconds = Math.floor(total%60)

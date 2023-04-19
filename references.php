@@ -51,7 +51,7 @@
                <a class="nav-link" href="api.php">Video Search API</a>
             </li>
           </ul>
-</nav>
+</div></nav>
 
 <header>
     <h1>References</h1>
@@ -76,14 +76,23 @@
             <div class="foreground-box">
                 <h2>Sebastian Smiley</h2>
                 <ul>
-                    <li> ********Please add which file(s) these citations apply to******** </li>                    <li>
-                        <b>Setting and reading user cookies:</b> W3Schools, “JavaScript Cookies,” www.w3schools.com, 2023. [Online]. Available: https://www.w3schools.com/js/js_cookies.asp [Accessed: Mar. 19, 2023]
+                    <li>
+                        <b>Setting and reading user cookies (cookieManagement.js):</b> W3Schools, “JavaScript Cookies,” www.w3schools.com, 2023. [Online]. Available: https://www.w3schools.com/js/js_cookies.asp [Accessed: Mar. 19, 2023]
                     </li>
                     <li>
-                        <b>RegEx for checking that a URL is from youtube.com or youtu.be:</b> B. Barker, “Regex for youtube URL,” Stack Overflow, Nov. 18, 2021. [Online]. Available: https://stackoverflow.com/q/19377262. [Accessed: Mar. 19, 2023]
+                        <b>RegEx for checking that a URL is from youtube.com or youtu.be (addDeleteVideo.js):</b> B. Barker, “Regex for youtube URL,” Stack Overflow, Nov. 18, 2021. [Online]. Available: https://stackoverflow.com/q/19377262. [Accessed: Mar. 19, 2023]
                     </li>
                     <li>
-                        <b>A small ( < 1 line) snippet showing how to call the generateRandomCombinations() function:</b> N. Ruotsalainen, “javascript - How to create an array containing 1...N,” Stack Overflow, Feb. 09, 2022. [Online]. Available: https://stackoverflow.com/q/3746725. [Accessed: Mar. 19, 2023]
+                        <b>A small (<1 line) snippet showing how to call the generateRandomCombinations() function (startAssessment.js):</b> N. Ruotsalainen, “javascript - How to create an array containing 1...N,” Stack Overflow, Feb. 09, 2022. [Online]. Available: https://stackoverflow.com/q/3746725. [Accessed: Mar. 19, 2023]
+                    </li>
+                    <li>
+                        <b>An explanation of how to pass a variable from PHP to JavaScript. (review.php):</b> M. Uchiha, “How do I pass variables and data from PHP to JavaScript?,” Stack Overflow, Sep. 03, 2021. [Online]. Available: https://stackoverflow.com/q/23740548. [Accessed: Apr. 19, 2023]
+                    </li>
+                    <li>
+                        <b>Valuable information on common snags that come when attempting to call an API from PHP. (api.php):</b> Michiel, “Call a REST API in PHP,” Stack Overflow, Feb. 25, 2022. [Online]. Available: https://stackoverflow.com/questions/9802788. [Accessed: Apr. 19, 2023]
+                    </li>
+                    <li>
+                        <b>An explanation of the YouTube API direct from Google itself. (api.php):</b> “Search | YouTube Data API,” Google Developers, Nov. 04, 2022. [Online]. Available: https://developers.google.com/youtube/v3/docs/search. [Accessed: Apr. 19, 2023]
                     </li>
                 </ul>
             </div>

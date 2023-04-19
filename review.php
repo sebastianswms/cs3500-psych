@@ -30,7 +30,7 @@
         $ytsearch = ($_GET["ytsearch"]);
 
         $query = array(
-            'maxResults' => '25',
+            'maxResults' => '100',
             'q' => $ytsearch,
             'key' => 'AIzaSyCcstjmRQbuQnf5vFL96MopUIE6hXJNW-c'
         );
