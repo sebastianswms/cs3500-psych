@@ -163,6 +163,8 @@ window.modalEnable = function modalEnable(optionIndex){
     let selection = cookieParse("selection");
     let videos = cookieParse("videos2");
 
+    $(".modal-content").empty() // Empties the modal's content.
+
     // Create a new iframe with a YouTube embed showing the user's selection.
     let iframeSelection = $("<iframe></iframe>").attr({
                 width: "560",
@@ -174,10 +176,13 @@ window.modalEnable = function modalEnable(optionIndex){
     // Stop the options from displaying in the background.
     $(".outer").css("display","none")
 
-    // Add and show the iframe, but disable pausing.
-    $("#selection-player .modal-content").append(iframeSelection)
-    $("iframe").css("pointer-events","none");
-    $("#selection-player").css("display","block")
+    // Checks to make sure that the modal has been emptied before appending
+    if ($("#selection-player .modal-content").is(':empty')) {
+        // Add and show the iframe, but disable pausing.
+        $("#selection-player .modal-content").append(iframeSelection);
+        $("iframe").css("pointer-events","none");
+        $("#selection-player").css("display","block");
+    }
 
 }
 
