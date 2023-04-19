@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport for the page to fit into screen & not scrollable by x-axis-->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Assessment Results</title>
 
     <!-- icon library link w3c -->
@@ -23,70 +25,64 @@
 
 <!-- When the page loads, fill the table and stats from the results of the assessment. -->
 <body class="results" onload="fillTable();fillStats();">
-<!-- loading div -->
-<div class="loader"></div>
-
-<!-- Jumbotron at the top of the page announcing completion of the assessment to the user. -->
-<section id="first-sec">
-    <div class="jumbotron-title" id="res-title">
-        <h1>Assessment Results</h1>
-        <hr>
-    </div>
-</section>
-
-<section>
-    <div class="row">
-        <div class="col res-sec duration">
-
-            <!-- Filled using tableBuilder.js with data from the user's cookies. -->
-            <div class="centered">
-                <h2>Percentage of Selection</h2>
-            </div>
-
-            <table class="video-table" id="video-table"></table>
-
-            <div class="centered">
-                <h2>Percentage of Selection (location)</h2>
-            </div>
-            <label id="option1-result"></label>
-            <label id="option2-result"></label>
-            <br>
-            <div class="centered">
-                <h2>Duration of Assessment</h2>
-            </div>
-            <label id="duration-result"></label>
-
+    <!-- loading div -->
+    <div class="loader"></div>
+    
+    <!-- Jumbotron at the top of the page announcing completion of the assessment to the user. -->
+    <section id="first-sec">
+        <div class="jumbotron-title" id="graph-res-title">
+            <h1>Assessment Results</h1>
+            <hr>
         </div>
+    </section>
+    
+    <section>
+        <div class="row">
+            <div id="col1" class="res-sec duration">
+                <!-- Filled using tableBuilder.js with data from the user's cookies. -->
+                <div class="centered">
+                    <h2>Percentage of Selection</h2>
+                </div>
+    
+                <table class="video-table" id="video-table"></table>
+    
+                <div class="centered">
+                    <h2>Percentage of Selection (location)</h2>
+                </div>
+                <label id="option1-result"></label>
+                <label id="option2-result"></label>
+                <br>
+                <div class="centered">
+                    <h2>Duration of Assessment</h2>
+                </div>
+                <label id="duration-result"></label>
+            </div>
 
-        <!-- For styling the container of the chart -->
-        <div class="col graph-sec">
-            <h3 class="graph-text title-text"></h3>
-
-            <!-- A link from canvas which will be populated using Chart.js -->
-            <canvas id="myChart"></canvas>
+            <!-- For styling the container of the chart -->
+            <div id="col2">
+                <div  id="chart-div" class="graph-sec">
+                    <h3 class="graph-text title-text"></h3>
+                    <!-- A link from canvas which will be populated using Chart.js -->
+                    <canvas id="myChart"></canvas>
+                </div>
+                <!-- brought the btn div inside the div which is for chart -->
+                <div class="btn-div">
+                    <!-- Restart the test from the beginning. -->
+                    <a href="index.html">
+                        <!-- added bootstrap btn styling -->
+                        <button id="btn-size" class="b-main btn btn-primary" type="button">Main Page <i class='fa fa-refresh' id="dnld"></i></button>
+                    </a>
+            
+                    <!-- Download the graph as a PNG. -->
+                    <!-- added bootstrap btn styling -->
+                    <button id="btn-size" class="btn btn-success" onclick="downloadChart()"> Download PNG <i class="fa fa-download" id="dnld"></i></button>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-
-<!-- Buttons for links to either restart the test or download the results. -->
-<section>
-    <div class="btn-div">
-
-        <!-- Restart the test from the beginning. -->
-        <a href="index.html">
-            <!-- added bootstrap btn styling -->
-            <button class="b-main btn btn-primary" type="button">Main Page <i class='fa fa-refresh'></i></button>
-        </a>
-
-        <!-- Download the graph as a PNG. -->
-        <!-- added bootstrap btn styling -->
-        <button class="btn btn-success" onclick="downloadChart()"> Download PNG<i class="fa fa-download"></i></button>
-    </div>
-</section>
-
-<footer>
-    <p><em>A website for Dr. Curiel.</em></p>
-</footer>
-
-</body>
+    </section>
+    <footer>
+        <p><em>A website for Dr. Curiel.</em></p>
+    </footer>
+    
+    </body>
 </html>
