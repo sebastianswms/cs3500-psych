@@ -154,8 +154,6 @@ so that the 'add video' button is not cut off*/
   padding-right: 7px;
 }
 
-/* Nav bar styling */
-
 /*The nav bar itself*/
 .navbar {
   border: 1px  rgb(238, 238, 238);
@@ -172,6 +170,20 @@ so that the 'add video' button is not cut off*/
 
 .nav-logo {
   margin-right: 1.5vw;
+}
+
+/* Take Me To The Test button */
+#test-button {
+  text-align: center;
+  border-width: 2px;
+  border-radius: 20px;
+  font-size: min(4vw, 20px);
+  padding: 2% 4%;
+  margin-top: 7vh;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);  
+  background-color: #28a745;
+  border-color: #000000;
+  color: #fff;
 }
 
 /* The active page */
