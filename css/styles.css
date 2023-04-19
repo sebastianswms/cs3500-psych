@@ -253,27 +253,14 @@ so that the 'add video' button is not cut off*/
     ========================================================================================== */ 
 
   
-
     .api { 
 
       height:100%; 
-  
   } 
-  
-    
-  
   .api div { 
-  
-      text-align: center; 
-  
+    
       display:flex; 
-  
-      justify-content:center; 
-  
-      align-items:center; 
-  
       height: 100%; 
-  
   } 
   
   
