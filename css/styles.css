@@ -23,8 +23,11 @@ body, h1, h2, h3, h4, h5, h6 {
 
 /*sets margins for all headers*/
 header {                        
-  margin: 1% 0 0.75% 5%;
+  margin: 2% 0 0.75% 5%;
   }
+
+
+  
 
 /*sets a bottom margin on all subheadings*/
 h2 { 
@@ -431,7 +434,7 @@ img iframe {
 #dnld {
   font-size: 0.9rem;
 }
-
+/* ==========================================================================================
                                         loader styling
 ========================================================================================== */
 .loader {
