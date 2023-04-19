@@ -26,9 +26,6 @@
             <a class="nav-link" href="about.php">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.php">Index</a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link" href="references.php">References</a>
         </li>
         <li class="nav-item">

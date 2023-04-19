@@ -10,7 +10,7 @@
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    
+
 </head>
 
 <body class="api">
@@ -24,9 +24,6 @@
         </li> 
         <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="index.php">Index</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="references.php">References</a>

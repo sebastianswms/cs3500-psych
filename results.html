@@ -29,6 +29,30 @@
 
 <!-- When the page loads, fill the table and stats from the results of the assessment. -->
 <body class="results" onload="fillTable();fillStats();">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-logo">
+            <img src="/images/logo.png" width="100" height="100" alt="Logo"  href="index.html">
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="about.php">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="references.php">References</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="catalog.php">Catalog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="api.php">API</a>
+            </li>
+        </ul>
+    </nav>
+
     <!-- loading div -->
     <div class="loader"></div>
     
@@ -74,7 +98,7 @@
                     <!-- Restart the test from the beginning. -->
                     <a href="index.html">
                         <!-- added bootstrap btn styling -->
-                        <button id="btn-size" class="b-main btn btn-primary" type="button">Main Page <i class='fa fa-refresh' id="dnld"></i></button>
+                        <button id="btn-size" class="b-main btn btn-primary" type="button">Home Page <i class='fa fa-refresh' id="dnld"></i></button>
                     </a>
             
                     <!-- Download the graph as a PNG. -->
