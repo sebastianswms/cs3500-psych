@@ -11,6 +11,7 @@ body {
   background-position: center;
   background-attachment:fixed;
   background-image: url("/images/background.png");
+  background-color: #bcd5ed; /* backup color */
 }
 
 /*sets text fonts*/
