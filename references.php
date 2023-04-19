@@ -17,10 +17,19 @@
             <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.php">About</a>
         </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="#">References</a>
+        <li class="nav-item">
+            <a class="nav-link" href="index.php">Index</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="references.php">References</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="catalog.php">Catalog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="api.php">API</a>
         </li>
     </ul>
 </nav>

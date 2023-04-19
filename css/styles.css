@@ -1,10 +1,7 @@
 /*  ==========================================================================================
                                         General Styling
     ========================================================================================== */  
-/* all the font style be as sans-serif */
-*{
-  font-family:sans-serif;
-}
+
 body {
   padding: 0;
   margin: 0;
@@ -15,9 +12,15 @@ body {
   background-attachment:fixed;
   background-image: url("/images/background.png");
 }
+
+/*sets text fonts*/
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}
+
 /*sets margins for all headers*/
 header {                        
-  margin: 1% 0 0.75% 5%;
+  margin: 2% 0 0.75% 5%;
   }
 
 /*sets a bottom margin on all subheadings*/
@@ -56,7 +59,7 @@ footer p {
   right: 5%;
   bottom: 20%;
   margin: 0;
-  font-family: "Garamond", serif;
+  font-family: "Fanwood Text", "Times New Roman", serif;
   font-style: italic;
   font-size: clamp(20px, 1vw, 24px); /*sets a minimum and maximum font size*/
 }
@@ -167,6 +170,37 @@ so that the 'add video' button is not cut off*/
     color: #eeeeee;
 }
 
+/*  ========================================================================================== 
+
+                                        API Search Page 
+
+    ========================================================================================== */ 
+
+  
+
+    .api { 
+
+      height:100%; 
+  
+  } 
+  
+    
+  
+  .api div { 
+  
+      text-align: center; 
+  
+      display:flex; 
+  
+      justify-content:center; 
+  
+      align-items:center; 
+  
+      height: 100%; 
+  
+  } 
+  
+  
 /*  ==========================================================================================
                                        Assessment page
     ========================================================================================== */
@@ -425,7 +459,9 @@ img iframe {
 #dnld {
   font-size: 0.9rem;
 }
-
+/* ==========================================================================================
+                                        loader styling
+========================================================================================== */
 .loader {
   top: 0;
   left: 0;
@@ -790,7 +826,7 @@ img iframe {
   #par_stim {
     display: block;
   }
-  /* video bank parent div bottom magrin */
+  /* video bank parent div bottom margin */
   #vid-bnk {
     margin-bottom: 2rem;
   }
