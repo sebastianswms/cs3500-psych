@@ -59,7 +59,7 @@
             <div class="foreground-box">
                 <h2>Sebastian Smiley</h2>
                 <ul>
-                    <li>
+                    <li> ********Please add which file(s) these citations apply to******** </li>                    <li>
                         <b>Setting and reading user cookies:</b> W3Schools, “JavaScript Cookies,” www.w3schools.com, 2023. [Online]. Available: https://www.w3schools.com/js/js_cookies.asp [Accessed: Mar. 19, 2023]
                     </li>
                     <li>
@@ -77,7 +77,9 @@
             <div class="foreground-box">
                     <h2>Camilla Vincent</h2>
                     <p class="indent">
-                        Voluptatem ducimus et eum eos. Est vel omnis nostrum voluptates quibusdam quisquam velit consequuntur. Cupiditate velit nisi est voluptate et praesentium sed quaerat.
+                        (Will convert to IEEE citation later.)
+                        Navigation bar
+                        https://www.youtube.com/watch?v=qNifU_aQRio
                     </p>
             </div>
         </div>
