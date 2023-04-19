@@ -106,7 +106,7 @@
                 <div class="col-sm-4" id="new-video-box">
                     <h2>Add New Stimulus</h2>
                     <form id="new-video" action="javascript:storeNewVideo();" onsubmit="return validateNewVideo()" method="post">
-                        <label>Title:</label><input type="text" name="video-title" size="30" placeholder="Video title....">
+                        <label>Title:</label><input type="text" name="video-title" size="30" maxlength="15" placeholder="Video title....">
                         <br><br>
                         <!-- YouTube URL. Has placeholder text to inform user of correct format. -->
                         <label>URL:</label><input type="text" name="video-url" size="30" placeholder="https://www.youtube.com/watch?v=??????">
