@@ -11,6 +11,9 @@
     <!-- Import jquery from Google's CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="scripts/reviewManagement.js" type="module"></script>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
 <body class="api">

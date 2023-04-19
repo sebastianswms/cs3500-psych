@@ -51,7 +51,8 @@
             </li>
           </ul>
 </nav>
-<main class="container h-100 w-100">
+
+<main class="search-box">
     <div class="row h-100 justify-content-center align-items-center">
         <form action="review.php" class="col-12">
             <label for="ytsearch">Search YouTube:</label>
