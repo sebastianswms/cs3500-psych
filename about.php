@@ -50,13 +50,14 @@
             their preferred rewards without relying on verbal communication.
         </p>
     </div>
-    <!-- Button that leads to the test. -->
 
-    <div class="btn">
+    <!-- Button that leads to the home page. -->
+    <div class="btn-container">
         <a href="index.html">
             <button id="test-button">Take Me To The Test</button>
         </a>
     </div>
+    
     <!-- The first row of about-page entries -->
     <div class="row pt-4">
 
