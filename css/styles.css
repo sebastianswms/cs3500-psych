@@ -1,10 +1,7 @@
 /*  ==========================================================================================
                                         General Styling
     ========================================================================================== */  
-/* all the font style be as sans-serif */
-*{
-  font-family:sans-serif;
-}
+
 body {
   padding: 0;
   margin: 0;
@@ -14,10 +11,17 @@ body {
   background-position: center;
   background-attachment:fixed;
   background-image: url("/images/background.png");
+  background-color: #bcd5ed; /* backup color */
 }
+
+/*sets text fonts*/
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}
+
 /*sets margins for all headers*/
 header {                        
-  margin: 1% 0 0.75% 5%;
+  margin: 2% 0 0.75% 5%;
   }
 
 /*sets a bottom margin on all subheadings*/
@@ -44,7 +48,7 @@ h2 {
 footer {
     background-color: #1a3147;
     color: white;
-    height: 50px;
+    height: 40px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -56,9 +60,9 @@ footer p {
   right: 5%;
   bottom: 20%;
   margin: 0;
-  font-family: "Garamond", serif;
+  font-family: "EB Garamond", "Times New Roman", serif;
   font-style: italic;
-  font-size: clamp(20px, 1vw, 24px); /*sets a minimum and maximum font size*/
+  font-size: clamp(18px, 1vw, 24px); /*sets a minimum and maximum font size*/
 }
   
 /*  ==========================================================================================
@@ -151,14 +155,46 @@ so that the 'add video' button is not cut off*/
   padding-right: 7px;
 }
 
-/* Nav bar styling */
-
 /*The nav bar itself*/
 .navbar {
-  border: 1px  rgb(238, 238, 238);
   background-color: #1a3147;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  padding: 15px;
+  padding-left: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.nav-link {
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.nav-logo {
+  margin-right: 1.5vw;
+  margin-left: 10px;
+}
+
+/* Take Me To The Test button */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+#test-button {
+  text-align: center;
+  border-width: 2.5px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 2% 4%;
+  margin-top: 7vh;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);  
+  background-color: #28a745;
+  border-color: #000000;
+  color: #fff;
+  width: 225px;
 }
 
 /* The active page */
@@ -167,6 +203,67 @@ so that the 'add video' button is not cut off*/
     color: #eeeeee;
 }
 
+/*  ==========================================================================================
+                                          Catalog page
+    ========================================================================================== */
+		.catalog {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		
+		.entry {
+			width: calc(25% - 20px);
+			margin-bottom: 20px;
+			background-color: #f9f9f9;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			box-sizing: border-box;
+			transition: box-shadow 0.3s ease;
+		}
+		
+		.entry:hover {
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		}
+		
+		.entry img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
+		
+		.entry h3 {
+			font-size: 20px;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+		
+		.entry p {
+			font-size: 16px;
+			margin: 0;
+			line-height: 1.5;
+		}
+/*  ========================================================================================== 
+
+                                        API Search Page 
+
+    ========================================================================================== */ 
+
+  
+    .api { 
+
+      height:100%; 
+  } 
+  .api div { 
+    
+      display:flex; 
+      height: 100%; 
+  } 
+  
+  
 /*  ==========================================================================================
                                        Assessment page
     ========================================================================================== */
@@ -180,6 +277,11 @@ so that the 'add video' button is not cut off*/
   float: left;
   width: 50%;
   position: relative;
+  text-align: center;
+}
+
+.video-row-inner {
+    text-align: center;
 }
 
 .video-row-outer:after {
@@ -220,14 +322,12 @@ img iframe {
 .video-column-inner #detector1, .video-column-inner #detector2 {
     margin-top: 15vh;
     margin-bottom: 10vh;
-    margin-left: 10%;
 }
 
 /* detector positioning for vertical presentation mode */
 .video-row-inner #detector1, .video-row-inner #detector2 {
     margin-top: 1vh;
     margin-bottom: 1vh;
-    margin-left: 15%;
 }
 
 /* detector positioning, including z-positioning to place them in front of their iframes */
@@ -238,6 +338,7 @@ img iframe {
     max-height: 80%;
     height:315px;
     width:560px;
+    display:inline-block;
 }
 
 /* The Modal (background) */
@@ -425,7 +526,9 @@ img iframe {
 #dnld {
   font-size: 0.9rem;
 }
-
+/* ==========================================================================================
+                                        loader styling
+========================================================================================== */
 .loader {
   top: 0;
   left: 0;
@@ -790,7 +893,7 @@ img iframe {
   #par_stim {
     display: block;
   }
-  /* video bank parent div bottom magrin */
+  /* video bank parent div bottom margin */
   #vid-bnk {
     margin-bottom: 2rem;
   }

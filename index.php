@@ -15,6 +15,8 @@
 
     <!-- External stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- icon library link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,29 +28,54 @@
     <script src="/scripts/videoList.js" type="module"></script> <!-- Generating a list of video checkboxes from cookies -->
     <script src="/scripts/startAssessment.js" type="module"></script> <!-- Verification and starting the assessment -->
     <script src="/scripts/instructionsDropdown.js" type="module"></script> <!-- Verification and starting the assessment -->
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    
+
 </head>
 
 <body onload="fillVideoList()"> <!-- When the page loads, populate the list of video checkboxes -->
 <div class="loader"></div>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <a
+        href="index.php"
+        class="nav-logo mb-0">
+          <img src="/images/logo.png"
+          width="100" height="100" />
+    </a>
+    <button
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    class="navbar-toggler"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" id="item1">
+           <a class="nav-link" href="index.php"
+           >Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+           <a class="nav-link" href="about.php"
+           >About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="references.html">References</a>
+           <a class="nav-link" href="references.php">References</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="api.html">API</a>
+           <a class="nav-link" href="api.php">Video Search API</a>
         </li>
-    </ul>
-</nav>
+      </ul>
+</div></nav>
 
-<header>
+<header class="page-header">
     <h1>Paired Stimulus Preference Assessment Tool</h1>
 </header>
 
@@ -58,20 +85,20 @@
         <div class="col-sm-8">
             <section class="indent">
                 <p><b>Welcome!</b> This website is a tool designed for researchers and educators to assess the favorite rewards
-                of autistic children. Using a series of video trials, subjects will be able to choose their preferred rewards
+                of autistic children and adults. Using a series of video trials, subjects will be able to choose their preferred rewards
                 without relying on verbal communication.
                 </p>
                 <!-- by clicking, the user can display/hide the instruction steps -->
                 <h2 class="inst-text" onclick="toggleInstructionsDropdown()">Instructions <i id="inst-icon" class='bx bx-chevron-down-circle up-icon'></i></h2>
                 <div id="instructions-box" class="foreground-box">
                     <ol>
-                        <li>Add your videos by pasting their YouTube URLs below. (max 20 videos).</li>
+                        <li>Add your videos by entering their YouTube URLs below (20 video maximum).</li>
                         <li>Set the timer (3 - 90 seconds).</li>
-                        <li>Select video location as Vertical/Horizontal.</li>
-                        <li>Select the video presentation as thumbnails or the video player.</li>
+                        <li>Select video orientation (Vertical/Horizontal).</li>
+                        <li>Select the trial presentation as either thumbnails or the video player.</li>
                         <li>Select the videos you want to include in the test from the video bank. Then press "Start Test."</li>
                     </ol>
-                    <p><b>After the test concludes, you will see the result and can download the Chart.</b></p>
+                    <p><b>After the test concludes, you can download the results!</b></p>
                 </div>
             </section>
             <div id="par_stim" class="row pt-3">

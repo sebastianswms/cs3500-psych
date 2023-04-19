@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
 <body class="decision">
@@ -25,14 +27,14 @@
 
     <!-- A div for styling the surroundings of the "see results" button. -->
     <div class="decision-buttons">
-        <a href="results.html">
+        <a href="results.php">
             <button class="btn btn-success btn-result">SEE RESULTS&nbsp&nbsp>></button>
         </a>
     </div>
 
     <!-- A div for styling the surroundings of the "start over" button. -->
     <div class="decision-buttons">
-        <a href="index.html">
+        <a href="index.php">
             <button class="btn btn-over btn-primary">&nbspSTART OVER&nbsp&nbsp&nbsp&#x21B7</button>
         </a>
     </div>

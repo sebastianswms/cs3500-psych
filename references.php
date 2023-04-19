@@ -6,23 +6,51 @@
 
     <!-- External stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="#">References</a>
-        </li>
-    </ul>
+<nav class="navbar navbar-expand-sm navbar-dark">
+        <a
+            href="index.php"
+            class="nav-logo mb-0">
+              <img src="/images/logo.png"
+              width="100" height="100" />
+        </a>
+        <button
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        class="navbar-toggler"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item" id="item1">
+               <a class="nav-link" href="index.php"
+               >Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="about.php"
+               >About</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="references.php">References</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="api.php">Video Search API</a>
+            </li>
+          </ul>
 </nav>
 
 <header>
@@ -48,7 +76,7 @@
             <div class="foreground-box">
                 <h2>Sebastian Smiley</h2>
                 <ul>
-                    <li>
+                    <li> ********Please add which file(s) these citations apply to******** </li>                    <li>
                         <b>Setting and reading user cookies:</b> W3Schools, “JavaScript Cookies,” www.w3schools.com, 2023. [Online]. Available: https://www.w3schools.com/js/js_cookies.asp [Accessed: Mar. 19, 2023]
                     </li>
                     <li>
@@ -66,7 +94,9 @@
             <div class="foreground-box">
                     <h2>Camilla Vincent</h2>
                     <p class="indent">
-                        Voluptatem ducimus et eum eos. Est vel omnis nostrum voluptates quibusdam quisquam velit consequuntur. Cupiditate velit nisi est voluptate et praesentium sed quaerat.
+                        (Will convert to IEEE citation later.)
+                        Navigation bar
+                        https://www.youtube.com/watch?v=qNifU_aQRio
                     </p>
             </div>
         </div>
