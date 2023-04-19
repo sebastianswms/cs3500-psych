@@ -53,7 +53,7 @@
             </li>
           </ul>
 </nav>
-<main class="review-container h-100 w-100">
+<main class="review-container">
 
     <!-- With assistance from https://stackoverflow.com/q/23740548 -->
     <div id="target-ytsearch" style="display:none;">
@@ -101,11 +101,20 @@
     <div>
         <div id="player"></div>
     </div>
-    <div>
+    <div class="btns-container">
         <input type="button" value="Reject" id="reject" class="btn btn-success text-light border-dark both-btn">
         <input type="button" value="Confirm" id = "confirm" class="btn btn-success text-light border-dark both-btn">
     </div>
+    <div class="btn-container">
+        <a href="index.php">
+            <button id="test-button">Finish</button>
+        </a>
+    </div>
 </main>
+
+<footer>
+    <p><em>A website for Dr. Curiel.</em></p>
+</footer>
 
 </body>
 </html>

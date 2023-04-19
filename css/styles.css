@@ -271,6 +271,24 @@ so that the 'add video' button is not cut off*/
                                         API Video Page 
     ========================================================================================== */ 
   
+    .review-container {
+      position: absolute;
+      top: 35%;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 150px;
+    }
+
+    .btns-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+    
+    
 /*  ==========================================================================================
                                        Assessment page
     ========================================================================================== */
