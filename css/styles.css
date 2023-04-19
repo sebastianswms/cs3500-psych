@@ -277,6 +277,11 @@ so that the 'add video' button is not cut off*/
   float: left;
   width: 50%;
   position: relative;
+  text-align: center;
+}
+
+.video-row-inner {
+    text-align: center;
 }
 
 .video-row-outer:after {
@@ -317,14 +322,12 @@ img iframe {
 .video-column-inner #detector1, .video-column-inner #detector2 {
     margin-top: 15vh;
     margin-bottom: 10vh;
-    margin-left: 10%;
 }
 
 /* detector positioning for vertical presentation mode */
 .video-row-inner #detector1, .video-row-inner #detector2 {
     margin-top: 1vh;
     margin-bottom: 1vh;
-    margin-left: 15%;
 }
 
 /* detector positioning, including z-positioning to place them in front of their iframes */
@@ -335,6 +338,7 @@ img iframe {
     max-height: 80%;
     height:315px;
     width:560px;
+    display:inline-block;
 }
 
 /* The Modal (background) */

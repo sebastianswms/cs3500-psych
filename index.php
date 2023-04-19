@@ -73,7 +73,7 @@
            <a class="nav-link" href="api.php">Video Search API</a>
         </li>
       </ul>
-</nav>
+</div></nav>
 
 <header class="page-header">
     <h1>Paired Stimulus Preference Assessment Tool</h1>
