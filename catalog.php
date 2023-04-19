@@ -38,6 +38,29 @@
         </li>
     </ul>
 </nav>
+
+<div class="catalog">
+		<div class="entry">
+			<img src="https://via.placeholder.com/300x200.png?" alt="Entry 1">
+			<h3>Entry 1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, quam sed dictum vestibulum, risus nulla malesuada enim, quis euismod nisi urna id ipsum. Sed auctor urna massa, at ullamcorper dolor hendrerit non. </p>
+		</div>
+		<div class="entry">
+			<img src="https://via.placeholder.com/300x200.png?" alt="Entry 2">
+			<h3>Entry 2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, quam sed dictum vestibulum, risus nulla malesuada enim, quis euismod nisi urna id ipsum. Sed auctor urna massa, at ullamcorper dolor hendrerit non. </p>
+		</div>
+		<div class="entry">
+			<img src="https://via.placeholder.com/300x200.png?" alt="Entry 3">
+			<h3>Entry 3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, quam sed dictum vestibulum, risus nulla malesuada enim, quis euismod nisi urna id ipsum. Sed auctor urna massa, at ullamcorper dolor hendrerit non. </p>
+		</div>
+		<div class="entry">
+			<img src="https://via.placeholder.com/300x200.png?" alt="Entry 4">
+			<h3>Entry 4</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat, quam sed dictum vestibulum, risus nulla malesuada enim, quis euismod
+        </div>
+</div>
 <footer>
     <p><em>A website for Dr. Curiel.</em></p>
 </footer>
