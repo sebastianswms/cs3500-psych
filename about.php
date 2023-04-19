@@ -93,7 +93,7 @@
             <div class="foreground-box">
                 <h2>Camilla Vincent</h2>
                 <p class="indent">
-                    Voluptatem ducimus et eum eos. Est vel omnis nostrum voluptates quibusdam quisquam velit consequuntur. Cupiditate velit nisi est voluptate et praesentium sed quaerat.
+                     I'm a computer science major at Western Michigan University. I am part of WALI, WMU's nanosatellite club. I am mainly interested in data science and embedded development. I worked heavily on the website layout and responsive design features.
                 </p>
             </div>
         </div>
