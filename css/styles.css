@@ -59,7 +59,7 @@ footer p {
   right: 5%;
   bottom: 20%;
   margin: 0;
-  font-family: "Fanwood Text", "Times New Roman", serif;
+  font-family: "EB Garamond", "Times New Roman", serif;
   font-style: italic;
   font-size: clamp(20px, 1vw, 24px); /*sets a minimum and maximum font size*/
 }
