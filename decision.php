@@ -27,7 +27,7 @@
 
     <!-- A div for styling the surroundings of the "see results" button. -->
     <div class="decision-buttons">
-        <a href="results.html">
+        <a href="results.php">
             <button class="btn btn-success btn-result">SEE RESULTS&nbsp&nbsp>></button>
         </a>
     </div>

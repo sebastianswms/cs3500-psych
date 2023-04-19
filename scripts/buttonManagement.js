@@ -90,7 +90,7 @@ window.fillButtons = function fillButtons(){
     // If the assessment has completed, move on to the next page.
     if(index >= combination.length){
         setCookie("end", (new Date().getTime() / 1000), 5) // Saves the epoch timestamp in seconds when the assessment reaches the end.
-        window.location.href = "./decision.html";
+        window.location.href = "./decision.php";
         return;
     }
 

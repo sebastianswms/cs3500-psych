@@ -31,7 +31,7 @@ window.validateStartAssessment = function validateStartAssessment(){
 
     Output: A series of cookies stored in the user's browser to determine how the assessment should be completed.
 
-    Remarks: This is the final function call before the user progresses to the assessment.html page.
+    Remarks: This is the final function call before the user progresses to the assessment.php page.
 */
 window.startAssessment = function startAssessment(){
 
@@ -87,5 +87,5 @@ window.startAssessment = function startAssessment(){
     setCookie("option1", 0, 5) // Sets an empty cookie to count the amount of times option1 is pressed.
     setCookie("option2", 0, 5) // Sets an empty cookie to count the amount of times option2 is pressed.
 
-    window.location.href = "./assessment.html"; // Move on to the assessment.
+    window.location.href = "./assessment.php"; // Move on to the assessment.
 }
