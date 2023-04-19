@@ -48,7 +48,7 @@ h2 {
 footer {
     background-color: #1a3147;
     color: white;
-    height: 50px;
+    height: 40px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -62,7 +62,7 @@ footer p {
   margin: 0;
   font-family: "EB Garamond", "Times New Roman", serif;
   font-style: italic;
-  font-size: clamp(20px, 1vw, 24px); /*sets a minimum and maximum font size*/
+  font-size: clamp(18px, 1vw, 24px); /*sets a minimum and maximum font size*/
 }
   
 /*  ==========================================================================================
@@ -157,20 +157,22 @@ so that the 'add video' button is not cut off*/
 
 /*The nav bar itself*/
 .navbar {
-  border: 1px  rgb(238, 238, 238);
   background-color: #1a3147;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  align-items: flex-end;
 }
 
+
 .nav-link {
-  margin-top: 6vh;
-  font-size: 16px;
-  height: 100%;
+  font-size: 18px;
+  padding-left: 20px;
 }
 
 .nav-logo {
   margin-right: 1.5vw;
+  margin-left: 10px;
 }
 
 /* Take Me To The Test button */
