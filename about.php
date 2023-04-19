@@ -17,7 +17,7 @@
     <!-- navbar (code is based on a tutorial listed in references) -->
 <nav class="navbar navbar-expand-sm navbar-dark">
         <a
-            href="index.html"
+            href="index.php"
             class="nav-logo mb-0">
               <img src="/images/logo.png"
               width="100" height="100" />
@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item" id="item1">
-               <a class="nav-link" href="index.html"
+               <a class="nav-link" href="index.php"
                >Home</a>
             </li>
             <li class="nav-item">
@@ -69,7 +69,7 @@
 
     <!-- Button that leads to the home page. -->
     <div class="btn-container">
-        <a href="index.html">
+        <a href="index.php">
             <button id="test-button">Take Me To The Test</button>
         </a>
     </div>
