@@ -102,8 +102,8 @@
         <div id="player"></div>
     </div>
     <div class="btns-container">
-        <input type="button" value="Reject" id="reject" class="btn btn-success text-light border-dark both-btn">
-        <input type="button" value="Confirm" id = "confirm" class="btn btn-success text-light border-dark both-btn">
+        <input type="button" value="Reject" id="reject" class="btn btn-danger text-dark border-dark both-btn">
+        <input type="button" value="Confirm" id = "confirm" class="btn btn-success text-dark border-dark both-btn">
     </div>
     <div class="btn-container">
         <a href="index.php">
