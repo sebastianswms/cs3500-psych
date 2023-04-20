@@ -77,7 +77,7 @@ const myChart = new Chart(ctx, {
         // added an x-axis title
         scaleLabel: {
           display: true,
-          labelString: "Picture"
+          labelString: "Stimulus"
         }
       }]
     },
