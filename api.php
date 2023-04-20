@@ -53,16 +53,16 @@
 </nav>
 
 <main class="search-box">
-    <div class="row h-100 justify-content-center align-items-center">
-        <form action="review.php" class="col-12">
-            <label for="ytsearch">Search YouTube:</label>
+    <div >
+        <form action="review.php" class="col-12" id="api-search-form">
+            <label for="ytsearch" id="search-youtube" >Search YouTube:</label>
             <input type="search" id="ytsearch" name="ytsearch" pattern=".{1,100}" required title="Up to 100 characters.">
-            <input type="submit" value="Search" class="btn btn-success text-light border-dark both-btn">
+            <input type="submit" id="api-search-btn"value="Search" class="btn btn-success">
         </form>
     </div>
 </main>
 
-<footer>
+<footer class="footer">
     <p><em>A website for Dr. Curiel.</em></p>
 </footer>
 
