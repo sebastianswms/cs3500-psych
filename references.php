@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport for the page to fit into screen & not scrollable by x-axis-->
+   <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>References</title> <!-- For display in tabs and bookmarks. -->
 
     <!-- External stylesheets -->
@@ -101,40 +103,68 @@
         <!-- The top right set of references. -->
         <div class="col pt-6">
             <div class="foreground-box">
-                    <h2>Camilla Vincent</h2>
-                    <p class="indent">
-                        (Will convert to IEEE citation later.)
-                        Navigation bar
-                        https://www.youtube.com/watch?v=qNifU_aQRio
-                    </p>
+                <h2>Camilla Vincent</h2>
+                <p class="indent">
+                    (Will convert to IEEE citation later.)
+                    Navigation bar
+                    https://www.youtube.com/watch?v=qNifU_aQRio
+                </p>
             </div>
         </div>
-
-    </div>
-
-    <!-- The second row of references. -->
-    <div class="row pt-4">
 
         <!-- The bottom left set of references. -->
         <div class="col pt-6">
             <div class="foreground-box">
-                    <h2>Cody Thornell</h2>
-                    <p class="indent">
-                        Voluptatem ducimus et eum eos. Est vel omnis nostrum voluptates quibusdam quisquam velit consequuntur. Cupiditate velit nisi est voluptate et praesentium sed quaerat.
-                    </p>
+                <h2>Cody Thornell</h2>
+                <ul>
+                    <li>
+                        <b>Implementing html modal and adding functionality (assessment.html):</b> “How to - CSS/JS modal,” How To Make a Modal Box With CSS and JavaScript. [Online]. Available: https://www.w3schools.com/howto/howto_css_modals.asp. [Accessed: 14-Feb-2023]. 
+                    </li>
+                    <li>
+                        <b>Getting a random number when generating the combinations (orderManagement.js):</b> JavaScript math object. [Online]. Available: https://www.w3schools.com/js/js_math.asp. [Accessed: 15-Feb-2023]. 
+                    </li>
+                    <li>
+                        <b>Handling the array when generating the combinations (orderManagement.js):</b> JavaScript array methods. [Online]. Available: https://www.w3schools.com/js/js_array_methods.asp. [Accessed: 15-Feb-2023]. 
+                    </li>
+                    <li>
+                        <b>Setting epoch timestamps (startAssessment.js):</b> “Javascript date gettime(),” JavaScript Date getTime() Method. [Online]. Available: https://www.w3schools.com/jsref/jsref_gettime.asp. [Accessed: 19-Mar-2023]. 
+                    </li>
+                    <li>
+                        <b>Parsing ints from cookies (buttonManagement.js):</b> “Javascript parseInt(),” JavaScript parseInt() Method. [Online]. Available: https://www.w3schools.com/jsref/jsref_parseint.asp. [Accessed: 20-Mar-2023]. 
+                    </li>
+                    <li>
+                        <b>Checking jQuery empty selector (buttonManagement.js):</b> J. S. F.- js.foundation, “:empty selector,” :empty Selector | jQuery API Documentation. [Online]. Available: https://api.jquery.com/empty-selector/. [Accessed: 18-Apr-2023]. 
+                    </li>
+                </ul>
             </div>
         </div>
 
         <!-- The bottom right set of references. -->
         <div class="col pt-6">
             <div class="foreground-box">
-                    <h2>Ali Azimi</h2>
-                    <p class="indent">
-                        Voluptatem ducimus et eum eos. Est vel omnis nostrum voluptates quibusdam quisquam velit consequuntur. Cupiditate velit nisi est voluptate et praesentium sed quaerat.
-                    </p>
+                <h2>Ali Azimi</h2>
+                <ul>
+                    <li>
+                        <b>Download Button for Graph (results.php, graphBuilder.js):</b> YouTube, “How to Download Canvas as Image,” www.youtube.com, 2022. [Online]. Available: https://www.youtube.com/watch?v=jlgeG5K6bBg [Accessed: Feb. 16, 2023]
+                    </li>
+                    <li>
+                        <b>Chart.js library link for graph (results.php):</b> chartjs, “chart.js library,” www.chartjs.org, 2023. [Online]. Available: https://www.chartjs.org/docs/latest/getting-started/ [Accessed: Feb. 27, 2023]
+                    </li>
+                    <li>
+                        <b>CSS Buttons Styling (index.php, decision.php, results.php):</b> W3Schools, “CSS Buttons,” www.w3schools.com, 2023. [Online]. Available: https://www.w3schools.com/css/css3_buttons.asp [Accessed: March. 15, 2023]
+                    </li>
+                    <li>
+                        <b>Y-axis, X-axis Grid Lines Remover (results.php, graphBuilder.js):</b> chart.js, “Bar Chart,” www.chartjs.org, 2023. [Online]. Available: https://www.chartjs.org/docs/latest/charts/bar.html [Accessed: Mar. 18, 2023]
+                    </li>
+                    <li>
+                        <b>Added loader for all pages (index.php, asssessment.php, decision.php, results.php, loader.js):</b> W3schools, “CSS Loader,” www.w3schools.com, 2023. [Online]. Available: https://www.w3schools.com/howto/howto_css_loader.asp [Accessed: Mar. 21, 2023]
+                    </li>
+                    <li>
+                        <b>Y-axis, X-axis Labels (results.php):</b> stackoverflow, “In Chart.js set chart title, name of x axis and y axis,” www.stackoverflow.com, 2023. [Online]. Available: https://stackoverflow.com/questions/27910719/in-chart-js-set-chart-title-name-of-x-axis-and-y-axis [Accessed: April. 02, 2023]
+                    </li>
+                </ul>
             </div>
         </div>
-
     </div>
 </main>
 
