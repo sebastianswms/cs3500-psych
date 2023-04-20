@@ -114,7 +114,7 @@
                     <!-- Restart the test from the beginning. -->
                     <a href="index.php">
                         <!-- added bootstrap btn styling -->
-                        <button id="btn-size" class="b-main btn btn-primary" type="button">Home Page <i class='fa fa-refresh' id="dnld"></i></button>
+                        <button id="btn-size" class="b-main btn btn-dark" type="button">Home Page <i class='fa fa-refresh' id="dnld"></i></button>
                     </a>
             
                     <!-- Download the graph as a PNG. -->

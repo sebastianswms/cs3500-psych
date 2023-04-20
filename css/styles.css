@@ -64,7 +64,19 @@ footer p {
   font-style: italic;
   font-size: clamp(18px, 1vw, 24px); /*sets a minimum and maximum font size*/
 }
+
+
+/* Buttons on About and Decision pages */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
   
+.btn-container button:hover {
+  filter: brightness(90%);
+}
+
 /*  ==========================================================================================
                                  Index, About, & References pages
     ========================================================================================== */
@@ -179,18 +191,10 @@ so that the 'add video' button is not cut off*/
   margin-left: 10px;
 }
 
-/* Take Me To The Test button */
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-}
-
-
 #test-button {
   text-align: center;
   border-width: 2.5px;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 20px;
   padding: 2% 4%;
   margin-top: 7vh;
@@ -300,7 +304,7 @@ so that the 'add video' button is not cut off*/
   
   
 /*  ========================================================================================== 
-                                        API Video Page 
+                                        API Video Page (review.php)
     ========================================================================================== */ 
   
     .review-container {
@@ -316,8 +320,8 @@ so that the 'add video' button is not cut off*/
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 50px;
-      margin-bottom: 25px;
+      margin-top: 0.5%;
+      margin-bottom: 0.25%;
     }
     
     
@@ -433,7 +437,6 @@ img iframe {
   text-align: center;
   color: #0b0c0e;
   background-color: transparent;
-  box-shadow: none;
   letter-spacing: 13px;
 }
 /*center the buttons*/
@@ -444,7 +447,7 @@ img iframe {
 .btn-result, .btn-over {
   border-width: 2px;
   border-radius: 20px;
-  font-size: min(5vw, 24px);
+  font-size: min(4vw, 20px);
   padding: 2% 4%;
   margin-top: 7vh;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);  
@@ -502,7 +505,8 @@ img iframe {
 }
 /* the line under the "Results" text  */
 #graph-res-title hr {
-  width: 40%;
+  width: 70vw;
+  max-width: 700px;
   margin: 0px auto;
 }
 .results .res {
@@ -579,6 +583,8 @@ img iframe {
   width: 9rem;
   font-size: 0.91rem;
   margin-left: 0.4rem;
+  border-color: #000000;
+  border-width: 1px;
 }
 #dnld {
   font-size: 0.9rem;
