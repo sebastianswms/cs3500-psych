@@ -82,7 +82,7 @@
 
         <!-- The top left about-page entry. -->
         <div class="col pt-6">
-            <div class="foreground-box">
+            <div class="foreground-box" id="new-width">
                 <h2>Sebastian Smiley</h2>
                 <p class="indent">
                     I'm one of the designers of this website. I'm a computer science and data science double-major, and
@@ -93,7 +93,7 @@
 
         <!-- The top right about-page entry. -->
         <div class="col pt-6">
-            <div class="foreground-box">
+            <div class="foreground-box"  id="new-width">
                 <h2>Camilla Vincent</h2>
                 <p class="indent">
                      I'm a computer science major at Western Michigan University. I am part of WALI, WMU's nanosatellite club. I am mainly interested in data science and embedded development. I worked heavily on the website layout and responsive design features. I also designed the website logo and favicon.
@@ -103,7 +103,7 @@
 
         <!-- The bottom left about-page entry. -->
         <div class="col pt-6">
-            <div class="foreground-box">
+            <div class="foreground-box"  id="new-width">
                 <h2>Cody Thornell</h2>
                 <p class="indent">
                     I'm a Computer Science major at Western Michigan University and have worked on various sections of this project. I have a passion for working on fun projects and building things.
@@ -113,7 +113,7 @@
 
         <!-- The bottom right about-page entry. -->
         <div class="col pt-6">
-            <div class="foreground-box">
+            <div class="foreground-box"  id="new-width">
                 <h2>Ali Azimi</h2>
                 <p class="indent">
                     I am a Computer Science student at WMU. As part of the design team for this website, 
