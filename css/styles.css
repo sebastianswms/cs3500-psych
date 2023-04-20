@@ -97,10 +97,13 @@ footer p {
   background-color: rgb(238, 238, 238);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /*add a shadow effect*/
   padding: 15px;
-  width: 19rem;
   margin: 1rem auto;
   /* keeping the texts inside the div in all conditions */
   overflow-wrap: break-word;
+}
+/* added width for each col in about file */
+#new-width {
+  width: 19rem;
 }
 /* video bank parent div bottom magrin */
 #vid-bnk {
