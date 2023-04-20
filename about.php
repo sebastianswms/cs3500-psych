@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport for the page to fit into screen & not scrollable by x-axis-->
+   <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>About</title> <!-- For display in tabs and bookmarks. -->
 
     <!-- External stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- favicon -->
@@ -70,7 +73,7 @@
     <!-- Button that leads to the home page. -->
     <div class="btn-container">
         <a href="index.php">
-            <button id="test-button">Take Me To The Test</button>
+            <button id="test-button">Return To Home Page</button>
         </a>
     </div>
 
@@ -98,11 +101,6 @@
             </div>
         </div>
 
-    </div>
-
-    <!-- The second row of about-page entries -->
-    <div class="row pt-4">
-
         <!-- The bottom left about-page entry. -->
         <div class="col pt-6">
             <div class="foreground-box">
@@ -118,11 +116,11 @@
             <div class="foreground-box">
                 <h2>Ali Azimi</h2>
                 <p class="indent">
-                    Voluptatem ducimus et eum eos. Est vel omnis nostrum voluptates quibusdam quisquam velit consequuntur. Cupiditate velit nisi est voluptate et praesentium sed quaerat.
+                    I am a Computer Science student at WMU. As part of the design team for this website, 
+                    I am one of the designers, and I have mostly worked as a front-end developer using HTML, CSS, and JS.
                 </p>
             </div>
         </div>
-
     </div>
 </main>
 
