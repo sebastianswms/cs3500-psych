@@ -2,6 +2,9 @@
 <html class="api">
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport for the page to fit into screen & not scrollable by x-axis-->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
     <title>API Review</title>
 
     <!-- External stylesheets -->
@@ -53,7 +56,7 @@
             </li>
           </ul>
 </nav>
-<main class="review-container">
+<main class="review-container" id="rev-cont">
 
     <!-- With assistance from https://stackoverflow.com/q/23740548 -->
     <div id="target-ytsearch" style="display:none;">
@@ -101,11 +104,11 @@
     <div>
         <div id="player"></div>
     </div>
-    <div class="btns-container">
+    <div class="btns-container conf-rej-btn">
         <input type="button" value="Reject" id="reject" class="btn btn-danger text-dark border-dark both-btn">
         <input type="button" value="Confirm" id = "confirm" class="btn btn-success text-dark border-dark both-btn">
     </div>
-    <div class="btn-container">
+    <div class="btn-container finish">
         <a href="index.php">
             <button id="test-button">Finish</button>
         </a>

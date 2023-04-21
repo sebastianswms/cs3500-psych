@@ -592,9 +592,22 @@ img iframe {
 #dnld {
   font-size: 0.9rem;
 }
-/* ==========================================================================================
-                                        loader styling
-========================================================================================== */
+/*  =========================================================
+                             Review page
+=========================================================== */
+  /* review page */
+  #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 7rem;
+    margin-left: 4rem;
+  }
+  .finish {
+    margin-top: 0rem;
+  }
+/* ==========================================================
+                           loader styling
+=========================================================== */
 .loader {
   top: 0;
   left: 0;
@@ -694,6 +707,16 @@ img iframe {
   }
   .both-btn {
     margin-bottom: 0.5rem;
+  }
+  /* review page */
+  #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 9rem;
+    margin-left: 5rem;
+  }
+  .finish {
+    margin-top: 0rem;
   }
  }
 @media only screen and  (max-width: 1200px) {
@@ -890,6 +913,24 @@ img iframe {
   #btn-size {
   width: 9.5rem;
   }
+    /* about page */
+    .btn-container {
+      margin-top: -3rem;
+      margin-bottom: 2rem;
+    }
+    #new-width {
+      margin-top: 1rem;
+    }
+      /* review page */
+   #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 9rem;
+    margin-left: 3rem;
+  }
+  .finish {
+    margin-top: 0rem;
+  }
 }
 @media only screen and  (max-width: 820px) {
    header h1 {
@@ -930,7 +971,7 @@ img iframe {
   /* result page  */
    /* div for chart */
    .results section {
-     width: 100%;
+     width: 90%;
      margin: 10px auto;
    }
    .results #col1, #col2{
@@ -949,6 +990,23 @@ img iframe {
      letter-spacing: 7px;
      font-size: 2rem;
    }
+   /* reference page */
+  .ref-section {
+    margin-top: -2.5rem;
+  }
+  .pt-6 {
+    margin-bottom: 0rem;
+  }
+   /* review page */
+   #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 9rem;
+    margin-left: 3rem;
+  }
+  .finish {
+    margin-top: 0rem;
+  }
  }
  
 @media only screen and (max-width: 768px) {
@@ -1011,9 +1069,9 @@ img iframe {
   /* result page  */
   /* div for chart */
    .results section {
-     width: 100%;
-     margin: 10px auto;
-   }
+    width: 95%;
+    margin: 20px auto;
+  }
    .results #col1, #col2{
      width: 29rem;
      margin: 1rem auto;
@@ -1030,6 +1088,50 @@ img iframe {
      letter-spacing: 7px;
      font-size: 2rem;
    }
+   /* about page */
+  .btn-container {
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+  }
+  #new-width {
+    margin-top: -1rem;
+  }
+   /* review page */
+   #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
+  .finish {
+    margin-top: 0rem;
+  }
+ }
+  /* -----------for cell phones----------- */
+  @media only screen and (max-width: 740px) {
+    /* review page */
+    #rev-cont {
+     width: 15rem;
+     height: auto;
+     margin-top: 7rem;
+     margin-left: 3rem;
+   }
+   .finish {
+     margin-top: 0rem;
+   }
+  }
+ /* -----------for cell phones----------- */
+ @media only screen and (max-width: 640px) {
+   /* review page */
+   #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 7rem;
+    margin-left: 3rem;
+  }
+  .finish {
+    margin-top: 0rem;
+  }
  }
  /* -----------for cell phones----------- */
  @media only screen and  (max-width: 480px) {
@@ -1088,7 +1190,7 @@ img iframe {
   /* result page */
   /* div for chart */
   .results section {
-    width: 100%;
+    width: 90%;
     margin: 20px auto;
   }
   .results #col1 {
@@ -1107,5 +1209,115 @@ img iframe {
     letter-spacing: 7px;
     font-size: 2rem;
   }
+  /* about page */
+  .btn-container {
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+  }
+  #new-width {
+    margin-top: -1rem;
+  }
+  /* reference page */
+  .ref-section {
+    margin-top: -2.5rem;
+  }
+  .pt-6 {
+    margin-bottom: 0rem;
+  }
+
+   /* review page */
+   #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+  }
+  .finish {
+    margin-top: -1rem;
+  }
  }
+
+  /* -----------for cell phones----------- */
+  @media only screen and  (max-width: 380px) {
+   
+   /* result page */
+   /* div for chart */
+   .results section {
+     width: 90%;
+     margin: 20px auto;
+   }
+   .results #col1 {
+     width: 23rem;
+     margin: 1rem auto;
+     display: flex;
+     flex-direction: column;
+   }
+   .results #chart-div {
+     margin: 0px auto;
+     height: auto;
+     width: 22.5rem;
+     padding: 2rem 0 0.9rem 1rem;
+   }
+   #graph-res-title h1 {
+     letter-spacing: 7px;
+     font-size: 2rem;
+   }
+    /* review page */
+  #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+  }
+  .finish {
+    margin-top: -1rem;
+  }
+  }
+/* -----------for cell phones----------- */
+@media only screen and  (max-width: 360px) {
+  /* result page */
+  #navbar {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #first-sec {
+    margin: 0rem auto;
+    text-align: center;
+  }
+  .results section {
+    width: 90%;
+    margin: 1rem auto -20rem auto;
+  }
+  .results #col1, .results #col2 {
+    width: 22rem;
+    margin: 1rem auto;
+  }
+  /* div for chart */
+  .results #chart-div {
+    width: 21.7rem;
+    padding: 0 0 0 0;
+  }
+
+  /* about page */
+  #new-width {
+    margin-bottom: 2rem;
+  }
+  /* reference page */
+  .ref-section {
+    margin-top: -2.5rem;
+  }
+  .pt-6 {
+    margin-bottom: 0rem;
+  }
+  /* review page */
+  #rev-cont {
+    width: 15rem;
+    height: auto;
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+  }
+  .finish {
+    margin-top: -1rem;
+  }
+}
  /*=================== new styling END ==================== */

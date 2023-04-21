@@ -71,7 +71,7 @@
     </div>
 
     <!-- The first row of references. -->
-    <div class="row pt-4">
+    <div class="row pt-4 ref-section">
 
         <!-- The top left set of references. -->
         <div class="col pt-6">
