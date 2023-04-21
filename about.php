@@ -94,9 +94,10 @@
         <!-- The top right about-page entry. -->
         <div class="col pt-6">
             <div class="foreground-box"  id="new-width">
-                <h2>Camilla Vincent</h2>
+                <h2>Ali Azimi</h2>
                 <p class="indent">
-                     I'm a computer science major at Western Michigan University. I am part of WALI, WMU's nanosatellite club. I am mainly interested in data science and embedded development. I worked heavily on the website layout and responsive design features. I also designed the website logo and favicon.
+                    I am a Computer Science student at WMU. As part of the design team for this website, 
+                    I am one of the designers, and I have mostly worked as a front-end developer using HTML, CSS, and JS.
                 </p>
             </div>
         </div>
@@ -114,10 +115,9 @@
         <!-- The bottom right about-page entry. -->
         <div class="col pt-6">
             <div class="foreground-box"  id="new-width">
-                <h2>Ali Azimi</h2>
+                <h2>Camilla Vincent</h2>
                 <p class="indent">
-                    I am a Computer Science student at WMU. As part of the design team for this website, 
-                    I am one of the designers, and I have mostly worked as a front-end developer using HTML, CSS, and JS.
+                     I'm a computer science major at Western Michigan University. I am part of WALI, WMU's nanosatellite club. I am mainly interested in data science and embedded development. I worked heavily on the website layout and responsive design features. I also designed the website logo and favicon.
                 </p>
             </div>
         </div>

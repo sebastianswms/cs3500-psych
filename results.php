@@ -32,7 +32,7 @@
 <!-- When the page loads, fill the table and stats from the results of the assessment. -->
 <body class="results" onload="fillTable();fillStats();">
 
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-dark">
         <a
             href="index.php"
             class="nav-logo mb-0">
