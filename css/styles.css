@@ -200,7 +200,7 @@ so that the 'add video' button is not cut off*/
   border-radius: 10px;
   font-size: 20px;
   padding: 2% 4%;
-  margin-top: 7vh;
+  margin-top: 60px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);  
   background-color: #28a745;
   border-color: #000000;
@@ -968,6 +968,7 @@ img iframe {
      width: 22rem;
      margin-bottom: 1.2rem;
    }
+  
   /* result page  */
    /* div for chart */
    .results section {
@@ -1093,9 +1094,7 @@ img iframe {
     margin-top: -5rem;
     margin-bottom: 2rem;
   }
-  #new-width {
-    margin-top: -1rem;
-  }
+
    /* review page */
    #rev-cont {
     width: 15rem;
@@ -1214,9 +1213,7 @@ img iframe {
     margin-top: -4rem;
     margin-bottom: 1rem;
   }
-  #new-width {
-    margin-top: -1rem;
-  }
+
   /* reference page */
   .ref-section {
     margin-top: -2.5rem;
