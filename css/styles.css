@@ -184,6 +184,7 @@ so that the 'add video' button is not cut off*/
   width: 100%;
   display: flex;
   align-items: flex-end;
+  z-index: 999;
 }
 
 
