@@ -4,7 +4,7 @@
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 175px 0 0 0;
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,6 +179,9 @@ so that the 'add video' button is not cut off*/
   background-color: #1a3147;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   padding-left: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   align-items: flex-end;
 }
