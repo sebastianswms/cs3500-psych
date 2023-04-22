@@ -75,7 +75,7 @@
 
         <!-- The top left set of references. -->
         <div class="col pt-6">
-            <div class="foreground-box">
+            <div class="foreground-box" id="reference-box">
                 <h2>Sebastian Smiley</h2>
                 <ul>
                     <li>
@@ -102,7 +102,7 @@
 
         <!-- The top right set of references. -->
         <div class="col pt-6">
-            <div class="foreground-box">
+            <div class="foreground-box" id="reference-box">
                 <h2>Camilla Vincent</h2>
                 <ul>
                     <li>
@@ -129,7 +129,7 @@
 
         <!-- The bottom left set of references. -->
         <div class="col pt-6">
-            <div class="foreground-box">
+            <div class="foreground-box" id="reference-box">
                 <h2>Cody Thornell</h2>
                 <ul>
                     <li>
@@ -156,7 +156,7 @@
 
         <!-- The bottom right set of references. -->
         <div class="col pt-6">
-            <div class="foreground-box">
+            <div class="foreground-box" id="reference-box">
                 <h2>Ali Azimi</h2>
                 <ul>
                     <li>

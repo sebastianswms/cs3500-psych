@@ -4,7 +4,7 @@
 
 body {
   padding: 0;
-  margin: 175px 0 0 0;
+  margin: 200px 0 0 0;
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,49 +222,13 @@ so that the 'add video' button is not cut off*/
     color: #eeeeee;
 }
 
-/*  ==========================================================================================
-                                          Catalog page
-    ========================================================================================== */
-		.catalog {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-		
-		.entry {
-			width: calc(25% - 20px);
-			margin-bottom: 20px;
-			background-color: #f9f9f9;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			padding: 20px;
-			box-sizing: border-box;
-			transition: box-shadow 0.3s ease;
-		}
-		
-		.entry:hover {
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-		}
-		
-		.entry img {
-			max-width: 100%;
-			height: auto;
-			margin-bottom: 20px;
-		}
-		
-		.entry h3 {
-			font-size: 20px;
-			margin: 0;
-			margin-bottom: 10px;
-		}
-		
-		.entry p {
-			font-size: 16px;
-			margin: 0;
-			line-height: 1.5;
-		}
+  /* display reference page boxes side-by-side on most screens*/
+  @media (min-width: 1500px) and (max-width: 2140px) {
+    #reference-box {
+      max-width: 21vw;
+    }
+  }
+
 /*  ========================================================================================== 
                                         API Search Page 
     ========================================================================================== */ 
@@ -1340,4 +1304,5 @@ img iframe {
     margin-top: -1rem;
   }
 }
+
  /*=================== new styling END ==================== */
