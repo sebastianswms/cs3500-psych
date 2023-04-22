@@ -82,7 +82,7 @@ footer p {
     ========================================================================================== */
 
 .main-pages {
-  margin: 200px 0 0 0;
+  margin: 150px 0 0 0;
 }
     /*apply an extra margin on all main contents*/
 #index, #about, #references {
@@ -113,7 +113,7 @@ footer p {
 #new-width {
   width: 19rem;
 }
-/* video bank parent div bottom magrin */
+/* video bank parent div bottom margin */
 #vid-bnk {
   margin-bottom: 5rem;
 }
@@ -293,20 +293,20 @@ so that the 'add video' button is not cut off*/
     ========================================================================================== */ 
   
     .review-container {
-      position: absolute;
-      top: 35%;
-      left: 45%;
-      transform: translate(-50%, -50%);
-      width: 500px;
-      height: 150px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
+
 
     .btns-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 0.5%;
-      margin-bottom: 0.25%;
+      margin-top: 3.5%;
+      margin-bottom: 3.5%;
     }
     
     
@@ -466,7 +466,7 @@ img iframe {
 /* all section styling */
 
 .results {
-  margin: 175px 0 0 0;
+  margin: 85px 0 0 0;
 }
 .results section {
   width: 85%;
@@ -584,13 +584,8 @@ img iframe {
   /* review page */
   #rev-cont {
     width: 15rem;
-    height: auto;
-    margin-top: 7rem;
-    margin-left: 4rem;
   }
-  .finish {
-    margin-top: 0rem;
-  }
+
 /* ==========================================================
                            loader styling
 =========================================================== */
@@ -709,17 +704,7 @@ img iframe {
   .both-btn {
     margin-bottom: 0.5rem;
   }
-  /* review page */
-  #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 9rem;
-    margin-left: 5rem;
-  }
-  .finish {
-    margin-top: 0rem;
-  }
- }
+}
 @media only screen and  (max-width: 1200px) {
   /* index page */
   header {
@@ -921,17 +906,7 @@ img iframe {
     #new-width {
       margin-top: 1rem;
     }
-      /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 9rem;
-    margin-left: 3rem;
   }
-  .finish {
-    margin-top: 0rem;
-  }
-}
 @media only screen and  (max-width: 820px) {
    header h1 {
      margin-top: 2rem;
@@ -998,16 +973,6 @@ img iframe {
   .pt-6 {
     margin-bottom: 0rem;
   }
-   /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 9rem;
-    margin-left: 3rem;
-  }
-  .finish {
-    margin-top: 0rem;
-  }
  }
  
 @media only screen and (max-width: 768px) {
@@ -1067,7 +1032,6 @@ img iframe {
   .decision-buttons {
     margin-bottom: 0.2rem;
   }
-  /* result page  */
   /* div for chart */
    .results section {
     width: 95%;
@@ -1093,45 +1057,8 @@ img iframe {
   .btn-container {
     margin-bottom: 2rem;
   }
-
-   /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 3rem;
-    margin-left: 3rem;
-  }
-  .finish {
-    margin-top: 0rem;
-  }
- }
-  /* -----------for cell phones----------- */
-  @media only screen and (max-width: 740px) {
-    /* review page */
-    #rev-cont {
-     width: 15rem;
-     height: auto;
-     margin-top: 7rem;
-     margin-left: 3rem;
-   }
-   .finish {
-     margin-top: 0rem;
-   }
-  }
- /* -----------for cell phones----------- */
- @media only screen and (max-width: 640px) {
-   /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 7rem;
-    margin-left: 3rem;
-  }
-  .finish {
-    margin-top: 0rem;
-  }
- }
- /* -----------for cell phones----------- */
+}
+ /*-----for cell phones----- */
  @media only screen and  (max-width: 480px) {
    /* index page */
    header {
@@ -1185,7 +1112,6 @@ img iframe {
    .decision-buttons {
      margin-bottom: -2rem;
    }
-  /* result page */
   /* div for chart */
   .results section {
     width: 90%;
@@ -1219,24 +1145,11 @@ img iframe {
   .pt-6 {
     margin-bottom: 0rem;
   }
-
-   /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 3rem;
-    margin-left: 1.5rem;
-  }
-  .finish {
-    margin-top: -1rem;
-  }
  }
 
   /* -----------for cell phones----------- */
   @media only screen and  (max-width: 380px) {
-   
-   /* result page */
-   /* div for chart */
+    /* div for chart */
    .results section {
      width: 90%;
      margin: 20px auto;
@@ -1257,16 +1170,6 @@ img iframe {
      letter-spacing: 7px;
      font-size: 2rem;
    }
-    /* review page */
-  #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 3rem;
-    margin-left: 1.5rem;
-  }
-  .finish {
-    margin-top: -1rem;
-  }
   }
 /* -----------for cell phones----------- */
 @media only screen and  (max-width: 360px) {
@@ -1299,16 +1202,6 @@ img iframe {
   }
   .pt-6 {
     margin-bottom: 0rem;
-  }
-  /* review page */
-  #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 3rem;
-    margin-left: 1.5rem;
-  }
-  .finish {
-    margin-top: -1rem;
   }
 }
 

@@ -18,44 +18,17 @@
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
 
 <body class="review-page">
-<nav class="navbar navbar-expand-sm navbar-dark">
-        <a
-            href="index.php"
-            class="nav-logo mb-0">
-              <img src="/images/logo.png"
-              width="100" height="100" />
-        </a>
-        <button
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        class="navbar-toggler"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item" id="item1">
-               <a class="nav-link" href="index.php"
-               >Home</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="about.php"
-               >About</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="references.php">References</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="api.php">Video Search API</a>
-            </li>
-          </ul>
-</nav>
+
 <main class="review-container" id="rev-cont">
 
     <!-- With assistance from https://stackoverflow.com/q/23740548 -->
