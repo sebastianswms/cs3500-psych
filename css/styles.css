@@ -80,7 +80,11 @@ footer p {
 /*  ==========================================================================================
                                  Index, About, & References pages
     ========================================================================================== */
-/*apply an extra margin on all main contents*/
+
+.main-pages {
+  margin: 150px 0 0 0;
+}
+    /*apply an extra margin on all main contents*/
 #index, #about, #references {
   margin: 0% 5% 10% 5%;
 }
@@ -88,6 +92,10 @@ footer p {
 /*indent certain paragraphs of text*/
 .indent p {
   margin-right: 4%;
+}
+
+#about-paragraph {
+  margin-bottom: 3.5vh;
 }
 
 /*Boxes with a drop-shadow in the foreground of the viewing window*/
@@ -105,7 +113,7 @@ footer p {
 #new-width {
   width: 19rem;
 }
-/* video bank parent div bottom magrin */
+/* video bank parent div bottom margin */
 #vid-bnk {
   margin-bottom: 5rem;
 }
@@ -179,8 +187,17 @@ so that the 'add video' button is not cut off*/
   background-color: #1a3147;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   padding-left: 20px;
-  display: flex;
-  align-items: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+@media screen and (min-width: 576px) {
+  .navbar-nav {
+    position: fixed;
+    top: 40px;
+  }
 }
 
 
@@ -194,13 +211,14 @@ so that the 'add video' button is not cut off*/
   margin-left: 10px;
 }
 
+/*The 'back to test' button'*/
+
 #test-button {
   text-align: center;
   border-width: 2.5px;
   border-radius: 10px;
   font-size: 20px;
   padding: 2% 4%;
-  margin-top: 7vh;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);  
   background-color: #28a745;
   border-color: #000000;
@@ -214,49 +232,13 @@ so that the 'add video' button is not cut off*/
     color: #eeeeee;
 }
 
-/*  ==========================================================================================
-                                          Catalog page
-    ========================================================================================== */
-		.catalog {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-		
-		.entry {
-			width: calc(25% - 20px);
-			margin-bottom: 20px;
-			background-color: #f9f9f9;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			padding: 20px;
-			box-sizing: border-box;
-			transition: box-shadow 0.3s ease;
-		}
-		
-		.entry:hover {
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-		}
-		
-		.entry img {
-			max-width: 100%;
-			height: auto;
-			margin-bottom: 20px;
-		}
-		
-		.entry h3 {
-			font-size: 20px;
-			margin: 0;
-			margin-bottom: 10px;
-		}
-		
-		.entry p {
-			font-size: 16px;
-			margin: 0;
-			line-height: 1.5;
-		}
+  /* display reference page boxes side-by-side on most screens*/
+  @media (min-width: 1500px) and (max-width: 2140px) {
+    #reference-box {
+      max-width: 21vw;
+    }
+  }
+
 /*  ========================================================================================== 
                                         API Search Page 
     ========================================================================================== */ 
@@ -311,20 +293,20 @@ so that the 'add video' button is not cut off*/
     ========================================================================================== */ 
   
     .review-container {
-      position: absolute;
-      top: 35%;
-      left: 45%;
-      transform: translate(-50%, -50%);
-      width: 500px;
-      height: 150px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
+
 
     .btns-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 0.5%;
-      margin-bottom: 0.25%;
+      margin-top: 3.5%;
+      margin-bottom: 3.5%;
     }
     
     
@@ -482,6 +464,10 @@ img iframe {
                              Results page
     =========================================================== */
 /* all section styling */
+
+.results {
+  margin: 85px 0 0 0;
+}
 .results section {
   width: 85%;
   margin: 20px auto;
@@ -527,7 +513,7 @@ img iframe {
 }
 .results #col1 {
   width: 29rem;
-  margin: 10px 1rem 3rem 12.5%;
+  margin: 10px 1rem 3rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -598,13 +584,8 @@ img iframe {
   /* review page */
   #rev-cont {
     width: 15rem;
-    height: auto;
-    margin-top: 7rem;
-    margin-left: 4rem;
   }
-  .finish {
-    margin-top: 0rem;
-  }
+
 /* ==========================================================
                            loader styling
 =========================================================== */
@@ -647,6 +628,21 @@ img iframe {
 /*===============================================================
                           responsive styling
   ==============================================================*/
+
+  /* navbar margins for small screens */
+
+  @media (max-width: 575px) {
+    .navbar-nav {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    #navbarNav {
+      margin: 0;
+    }
+  }
+
 @media only screen and  (max-width: 1400px) {
   /* index page */
   header {
@@ -708,17 +704,7 @@ img iframe {
   .both-btn {
     margin-bottom: 0.5rem;
   }
-  /* review page */
-  #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 9rem;
-    margin-left: 5rem;
-  }
-  .finish {
-    margin-top: 0rem;
-  }
- }
+}
 @media only screen and  (max-width: 1200px) {
   /* index page */
   header {
@@ -915,23 +901,12 @@ img iframe {
   }
     /* about page */
     .btn-container {
-      margin-top: -3rem;
       margin-bottom: 2rem;
     }
     #new-width {
       margin-top: 1rem;
     }
-      /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 9rem;
-    margin-left: 3rem;
   }
-  .finish {
-    margin-top: 0rem;
-  }
-}
 @media only screen and  (max-width: 820px) {
    header h1 {
      margin-top: 2rem;
@@ -968,6 +943,7 @@ img iframe {
      width: 22rem;
      margin-bottom: 1.2rem;
    }
+  
   /* result page  */
    /* div for chart */
    .results section {
@@ -996,16 +972,6 @@ img iframe {
   }
   .pt-6 {
     margin-bottom: 0rem;
-  }
-   /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 9rem;
-    margin-left: 3rem;
-  }
-  .finish {
-    margin-top: 0rem;
   }
  }
  
@@ -1066,7 +1032,6 @@ img iframe {
   .decision-buttons {
     margin-bottom: 0.2rem;
   }
-  /* result page  */
   /* div for chart */
    .results section {
     width: 95%;
@@ -1090,50 +1055,10 @@ img iframe {
    }
    /* about page */
   .btn-container {
-    margin-top: -5rem;
     margin-bottom: 2rem;
   }
-  #new-width {
-    margin-top: -1rem;
-  }
-   /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 3rem;
-    margin-left: 3rem;
-  }
-  .finish {
-    margin-top: 0rem;
-  }
- }
-  /* -----------for cell phones----------- */
-  @media only screen and (max-width: 740px) {
-    /* review page */
-    #rev-cont {
-     width: 15rem;
-     height: auto;
-     margin-top: 7rem;
-     margin-left: 3rem;
-   }
-   .finish {
-     margin-top: 0rem;
-   }
-  }
- /* -----------for cell phones----------- */
- @media only screen and (max-width: 640px) {
-   /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 7rem;
-    margin-left: 3rem;
-  }
-  .finish {
-    margin-top: 0rem;
-  }
- }
- /* -----------for cell phones----------- */
+}
+ /*-----for cell phones----- */
  @media only screen and  (max-width: 480px) {
    /* index page */
    header {
@@ -1187,7 +1112,6 @@ img iframe {
    .decision-buttons {
      margin-bottom: -2rem;
    }
-  /* result page */
   /* div for chart */
   .results section {
     width: 90%;
@@ -1211,12 +1135,9 @@ img iframe {
   }
   /* about page */
   .btn-container {
-    margin-top: -4rem;
     margin-bottom: 1rem;
   }
-  #new-width {
-    margin-top: -1rem;
-  }
+
   /* reference page */
   .ref-section {
     margin-top: -2.5rem;
@@ -1224,24 +1145,11 @@ img iframe {
   .pt-6 {
     margin-bottom: 0rem;
   }
-
-   /* review page */
-   #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 3rem;
-    margin-left: 1.5rem;
-  }
-  .finish {
-    margin-top: -1rem;
-  }
  }
 
   /* -----------for cell phones----------- */
   @media only screen and  (max-width: 380px) {
-   
-   /* result page */
-   /* div for chart */
+    /* div for chart */
    .results section {
      width: 90%;
      margin: 20px auto;
@@ -1262,24 +1170,10 @@ img iframe {
      letter-spacing: 7px;
      font-size: 2rem;
    }
-    /* review page */
-  #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 3rem;
-    margin-left: 1.5rem;
-  }
-  .finish {
-    margin-top: -1rem;
-  }
   }
 /* -----------for cell phones----------- */
 @media only screen and  (max-width: 360px) {
   /* result page */
-  #navbar {
-    width: 100%;
-    margin: 0 auto;
-  }
   #first-sec {
     margin: 0rem auto;
     text-align: center;
@@ -1309,15 +1203,6 @@ img iframe {
   .pt-6 {
     margin-bottom: 0rem;
   }
-  /* review page */
-  #rev-cont {
-    width: 15rem;
-    height: auto;
-    margin-top: 3rem;
-    margin-left: 1.5rem;
-  }
-  .finish {
-    margin-top: -1rem;
-  }
 }
+
  /*=================== new styling END ==================== */
