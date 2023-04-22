@@ -182,9 +182,11 @@ so that the 'add video' button is not cut off*/
   position: fixed;
   top: 0;
   width: 100%;
-  display: flex;
-  align-items: flex-end;
   z-index: 999;
+}
+
+.navbar-nav {
+  margin-top: 40px;
 }
 
 
@@ -197,6 +199,8 @@ so that the 'add video' button is not cut off*/
   margin-right: 1.5vw;
   margin-left: 10px;
 }
+
+/*The 'back to test' button'*/
 
 #test-button {
   text-align: center;
@@ -651,6 +655,21 @@ img iframe {
 /*===============================================================
                           responsive styling
   ==============================================================*/
+
+  /* navbar margins for small screens */
+
+  @media (max-width: 575px) {
+    .navbar-nav {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    #navbarNav {
+      margin: 0;
+    }
+  }
+
 @media only screen and  (max-width: 1400px) {
   /* index page */
   header {
