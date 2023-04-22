@@ -28,6 +28,14 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
 </head>
+<style>
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+</style>
 
 <!-- When the page loads, fill the table and stats from the results of the assessment. -->
 <body class="results" onload="fillTable();fillStats();">

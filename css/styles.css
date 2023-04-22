@@ -4,7 +4,7 @@
 
 body {
   padding: 0;
-  margin: 200px 0 0 0;
+  margin: 0;
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -80,7 +80,11 @@ footer p {
 /*  ==========================================================================================
                                  Index, About, & References pages
     ========================================================================================== */
-/*apply an extra margin on all main contents*/
+
+.main-pages {
+  margin: 200px 0 0 0;
+}
+    /*apply an extra margin on all main contents*/
 #index, #about, #references {
   margin: 0% 5% 10% 5%;
 }
@@ -88,6 +92,10 @@ footer p {
 /*indent certain paragraphs of text*/
 .indent p {
   margin-right: 4%;
+}
+
+#about-paragraph {
+  margin-bottom: 6.5vh;
 }
 
 /*Boxes with a drop-shadow in the foreground of the viewing window*/
@@ -208,7 +216,6 @@ so that the 'add video' button is not cut off*/
   border-radius: 10px;
   font-size: 20px;
   padding: 2% 4%;
-  margin-top: 60px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);  
   background-color: #28a745;
   border-color: #000000;
@@ -454,6 +461,10 @@ img iframe {
                              Results page
     =========================================================== */
 /* all section styling */
+
+.results {
+  margin: 175px 0 0 0;
+}
 .results section {
   width: 85%;
   margin: 20px auto;
@@ -499,7 +510,7 @@ img iframe {
 }
 .results #col1 {
   width: 29rem;
-  margin: 10px 1rem 3rem 12.5%;
+  margin: 10px 1rem 3rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -1260,10 +1271,6 @@ img iframe {
 /* -----------for cell phones----------- */
 @media only screen and  (max-width: 360px) {
   /* result page */
-  #navbar {
-    width: 100%;
-    margin: 0 auto;
-  }
   #first-sec {
     margin: 0rem auto;
     text-align: center;

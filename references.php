@@ -16,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
-<body>
+<body class="main-pages">
 
 <nav class="navbar navbar-expand-sm navbar-dark">
         <a

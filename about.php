@@ -16,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
-<body>
+<body  class="main-pages">
     <!-- navbar (code is based on a tutorial listed in references) -->
 <nav class="navbar navbar-expand-sm navbar-dark">
         <a
@@ -63,7 +63,7 @@
 
     <!-- A blurb describing the about page. Includes Team "number" and a description of the project. -->
     <div class="row pt-4">
-        <p class="indent">
+        <p class="indent" id="about-paragraph">
             Welcome to the About page for Team Psych's website. This website is a tool designed for researchers and educators to assess
             the favorite rewards of autistic children. Using a series of video trials, subjects will be able to choose
             their preferred rewards without relying on verbal communication.

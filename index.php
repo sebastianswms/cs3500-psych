@@ -35,7 +35,7 @@
 
 </head>
 
-<body onload="fillVideoList()"> <!-- When the page loads, populate the list of video checkboxes -->
+<body onload="fillVideoList()" class="main-pages"> <!-- When the page loads, populate the list of video checkboxes -->
 <div class="loader"></div>
 
 <nav class="navbar navbar-expand-sm navbar-dark">
