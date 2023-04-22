@@ -95,7 +95,7 @@ footer p {
 }
 
 #about-paragraph {
-  margin-bottom: 6.5vh;
+  margin-bottom: 3.5vh;
 }
 
 /*Boxes with a drop-shadow in the foreground of the viewing window*/
@@ -193,8 +193,11 @@ so that the 'add video' button is not cut off*/
   z-index: 999;
 }
 
-.navbar-nav {
-  margin-top: 40px;
+@media screen and (min-width: 576px) {
+  .navbar-nav {
+    position: fixed;
+    top: 40px;
+  }
 }
 
 
@@ -913,7 +916,6 @@ img iframe {
   }
     /* about page */
     .btn-container {
-      margin-top: -3rem;
       margin-bottom: 2rem;
     }
     #new-width {
@@ -1089,7 +1091,6 @@ img iframe {
    }
    /* about page */
   .btn-container {
-    margin-top: -5rem;
     margin-bottom: 2rem;
   }
 
@@ -1208,7 +1209,6 @@ img iframe {
   }
   /* about page */
   .btn-container {
-    margin-top: -4rem;
     margin-bottom: 1rem;
   }
 
