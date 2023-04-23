@@ -292,22 +292,26 @@ so that the 'add video' button is not cut off*/
                                         API Video Page (review.php)
     ========================================================================================== */ 
   
-    .review-container {
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+.review-container {
+   height: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+#player {
+  width: 95vw;
+}
 
 
-    .btns-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 3.5%;
-      margin-bottom: 3.5%;
-    }
+.btns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+}
     
     
 /*  ==========================================================================================
@@ -593,13 +597,6 @@ img iframe {
 #dnld {
   font-size: 0.9rem;
 }
-/*  =========================================================
-                             Review page
-=========================================================== */
-  /* review page */
-  #rev-cont {
-    width: 15rem;
-  }
 
 /* ==========================================================
                            loader styling
