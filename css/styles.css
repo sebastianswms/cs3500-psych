@@ -320,7 +320,21 @@ so that the 'add video' button is not cut off*/
     margin-top: 3.5%;
     margin-bottom: 3.5%;
 }
-    
+
+@media (max-height: 500px) {
+  .review-container {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  .btns-container {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .review-page footer {
+    display: none;
+  }
+
+}
     
 /*  ==========================================================================================
                                        Assessment page
@@ -356,6 +370,10 @@ so that the 'add video' button is not cut off*/
 
 .video-row-inner {
   text-align: center;
+}
+
+.video-row-inner img {
+  max-width: 95vw;
 }
 
 .video-row-outer:after {
