@@ -1028,9 +1028,6 @@ img iframe {
     align-items: center;
   }
 
-  .decision-buttons {
-    margin-bottom: 0.2rem;
-  }
   /* div for chart */
    .results section {
     width: 95%;
@@ -1090,10 +1087,7 @@ img iframe {
     align-items: center;
     text-align: center;
   }
- 
-   .decision-buttons {
-     margin-bottom: -2rem;
-   }
+
   /* div for chart */
   .results section {
     width: 90%;
