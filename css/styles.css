@@ -474,6 +474,7 @@ img iframe {
 /*center the buttons*/
 .decision-buttons {
   text-align: center;
+  margin-top: 6vh;
 }
 /*button size and margins*/
 .btn-result, .btn-over {
@@ -481,7 +482,6 @@ img iframe {
   border-radius: 20px;
   font-size: min(4vw, 20px);
   padding: 2% 4%;
-  margin-top: 7vh;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);  
 }
 /*button color and border*/
