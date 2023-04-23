@@ -95,16 +95,16 @@ window.downloadChart = function downloadChart() {
   const canvas = document.getElementById('myChart');
   // creating a new chart with white background color
   const newChart = document.createElement('canvas');
-  newChart.width = canvas.width;
-  newChart.height = canvas.height;
+  newChart.width = canvas.width + 60; // Add 30px margin on each side
+  newChart.height = canvas.height + 60; // Add 30px margin on top and bottom
   const ctx = newChart.getContext('2d');
   ctx.fillStyle = '#fff';
   ctx.fillRect(0, 0, newChart.width, newChart.height);
-  // convert the new chart to an images
+  // convert the new chart to an image with the added margin
   const chartImage = canvas.toDataURL();
   const newImg = new Image();
   newImg.onload = function () {
-    ctx.drawImage(newImg, 0, 0);
+    ctx.drawImage(newImg, 30, 30, canvas.width, canvas.height); // Draw the chart with a 30px margin
     const downloadLink = document.createElement('a');
     downloadLink.href = newChart.toDataURL();
     // let user enter a custom file name
@@ -117,3 +117,4 @@ window.downloadChart = function downloadChart() {
   }
   newImg.src = chartImage;
 }
+

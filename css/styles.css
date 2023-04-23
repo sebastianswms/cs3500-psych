@@ -84,7 +84,8 @@ footer p {
 .main-pages {
   margin: 150px 0 0 0;
 }
-    /*apply an extra margin on all main contents*/
+
+/*apply an extra margin on all main contents*/
 #index, #about, #references {
   margin: 0% 5% 10% 5%;
 }
@@ -92,6 +93,13 @@ footer p {
 /*indent certain paragraphs of text*/
 .indent p {
   margin-right: 4%;
+}
+
+/*index page forms*/
+
+#new-video input[type="text"]{
+  width: 80%;
+  max-width: 250px;
 }
 
 #about-paragraph {
@@ -214,6 +222,7 @@ so that the 'add video' button is not cut off*/
 /*The 'back to test' button'*/
 
 #test-button {
+  margin-top: min(10vh, 20px);
   text-align: center;
   border-width: 2.5px;
   border-radius: 10px;
@@ -233,7 +242,7 @@ so that the 'add video' button is not cut off*/
 }
 
   /* display reference page boxes side-by-side on most screens*/
-  @media (min-width: 1500px) and (max-width: 2140px) {
+  @media (min-width: 1500px) and (max-width: 2340px) {
     #reference-box {
       max-width: 21vw;
     }
@@ -292,23 +301,41 @@ so that the 'add video' button is not cut off*/
                                         API Video Page (review.php)
     ========================================================================================== */ 
   
-    .review-container {
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+.review-container {
+   height: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+#player {
+  width: 95vw;
+}
 
 
-    .btns-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 3.5%;
-      margin-bottom: 3.5%;
-    }
-    
+.btns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+}
+
+@media (max-height: 500px) {
+  .review-container {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  .btns-container {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .review-page footer {
+    display: none;
+  }
+
+}
     
 /*  ==========================================================================================
                                        Assessment page
@@ -319,6 +346,22 @@ so that the 'add video' button is not cut off*/
   text-align: center;
 }
 
+.video-column-outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+}
+
+.video-row-outer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+}
+
 .video-column-inner {
   float: left;
   width: 50%;
@@ -327,7 +370,12 @@ so that the 'add video' button is not cut off*/
 }
 
 .video-row-inner {
-    text-align: center;
+  text-align: center;
+}
+
+.video-row-inner img {
+  max-width: 95vw;
+  max-height: 50vh;
 }
 
 .video-row-outer:after {
@@ -350,38 +398,22 @@ img iframe {
 
 /* img and iframe positioning for horizontal presentation mode */
 .video-column-inner img, .video-column-inner iframe {
-  max-width: 80%;
-  max-height: 80%;
-  margin-top: 15vh;
-  margin-bottom: 10vh;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 /* img and iframe positioning for vertical presentation mode */
 .video-row-inner image, .video-row-inner iframe {
-  max-width: 80%;
-  max-height: 80%;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-}
-
-/* detector positioning for horizontal presentation mode */
-.video-column-inner #detector1, .video-column-inner #detector2 {
-    margin-top: 15vh;
-    margin-bottom: 10vh;
-}
-
-/* detector positioning for vertical presentation mode */
-.video-row-inner #detector1, .video-row-inner #detector2 {
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 /* detector positioning, including z-positioning to place them in front of their iframes */
 #detector1, #detector2 {
     z-index:1;
     position:absolute;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     height:315px;
     width:560px;
     display:inline-block;
@@ -401,24 +433,39 @@ img iframe {
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Content Box */
 .modal-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+  background-color: #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #888;
+  width: 620px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+
+
+@media (max-width: 640px) {
+  .modal-content {
+    background-color: transparent;
+    border: none;
+  }
+}
+
 
 /*  ===================================================================
                                 Decision page
     ================================================================= */
 /*Bootstrapped title: add background and shadows*/
 #res-title {
-  padding: 50px;
+  margin-top: 6vh;
+  padding: 25px;
   text-align: center;
   color: #0b0c0e;
   background-color: transparent;
@@ -578,13 +625,6 @@ img iframe {
 #dnld {
   font-size: 0.9rem;
 }
-/*  =========================================================
-                             Review page
-=========================================================== */
-  /* review page */
-  #rev-cont {
-    width: 15rem;
-  }
 
 /* ==========================================================
                            loader styling
@@ -652,17 +692,6 @@ img iframe {
   header h1 {
     margin-top: 2rem;
   }
-  /* text indents */
-  .indent {
-    margin-left: 0%;
-    margin-right: 0;
-  }
-  .indent p {
-    margin: 0 auto;
-    text-align: justify;
-    align-items: center;
-    padding: 1rem auto;
-  }
   /* instruction text */
   .inst-text {
     margin-top: 1rem;
@@ -713,17 +742,6 @@ img iframe {
   /* header title */
   header h1 {
     margin-top: 2rem;
-  }
-  /* text indents */
-  .indent {
-    margin-left: 0%;
-    margin-right: 0;
-  }
-  .indent p {
-    margin: 0 auto;
-    text-align: justify;
-    align-items: center;
-    padding: 1rem auto;
   }
   /* instruction text */
   .inst-text {
@@ -815,17 +833,6 @@ img iframe {
   /* header title */
   header h1 {
     margin-top: 2rem;
-  }
-  /* text indents */
-  .indent {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .indent p {
-    margin: 0 auto;
-    text-align: justify;
-    align-items: center;
-    padding: 1rem auto;
   }
   /* instruction text */
   .inst-text {
@@ -966,13 +973,6 @@ img iframe {
      letter-spacing: 7px;
      font-size: 2rem;
    }
-   /* reference page */
-  .ref-section {
-    margin-top: -2.5rem;
-  }
-  .pt-6 {
-    margin-bottom: 0rem;
-  }
  }
  
 @media only screen and (max-width: 768px) {
@@ -1024,11 +1024,7 @@ img iframe {
     text-align: center;
     align-items: center;
   }
-  #res-title h1 {
-    letter-spacing: 3px;
-    margin: 1rem auto -3rem auto;
-    width: 27rem;
-  }
+
   .decision-buttons {
     margin-bottom: 0.2rem;
   }
@@ -1068,16 +1064,6 @@ img iframe {
    header h1 {
      margin-top: 2rem;
    }
-   .indent {
-     margin-left: 0%;
-     margin-right: 0;
-   }
-   .indent p {
-     margin: 0 auto;
-     text-align: justify;
-     align-items: center;
-     padding: 1rem auto;
-   }
    .inst-text {
      margin-top: 1rem;
      margin-bottom: -0.09rem;
@@ -1101,14 +1087,7 @@ img iframe {
     align-items: center;
     text-align: center;
   }
-  #res-title {
-    text-align: center;
-  }
-  #res-title h1 {
-    letter-spacing: 2px;
-    margin: 5rem auto -3rem -6%;
-    width: 22rem;
-   }
+ 
    .decision-buttons {
      margin-bottom: -2rem;
    }
@@ -1138,13 +1117,6 @@ img iframe {
     margin-bottom: 1rem;
   }
 
-  /* reference page */
-  .ref-section {
-    margin-top: -2.5rem;
-  }
-  .pt-6 {
-    margin-bottom: 0rem;
-  }
  }
 
   /* -----------for cell phones----------- */
@@ -1192,17 +1164,6 @@ img iframe {
     padding: 0 0 0 0;
   }
 
-  /* about page */
-  #new-width {
-    margin-bottom: 2rem;
-  }
-  /* reference page */
-  .ref-section {
-    margin-top: -2.5rem;
-  }
-  .pt-6 {
-    margin-bottom: 0rem;
-  }
 }
 
  /*=================== new styling END ==================== */
