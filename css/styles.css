@@ -410,8 +410,16 @@ img iframe {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: 50%;
 }
+
+@media (max-width: 1150px) {
+  .modal-content {
+    background-color: transparent;
+    border: none;
+  }
+}
+
 
 /*  ===================================================================
                                 Decision page
