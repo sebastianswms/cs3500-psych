@@ -319,6 +319,22 @@ so that the 'add video' button is not cut off*/
   text-align: center;
 }
 
+.video-column-outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+}
+
+.video-row-outer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+}
+
 .video-column-inner {
   float: left;
   width: 50%;
@@ -327,7 +343,7 @@ so that the 'add video' button is not cut off*/
 }
 
 .video-row-inner {
-    text-align: center;
+  text-align: center;
 }
 
 .video-row-outer:after {
@@ -350,38 +366,22 @@ img iframe {
 
 /* img and iframe positioning for horizontal presentation mode */
 .video-column-inner img, .video-column-inner iframe {
-  max-width: 80%;
-  max-height: 80%;
-  margin-top: 15vh;
-  margin-bottom: 10vh;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 /* img and iframe positioning for vertical presentation mode */
 .video-row-inner image, .video-row-inner iframe {
-  max-width: 80%;
-  max-height: 80%;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-}
-
-/* detector positioning for horizontal presentation mode */
-.video-column-inner #detector1, .video-column-inner #detector2 {
-    margin-top: 15vh;
-    margin-bottom: 10vh;
-}
-
-/* detector positioning for vertical presentation mode */
-.video-row-inner #detector1, .video-row-inner #detector2 {
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 /* detector positioning, including z-positioning to place them in front of their iframes */
 #detector1, #detector2 {
     z-index:1;
     position:absolute;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     height:315px;
     width:560px;
     display:inline-block;
@@ -401,19 +401,25 @@ img iframe {
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Content Box */
 .modal-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
+  background-color: #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #888;
+  width: 620px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 1150px) {
+
+
+@media (max-width: 640px) {
   .modal-content {
     background-color: transparent;
     border: none;
