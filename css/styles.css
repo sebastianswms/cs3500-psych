@@ -374,6 +374,7 @@ so that the 'add video' button is not cut off*/
 
 .video-row-inner img {
   max-width: 95vw;
+  max-height: 50vh;
 }
 
 .video-row-outer:after {
