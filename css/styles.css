@@ -426,7 +426,8 @@ img iframe {
     ================================================================= */
 /*Bootstrapped title: add background and shadows*/
 #res-title {
-  padding: 50px;
+  margin-top: 6vh;
+  padding: 25px;
   text-align: center;
   color: #0b0c0e;
   background-color: transparent;
@@ -1032,11 +1033,7 @@ img iframe {
     text-align: center;
     align-items: center;
   }
-  #res-title h1 {
-    letter-spacing: 3px;
-    margin: 1rem auto -3rem auto;
-    width: 27rem;
-  }
+
   .decision-buttons {
     margin-bottom: 0.2rem;
   }
@@ -1109,14 +1106,7 @@ img iframe {
     align-items: center;
     text-align: center;
   }
-  #res-title {
-    text-align: center;
-  }
-  #res-title h1 {
-    letter-spacing: 2px;
-    margin: 5rem auto -3rem -6%;
-    width: 22rem;
-   }
+ 
    .decision-buttons {
      margin-bottom: -2rem;
    }
