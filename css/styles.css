@@ -222,6 +222,7 @@ so that the 'add video' button is not cut off*/
 /*The 'back to test' button'*/
 
 #test-button {
+  margin-top: min(10vh, 20px);
   text-align: center;
   border-width: 2.5px;
   border-radius: 10px;
@@ -241,7 +242,7 @@ so that the 'add video' button is not cut off*/
 }
 
   /* display reference page boxes side-by-side on most screens*/
-  @media (min-width: 1500px) and (max-width: 2140px) {
+  @media (min-width: 1500px) and (max-width: 2340px) {
     #reference-box {
       max-width: 21vw;
     }
@@ -691,17 +692,6 @@ img iframe {
   header h1 {
     margin-top: 2rem;
   }
-  /* text indents */
-  .indent {
-    margin-left: 0%;
-    margin-right: 0;
-  }
-  .indent p {
-    margin: 0 auto;
-    text-align: justify;
-    align-items: center;
-    padding: 1rem auto;
-  }
   /* instruction text */
   .inst-text {
     margin-top: 1rem;
@@ -752,17 +742,6 @@ img iframe {
   /* header title */
   header h1 {
     margin-top: 2rem;
-  }
-  /* text indents */
-  .indent {
-    margin-left: 0%;
-    margin-right: 0;
-  }
-  .indent p {
-    margin: 0 auto;
-    text-align: justify;
-    align-items: center;
-    padding: 1rem auto;
   }
   /* instruction text */
   .inst-text {
@@ -854,17 +833,6 @@ img iframe {
   /* header title */
   header h1 {
     margin-top: 2rem;
-  }
-  /* text indents */
-  .indent {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .indent p {
-    margin: 0 auto;
-    text-align: justify;
-    align-items: center;
-    padding: 1rem auto;
   }
   /* instruction text */
   .inst-text {
@@ -1005,13 +973,6 @@ img iframe {
      letter-spacing: 7px;
      font-size: 2rem;
    }
-   /* reference page */
-  .ref-section {
-    margin-top: -2.5rem;
-  }
-  .pt-6 {
-    margin-bottom: 0rem;
-  }
  }
  
 @media only screen and (max-width: 768px) {
@@ -1103,16 +1064,6 @@ img iframe {
    header h1 {
      margin-top: 2rem;
    }
-   .indent {
-     margin-left: 0%;
-     margin-right: 0;
-   }
-   .indent p {
-     margin: 0 auto;
-     text-align: justify;
-     align-items: center;
-     padding: 1rem auto;
-   }
    .inst-text {
      margin-top: 1rem;
      margin-bottom: -0.09rem;
@@ -1166,13 +1117,6 @@ img iframe {
     margin-bottom: 1rem;
   }
 
-  /* reference page */
-  .ref-section {
-    margin-top: -2.5rem;
-  }
-  .pt-6 {
-    margin-bottom: 0rem;
-  }
  }
 
   /* -----------for cell phones----------- */
@@ -1220,17 +1164,6 @@ img iframe {
     padding: 0 0 0 0;
   }
 
-  /* about page */
-  #new-width {
-    margin-bottom: 2rem;
-  }
-  /* reference page */
-  .ref-section {
-    margin-top: -2.5rem;
-  }
-  .pt-6 {
-    margin-bottom: 0rem;
-  }
 }
 
  /*=================== new styling END ==================== */
