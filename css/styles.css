@@ -84,7 +84,8 @@ footer p {
 .main-pages {
   margin: 150px 0 0 0;
 }
-    /*apply an extra margin on all main contents*/
+
+/*apply an extra margin on all main contents*/
 #index, #about, #references {
   margin: 0% 5% 10% 5%;
 }
@@ -92,6 +93,13 @@ footer p {
 /*indent certain paragraphs of text*/
 .indent p {
   margin-right: 4%;
+}
+
+/*index page forms*/
+
+#new-video input[type="text"]{
+  width: 80%;
+  max-width: 250px;
 }
 
 #about-paragraph {
