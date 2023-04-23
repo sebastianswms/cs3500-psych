@@ -626,6 +626,9 @@ img iframe {
   font-size: 0.9rem;
 }
 
+.graph-sec{
+  max-width: 99.5%;
+}
 /* ==========================================================
                            loader styling
 =========================================================== */
@@ -704,7 +707,7 @@ img iframe {
     flex-wrap: wrap;
     width: 50rem;
   }
-  /* add new stimulu */
+  /* add new stimulus */
   #new-video-box {
     width: 18rem;
   }
@@ -1119,51 +1122,6 @@ img iframe {
 
  }
 
-  /* -----------for cell phones----------- */
-  @media only screen and  (max-width: 380px) {
-    /* div for chart */
-   .results section {
-     width: 90%;
-     margin: 20px auto;
-   }
-   .results #col1 {
-     width: 23rem;
-     margin: 1rem auto;
-     display: flex;
-     flex-direction: column;
-   }
-   .results #chart-div {
-     margin: 0px auto;
-     height: auto;
-     width: 22.5rem;
-     padding: 2rem 0 0.9rem 1rem;
-   }
-   #graph-res-title h1 {
-     letter-spacing: 7px;
-     font-size: 2rem;
-   }
-  }
-/* -----------for cell phones----------- */
-@media only screen and  (max-width: 360px) {
-  /* result page */
-  #first-sec {
-    margin: 0rem auto;
-    text-align: center;
-  }
-  .results section {
-    width: 90%;
-    margin: 1rem auto -20rem auto;
-  }
-  .results #col1, .results #col2 {
-    width: 22rem;
-    margin: 1rem auto;
-  }
-  /* div for chart */
-  .results #chart-div {
-    width: 21.7rem;
-    padding: 0 0 0 0;
-  }
-
-}
+ 
 
  /*=================== new styling END ==================== */
