@@ -7,7 +7,7 @@ const titles = cookieParse("titles2");
 const option = cookieParse("option"); // Get counts for how many times each option has been chosen.
 var label = [];
 var percent = [];
-var total = option.reduce((i,j) => i+j, 0) // The total number of selections for all options.
+var total = (option.length - 1)*2 // The number of times each video is presented.
 selection.forEach(element => label.push(titles[element])); // Put each title into a new array.
 option.forEach(element => percent.push(Math.round(element*100/total))); // Calculate and store each percentage.
 

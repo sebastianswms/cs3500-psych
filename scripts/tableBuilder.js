@@ -14,10 +14,10 @@ window.fillTable = function fillTable() {
     let selection = cookieParse("selection"); // Get all selected videos.
     let titles = cookieParse("titles2"); // Get titles for all videos.
     let options = cookieParse("option"); // Get counts for how many times each option has been chosen.
-    let label = [];
+    let labels = [];
     let percents = [];
-    let total = options.reduce((i,j) => i+j, 0) // The total number of selections for all options.
-    selection.forEach(element => label.push(titles[element])); // Put each selected title into a new array.
+    let total = (options.length - 1)*2 // The number of times each video is presented.
+    selection.forEach(element => labels.push(titles[element])); // Put each selected title into a new array.
     options.forEach(element => percents.push(Math.round(element*100/total))); // Put each percentage into a new array.
 
     table.innerHTML = ""; // Clear the table.
@@ -26,7 +26,7 @@ window.fillTable = function fillTable() {
     for (var i = 0; i < selection.length; i++) {
 
         // Get the respective title and percentage for the given selection.
-        let title = titles[i];
+        let label = labels[i];
         let percent = percents[i];
 
         // Create a row and two cells.
@@ -34,8 +34,8 @@ window.fillTable = function fillTable() {
         let cell1 = document.createElement("td");
         let cell2 = document.createElement("td");
 
-        // Add the title and percentage for the given selection to the two cells.
-        cell1.innerHTML = title;
+        // Add the label and percentage for the given selection to the two cells.
+        cell1.innerHTML = label;
         cell2.innerHTML = percent + "%";
 
         // Add the cells to the row, then add the row to the table.
