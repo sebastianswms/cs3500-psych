@@ -20,14 +20,14 @@ window.selectOption = function selectOption(optionIndex){
     let option = cookieParse("option");
 
     option[cookieParse("combination")[index][optionIndex]]++; // Increment the appropriate selection.
-    setCookie("option",JSON.stringify(option),5); // Store the user's selections again. 5 days until expiry.
+    setCookie("option",JSON.stringify(option),14); // Store the user's selections again. 2 weeks until expiry.
     
     if (optionIndex == 0) {
         let count = parseInt(getCookie("option1")) + 1;
-        setCookie("option1", count, 5);
+        setCookie("option1", count, 14);
     } else if (optionIndex == 1) {
         let count = parseInt(getCookie("option2")) + 1;
-        setCookie("option2", count, 5);
+        setCookie("option2", count, 14);
     }
 
     if(playtimeLength > 0){
@@ -93,7 +93,7 @@ window.fillButtons = function fillButtons(){
 
     // If the assessment has completed, move on to the next page.
     if(index >= combination.length){
-        setCookie("end", (new Date().getTime() / 1000), 5) // Saves the epoch timestamp in seconds when the assessment reaches the end.
+        setCookie("end", (new Date().getTime() / 1000), 14) // Saves the epoch timestamp in seconds when the assessment reaches the end.
         window.location.href = "./decision.html";
         return;
     }

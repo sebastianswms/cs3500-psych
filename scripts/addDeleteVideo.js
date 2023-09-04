@@ -44,13 +44,13 @@ window.storeNewVideo = function storeNewVideo(){
 
     // Add a new entry to the array of video titles and set the user's cookies accordingly.
     titles.push(video_title);
-    setCookie("titles",JSON.stringify(titles),5); // 5 days until expiry.
+    setCookie("titles",JSON.stringify(titles),14); // 2 weeks until expiry.
 
     let url_pattern = /(?:https?\:\/\/)(?:www\.)?(?:(?:youtube\.com\/watch\?v=)|(?:youtu\.be\/))([\w-]+)&?.*/i // Source: modified starting from https://stackoverflow.com/q/19377262
 
     // Add a new entry to the array of video ids and set the user's cookies accordingly.
     videos.push(video_url.match(url_pattern)[1]);
-    setCookie("videos",JSON.stringify(videos),5); // 5 days until expiry.
+    setCookie("videos",JSON.stringify(videos),14); // 2 weeks until expiry.
 
     fillVideoList(); // Update the video bank with the video that was just added.
 }
@@ -83,8 +83,8 @@ window.removeVideos = function removeVideos() {
     let shift = 0;
     values.forEach(i => {titles.splice(i-shift,1); videos.splice(i-shift++,1)});
 
-    setCookie("titles",JSON.stringify(titles),5); // 5 days until expiry.
-    setCookie("videos",JSON.stringify(videos),5); // 5 days until expiry.
+    setCookie("titles",JSON.stringify(titles),14); // 2 weeks until expiry.
+    setCookie("videos",JSON.stringify(videos),14); // 2 weeks until expiry.
 
     fillVideoList(); // Update the video bank with the video that was just added.
 }

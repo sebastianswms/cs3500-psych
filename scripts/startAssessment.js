@@ -38,10 +38,10 @@ window.startAssessment = function startAssessment(){
     let all = document.querySelectorAll("input[name=video-entry]"); // Get all videos.
 
     let titles = cookieParse("titles");
-    setCookie("titles2",JSON.stringify(titles),5); // 5 days until expiry.
+    setCookie("titles2",JSON.stringify(titles),14); // 2 weeks until expiry.
 
     let videos = cookieParse("videos");
-    setCookie("videos2",JSON.stringify(videos),5); // 5 days until expiry.
+    setCookie("videos2",JSON.stringify(videos),14); // 2 weeks until expiry.
 
     all.forEach(element => {
             if(element.value.includes(",")){
@@ -51,10 +51,10 @@ window.startAssessment = function startAssessment(){
                 let videos2 = cookieParse("videos2");
 
                 titles2[triplet[2]] = triplet[0];
-                setCookie("titles2",JSON.stringify(titles2),5); // 5 days until expiry.
+                setCookie("titles2",JSON.stringify(titles2),14); // 2 weeks until expiry.
 
                 videos2[triplet[2]] = triplet[1];
-                setCookie("videos2",JSON.stringify(videos2),5); // 5 days until expiry.
+                setCookie("videos2",JSON.stringify(videos2),14); // 2 weeks until expiry.
             }
         })
 
@@ -74,16 +74,16 @@ window.startAssessment = function startAssessment(){
     // Array.from(Array(10).keys()) from: https://stackoverflow.com/q/3746725
     let combinations = generateRandomCombinations(Array.from(Array(values.length).keys()));
 
-    setCookie("selection", JSON.stringify(values),5) // Ordered list of video IDs.
-    setCookie("option", JSON.stringify(Array(values.length)),5) // Empty array for containing how many times an option was chosen.
-    setCookie("combination",JSON.stringify(combinations),5); // Randomized combinations of video IDs.
-    setCookie("orientation",document.getElementById("start-assessment")["video-location"].value, 5) // Put the user's desired orientation into a cookie.
-    setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value, 5) // Put the user's desired playback type into a cookie.
-    setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value, 5) // Put the user's desired idle timeout into a cookie.
-    setCookie("playtime",document.getElementById("start-assessment")["playtime"].value, 5) // Put the user's desired idle timeout into a cookie.
-    setCookie("start", (new Date().getTime() / 1000), 5) // Saves the epoch timestamp in seconds when the assessment gets started.
-    setCookie("option1", 0, 5) // Sets an empty cookie to count the amount of times option1 is pressed.
-    setCookie("option2", 0, 5) // Sets an empty cookie to count the amount of times option2 is pressed.
+    setCookie("selection", JSON.stringify(values),14) // Ordered list of video IDs.
+    setCookie("option", JSON.stringify(Array(values.length)),14) // Empty array for containing how many times an option was chosen.
+    setCookie("combination",JSON.stringify(combinations),14); // Randomized combinations of video IDs.
+    setCookie("orientation",document.getElementById("start-assessment")["video-location"].value, 14) // Put the user's desired orientation into a cookie.
+    setCookie("presentation",document.getElementById("start-assessment")["video-presentation"].value, 14) // Put the user's desired playback type into a cookie.
+    setCookie("timeout",document.getElementById("start-assessment")["time-to-selection"].value, 14) // Put the user's desired idle timeout into a cookie.
+    setCookie("playtime",document.getElementById("start-assessment")["playtime"].value, 14) // Put the user's desired idle timeout into a cookie.
+    setCookie("start", (new Date().getTime() / 1000), 14) // Saves the epoch timestamp in seconds when the assessment gets started.
+    setCookie("option1", 0, 14) // Sets an empty cookie to count the amount of times option1 is pressed.
+    setCookie("option2", 0, 14) // Sets an empty cookie to count the amount of times option2 is pressed.
 
     window.location.href = "./assessment.html"; // Move on to the assessment.
 }
